@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Globex Insight</h1>
+        <h1>the future of data</h1>
       </header>
     </div>
   );
