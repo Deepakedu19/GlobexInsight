@@ -5,6 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Globex Insight</h1>
+        <h1>the future of data</h1>
       </header>
     </div>
   );
