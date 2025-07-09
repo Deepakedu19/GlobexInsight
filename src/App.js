@@ -1,13 +1,21 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginComponent from "./Components/LoginComponent/LoginComponent";
+import LoginContactUsComponent from "./Components/LoginContactUsComponent/LoginContactUsComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Globex Insight</h1>
-        <h1>the future of data</h1>
-      </header>
-    </div>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route />
+    //   </Routes>
+    // </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginComponent />} />
+        <Route path="/contactUs" element={<LoginContactUsComponent />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
