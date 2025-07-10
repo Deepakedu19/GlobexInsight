@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
-import { useState } from "react";
-import "./index.css"; // Assuming you have some styles in index.css
+import { useContext } from "react";
+import { DataContext } from "../ContextComponent/ContextComponent";
+import "./index.css";
 
 const LoginHeaderComponent = () => {
-  const [isContact, setIsContact] = useState(true);
+  const contextValue = useContext(DataContext);
+  const { switchLink, setSwitchLink } = contextValue;
+  // const [isContact, setIsContact] = useState(true);
   return (
     <div className="login-header">
       <div>
@@ -16,18 +19,20 @@ const LoginHeaderComponent = () => {
         </p>
       </div>
       <div>
-        {isContact && (
-          <button onClick={() => setIsContact(false)}>
-            <Link to="/contactUs" className="link-styles">
-              Contact us
-            </Link>
-          </button>
+        {switchLink && (
+          <Link
+            to="/contactUs"
+            className="link-styles"
+            onClick={() => setSwitchLink(false)}
+          >
+            Contact us
+          </Link>
         )}
-        {!isContact && (
+        {!switchLink && (
           <Link
             to="/"
             className="link-styles"
-            onClick={() => setIsContact(true)}
+            onClick={() => setSwitchLink(true)}
           >
             Login
           </Link>
