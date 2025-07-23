@@ -3,8 +3,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding: 20px;
   height: 70vh;
+  border: solid 1px #040303;
 }
 
 .login-dashboard button {
@@ -47,6 +47,34 @@
   color: white;
   cursor: pointer;
   height: 30vh;
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px;
+}
+
+.logo-subscription-btn-style {
+  font-size: 25px;
+}
+
+.login-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  border: solid 1px #1b1818;
+}
+
+.login-form-container {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-btn-icon {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
 }

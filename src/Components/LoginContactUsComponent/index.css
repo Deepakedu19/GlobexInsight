@@ -5,6 +5,7 @@
   align-items: flex-start; */
   width: 60%;
   margin: 30px auto;
+  margin-top: 20px;
 }
 
 .contact-us-container {
@@ -15,10 +16,12 @@
   width: 100%;
 }
 .contact-info-icon-style {
-  font-size: 25px;
+  font-size: 22px;
   margin-right: 10px;
   color: rgb(51, 51, 51);
   padding: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .info-container-set {
@@ -46,4 +49,29 @@
 
 .info-container {
   width: 30%;
+}
+.info-container-text {
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  color: #343434;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  background-color: rgb(54, 139, 230);
+  padding: 12px;
+}
+
+.footer-info-container-text {
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0 0 0 0;
 }
