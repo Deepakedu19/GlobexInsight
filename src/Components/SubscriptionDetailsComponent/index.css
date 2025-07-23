@@ -1,0 +1,113 @@
+.subscription-content-container {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription-content {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  background-color: #ffffff49;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.subscription-link-style {
+  text-decoration: none;
+}
+.subscription-option {
+  background-color: rgb(14, 33, 97);
+  color: #f1f1f1;
+  margin: 14px;
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.subscription-option:hover {
+  background-color: rgb(12, 88, 202);
+}
+.subscription-details-main-container {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  background-color: #ffffff49;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.subscription-details-container {
+  height: 83vh;
+  width: 80%;
+  background-image: linear-gradient(
+    rgba(16, 11, 149, 0.891),
+    rgba(57, 88, 190, 0.844),
+    rgba(12, 20, 31, 0.842)
+  );
+  margin-top: 20px;
+  display: flex;
+  padding: 20px;
+}
+.globex-logo {
+  width: 100%;
+  padding-top: 150px;
+}
+.subscription-detail-list {
+  list-style-type: none;
+  padding: 0;
+}
+.subscription-detail-title {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+}
+.subscription-detail-logo {
+  width: 30%;
+}
+
+.subscription-detail-text {
+  width: 70%;
+}
+.subscription-detail-table-header {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: rgb(255, 153, 0);
+  border: 1px solid #540303b9;
+  font-weight: 0;
+}
+.subscription-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.subscription-detail-table-row {
+  border: 1px solid #540303b9;
+  height: 40px;
+  color: #191919;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.subscription-detail-table-cell {
+  padding: 10px;
+  border: 1px solid #540303b9;
+  color: #191919;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
