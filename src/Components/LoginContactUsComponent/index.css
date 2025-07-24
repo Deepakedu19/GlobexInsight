@@ -49,6 +49,12 @@
 
 .info-container {
   width: 30%;
+
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .info-container-text {
   font-size: 15px;

@@ -34,7 +34,7 @@ const SubscriptionDetailComponent = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          height: "100vh",
+          height: "90vh",
         }}
       >
         <div className="subscription-content">
