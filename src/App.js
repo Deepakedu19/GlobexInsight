@@ -5,6 +5,7 @@ import LoginContactUsComponent from "./Components/LoginContactUsComponent/LoginC
 import SubscriptionDetailComponent from "./Components/SubscriptionDetailsComponent/SubscriptionDetailComponent";
 import TrialSubscriptionComponent from "./Components/TrialSubscriptionComponent/TrailSubscriptionComponent";
 import AnnualSubscriptionComponent from "./Components/AnnualSubscriptionComponent/AnnualSubscriptionComponent";
+import DashboardComponent from "./Components/DashboardComponent/DashboardComponent";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           path="/annual-subscription-registration"
           element={<AnnualSubscriptionComponent />}
         />
+        <Route path="/dashboard" element={<DashboardComponent />} />
       </Routes>
     </BrowserRouter>
   );
