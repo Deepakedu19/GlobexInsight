@@ -1,7 +1,8 @@
 .login-form {
-  border: solid 1px #ccc;
-  background-color: rgba(0, 0, 0, 0.402);
+  border: solid 1px #727272;
+  background-color: rgba(0, 0, 0, 0.575);
   width: 90%;
+  padding-bottom: 15px;
 }
 
 .login-input-tag {

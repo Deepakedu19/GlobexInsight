@@ -7,7 +7,6 @@ const FooterComponent = () => {
         being reviewed and revised continuously, an update may not include all
         fields at the same time.
         <br />
-        <br />
         Feel free to contact your Globex Insight experts if your use of the
         latest information is critical.
         <br />
