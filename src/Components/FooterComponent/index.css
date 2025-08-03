@@ -1,0 +1,16 @@
+.footer-container {
+  background-color: rgb(8, 103, 204);
+  padding: 12px;
+}
+
+.footer-info-container-text {
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0 0 0 0;
+}

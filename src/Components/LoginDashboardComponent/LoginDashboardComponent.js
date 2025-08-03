@@ -14,6 +14,7 @@ const LoginDashboardComponent = () => {
   // take the day of the month as a value and use the background image accordingly
   // Choose background image based on dayOfMonth
   const backgroundImages = [
+    "url(https://images.unsplash.com/photo-1541446201430-cf2532e3d424?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
     "url('https://images.unsplash.com/photo-1661790291293-b5e43e5c9f2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
     "url('https://images.unsplash.com/photo-1615057905828-78d3c0d01268?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
     "url('https://images.unsplash.com/photo-1580537782709-a15bb3c13a01?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
@@ -25,6 +26,7 @@ const LoginDashboardComponent = () => {
     "url('https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
     "url('https://images.unsplash.com/photo-1747457421291-2a059f60c384?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
     "url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+    "url(https://images.unsplash.com/photo-1541446201430-cf2532e3d424?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
   ];
   const bgIndex = dayOfMonth % backgroundImages.length;
   console.log(bgIndex);

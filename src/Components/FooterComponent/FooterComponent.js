@@ -1,3 +1,5 @@
+import "./index.css";
+
 const FooterComponent = () => {
   return (
     <div className="footer-container">

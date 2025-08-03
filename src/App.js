@@ -6,28 +6,37 @@ import SubscriptionDetailComponent from "./Components/SubscriptionDetailsCompone
 import TrialSubscriptionComponent from "./Components/TrialSubscriptionComponent/TrailSubscriptionComponent";
 import AnnualSubscriptionComponent from "./Components/AnnualSubscriptionComponent/AnnualSubscriptionComponent";
 import DashboardComponent from "./Components/DashboardComponent/DashboardComponent";
+import SubscriptionRequestComponent from "./Components/SubscriptionRequestComponent/SubscriptionRequestComponent";
+import SupportComponent from "./Components/SupportComponent/SupportComponent";
 
 function App() {
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route />
-    //   </Routes>
-    // </BrowserRouter>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginComponent />} />
-        <Route path="/contactUs" element={<LoginContactUsComponent />} />
-        <Route path="/subscription" element={<SubscriptionDetailComponent />} />
+        <Route exact path="/" element={<LoginComponent />} />
+        <Route exact path="/contactUs" element={<LoginContactUsComponent />} />
         <Route
+          exact
+          path="/subscription"
+          element={<SubscriptionDetailComponent />}
+        />
+        <Route
+          exact
           path="/trial-subscription-registration"
           element={<TrialSubscriptionComponent />}
         />
         <Route
+          exact
           path="/annual-subscription-registration"
           element={<AnnualSubscriptionComponent />}
         />
-        <Route path="/dashboard" element={<DashboardComponent />} />
+        <Route exact path="/dashboard" element={<DashboardComponent />} />
+        <Route
+          exact
+          path="/subscription-request"
+          element={<SubscriptionRequestComponent />}
+        />
+        <Route path="/support" element={<SupportComponent />} />
       </Routes>
     </BrowserRouter>
   );

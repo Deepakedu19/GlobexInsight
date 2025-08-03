@@ -6,6 +6,7 @@
   width: 60%;
   margin: 30px auto;
   margin-top: 20px;
+  height: 67vh;
 }
 
 .contact-us-container {
@@ -63,21 +64,4 @@
   color: #343434;
   margin: 0;
   padding: 0;
-}
-
-.footer-container {
-  background-color: rgb(54, 139, 230);
-  padding: 12px;
-}
-
-.footer-info-container-text {
-  font-size: 12px;
-  font-weight: lighter;
-  font-family: sans-serif;
-  color: white;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  padding-top: 10px;
-  margin: 0 0 0 0;
 }

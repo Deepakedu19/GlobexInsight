@@ -1,0 +1,60 @@
+.support-main-container {
+  height: 70vh;
+}
+.support-header-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.btn-search-ticket {
+  background-color: rgb(35, 76, 146);
+  border: none;
+  color: rgb(255, 245, 233);
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+  margin-left: 40%;
+  cursor: pointer;
+}
+.drop-down-ticket {
+  width: 30%;
+  height: 35px;
+  padding-left: 15px;
+  outline: none;
+  border: solid 1px rgb(190, 190, 190);
+  border-radius: 10px;
+  color: rgb(94, 94, 94);
+}
+.content-style {
+  color: rgb(71, 71, 71);
+}
+
+.search-style {
+  margin: 10px;
+}
+.addition-style-container {
+  margin-top: 3%;
+}
+.subject-style {
+  width: 70px;
+}
+.comment-style {
+  width: 700px;
+}
+.status-style {
+  width: 100px;
+}
+.Date-style {
+  width: 70px;
+}
+.table-header-style {
+  background-color: rgb(83, 127, 146);
+  height: 35px;
+  color: rgb(226, 251, 251);
+}
+
+.common-font-style {
+  font-weight: 100;
+  font-size: small;
+}

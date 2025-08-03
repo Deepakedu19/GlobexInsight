@@ -1,13 +1,21 @@
 import { FaUser } from "react-icons/fa";
 import { MdKey } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 import "./index.css";
 
 const LoginFormComponent = () => {
+  const navigate = useNavigate();
+
+  const onDetailsSubmit = (e) => {
+    e.preventDefault();
+    navigate("/dashboard");
+  };
+
   return (
     <div className="login-form-container">
-      <form className="login-form">
+      <form className="login-form" onSubmit={onDetailsSubmit}>
         <h2 className="login-form-title">Login</h2>
         <div className="login-input-container">
           <div className="login-input-icon-container">

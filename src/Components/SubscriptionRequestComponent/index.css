@@ -1,0 +1,118 @@
+.subscrition-title {
+  font-weight: lighter;
+  color: brown;
+  font-family: Roboto;
+}
+.subscription-container {
+  background-color: rgb(255, 253, 250);
+  height: 70vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+.drop-down-style {
+  border: solid 1px rgb(182, 182, 182);
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  font-size: small;
+  cursor: pointer;
+  color: rgb(82, 82, 82);
+  outline: none;
+  padding: 5px;
+}
+
+.label-style {
+  font-family: Roboto;
+  color: rgb(105, 109, 110);
+  font-weight: 100px;
+  padding-left: 6px;
+  font-size: 13px;
+  margin-right: 8px;
+}
+.btn-pagination-style {
+  border: solid 1px rgb(163, 163, 163);
+  /* border: none; */
+  height: 20px;
+  width: 65px;
+  color: rgb(56, 56, 56);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(208, 208, 208),
+    rgb(200, 200, 200),
+    rgb(170, 170, 170)
+  );
+  cursor: pointer;
+}
+.index-page-style {
+  border: solid 1px rgb(156, 156, 156);
+  height: 22x;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 13px;
+  /* padding-top: 2px;
+  padding-bottom: 4px; */
+  color: rgb(112, 112, 112);
+}
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 22px;
+}
+.table-header {
+  border: none;
+  width: 300px;
+  color: white;
+  height: 32px;
+  font-weight: lighter;
+  font-size: 13px;
+}
+.request-style {
+  width: 150px;
+}
+
+.edit-style {
+  width: 70px;
+  text-align: center;
+}
+
+.font-style {
+  color: rgb(75, 75, 75);
+}
+.header-row-style {
+  background-color: rgb(112, 134, 184);
+}
+
+.subscription-table {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  font-family: sans-serif;
+}
+
+.name-style {
+  width: 200px;
+}
+
+.organization-style {
+  width: 250px;
+}
+
+.table-style {
+  padding: 0px;
+}
+.desciption-row-style {
+  background-color: rgb(229, 229, 229);
+}
+
+.desciption-row-style {
+  background-color: rgb(238, 238, 238);
+}
+
+.desciption-row-style-2 {
+  background-color: rgb(244, 244, 244);
+}
+
+.font-style-2 {
+  color: rgb(179, 52, 35);
+}

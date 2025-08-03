@@ -1,4 +1,5 @@
 import LoginHeaderComponent from "../LoginHeaderComponent/LoginHeaderComponent";
+import FooterComponent from "../FooterComponent/FooterComponent";
 import { Stack, TextField } from "@mui/material";
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
@@ -187,7 +188,7 @@ const LoginContactUsComponent = () => {
           </a>
         </div>
       </div>
-      <div className="footer-container">
+      {/* <div className="footer-container">
         <p className="footer-info-container-text">
           Globex Insight provides information that is subject to change and it
           may not reflect real time information at the time it is viewed. Data
@@ -202,7 +203,8 @@ const LoginContactUsComponent = () => {
           Copyright 2025, Globex International Group Inc. © 2025 Globex • Terms
           & Conditions • Privacy Policy
         </p>
-      </div>
+      </div> */}
+      <FooterComponent />
     </div>
   );
 };
