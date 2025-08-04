@@ -1,8 +1,9 @@
 import { FaLinkedin } from "react-icons/fa";
+import "./index.css";
 
 const DashboardMinHeader = () => {
   return (
-    <div className="login-header">
+    <div className="login-header mini-header-position">
       <div>
         <h1 className="header-logo">
           Globex <span className="logo-style">In</span>sight

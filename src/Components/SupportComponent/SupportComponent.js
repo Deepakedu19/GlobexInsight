@@ -4,14 +4,13 @@ import FooterComponent from "../FooterComponent/FooterComponent";
 import { useState } from "react";
 import "./index.css";
 import { BiSolidEdit } from "react-icons/bi";
+import { IoSearchOutline } from "react-icons/io5";
+import { IoCloseSharp } from "react-icons/io5";
+import { IoCaretBackCircle } from "react-icons/io5";
+import { TfiArrowCircleRight } from "react-icons/tfi";
+import { TfiArrowCircleLeft } from "react-icons/tfi";
 
 const SupportComponent = () => {
-  const [onToggleContainer, setOnToggleContainer] = useState(false);
-
-  const onSearchContainer = () => {
-    setOnToggleContainer(!onToggleContainer);
-  };
-
   return (
     <>
       <DashboardHeaderComponent />
@@ -19,12 +18,8 @@ const SupportComponent = () => {
       <div className="subscription-container">
         <div className="support-header-component">
           <h2 className="subscrition-title">Support</h2>
-          <button className="btn-search-ticket" onClick={onSearchContainer}>
-            Search Ticket
-          </button>
-        </div>
-        {onToggleContainer && (
-          <div>
+
+          <div className="search-contanier">
             <p className="content-style">Status</p>
             <select className="drop-down-ticket">
               <option disabled selected>
@@ -34,31 +29,15 @@ const SupportComponent = () => {
               <option>In-Progress</option>
               <option>closed</option>
             </select>
-            <button className="btn-search-ticket search-style">Search</button>
+            <button className="search-style">
+              <IoSearchOutline />
+            </button>
           </div>
-        )}
-
-        <div className="pagination-container addition-style-container">
-          <label id="pagination-element" className="label-style">
-            Show
-          </label>
-          <select className="drop-down-style" htmlFor="pagination-element">
-            <option>25</option>
-            <option>50</option>
-            <option>100</option>
-            <option>150</option>
-          </select>
-          <span className="label-style">entries</span>
-          <span className="label-style">Showing:1 to 1 of 1</span>
-          <button className="btn-pagination-style">First</button>
-          <button className="btn-pagination-style">Previous</button>
-          <label className="index-page-style">1</label>
-          <button className="btn-pagination-style">Next</button>
-          <button className="btn-pagination-style">Last</button>
         </div>
-        <div className="subscription-table">
-          <table className="table-style">
-            <tr className="table-header-style">
+
+        <div className="support-table">
+          <table className="support-table-style">
+            <tr className="support-table-header-style">
               <th className="common-font-style subject-style">Subject</th>
               <th className="common-font-style comment-style">Comment</th>
               <th className="common-font-style status-style">Status</th>
@@ -66,7 +45,7 @@ const SupportComponent = () => {
               <th className="common-font-style edit-style">Edit</th>
             </tr>
 
-            <tr className="desciption-row-style">
+            <tr className="support-desciption-row-style">
               <td className="table-header name-style"></td>
               <td className="table-header name-style"></td>
               <td className="table-header organization-style"></td>
@@ -76,6 +55,17 @@ const SupportComponent = () => {
               </td>
             </tr>
           </table>
+          <div className="table-footer">
+            <span className="pagination-content-new">Show entries</span>
+            <select className="drop-down-selection">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+            <TfiArrowCircleLeft className="pagination-font-style" />
+            <TfiArrowCircleRight className="pagination-font-style" />
+            <span className="pagination-content">Page 1 of 1</span>
+          </div>
         </div>
       </div>
       <FooterComponent />

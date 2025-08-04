@@ -109,7 +109,7 @@ const DashboardHeaderComponent = () => {
             </Link>
             <Link className="link-style support-style" to="/support">
               Support
-              <div className="notification-cotnainer">1</div>
+              <div className="notification-cotnainer">0</div>
             </Link>
             <Link className="link-style" to="/subscription-request">
               Subscription Request

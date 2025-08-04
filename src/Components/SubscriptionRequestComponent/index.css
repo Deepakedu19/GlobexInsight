@@ -2,6 +2,8 @@
   font-weight: lighter;
   color: brown;
   font-family: Roboto;
+  margin-top: 0px;
+  margin-left: 10px;
 }
 .subscription-container {
   background-color: rgb(255, 253, 250);
@@ -62,10 +64,10 @@
 .table-header {
   border: none;
   width: 300px;
-  color: white;
+  color: rgb(79, 79, 79);
   height: 32px;
   font-weight: lighter;
-  font-size: 13px;
+  font-size: 14px;
 }
 .request-style {
   width: 150px;
@@ -77,42 +79,48 @@
 }
 
 .font-style {
-  color: rgb(75, 75, 75);
+  color: rgb(49, 49, 49);
 }
 .header-row-style {
-  background-color: rgb(112, 134, 184);
+  background-color: rgb(211, 226, 240);
+  height: 45px;
 }
 
 .subscription-table {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 30px;
+  margin: 10px;
   font-family: sans-serif;
 }
 
 .name-style {
-  width: 200px;
+  width: 20%;
 }
 
 .organization-style {
-  width: 250px;
+  width: 30%px;
 }
 
 .table-style {
-  padding: 0px;
+  border-collapse: collapse;
+  width: 100%;
 }
 .desciption-row-style {
-  background-color: rgb(229, 229, 229);
-}
-
-.desciption-row-style {
-  background-color: rgb(238, 238, 238);
-}
-
-.desciption-row-style-2 {
-  background-color: rgb(244, 244, 244);
+  background-color: rgb(249, 248, 248);
+  height: 45px;
 }
 
 .font-style-2 {
   color: rgb(179, 52, 35);
+}
+
+.subscription-table-footer {
+  height: 45px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: rgb(211, 226, 240);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
