@@ -26,10 +26,12 @@
   color: rgb(249, 249, 249);
   margin: -2px;
   padding: 0px;
+  font-weight: 400;
 }
 
 .logo-style {
   color: rgb(243, 185, 114);
   margin: 0px;
   padding: 0px;
+  font-weight: lighter;
 }

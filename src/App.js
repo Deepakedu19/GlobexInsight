@@ -8,6 +8,9 @@ import AnnualSubscriptionComponent from "./Components/AnnualSubscriptionComponen
 import DashboardComponent from "./Components/DashboardComponent/DashboardComponent";
 import SubscriptionRequestComponent from "./Components/SubscriptionRequestComponent/SubscriptionRequestComponent";
 import SupportComponent from "./Components/SupportComponent/SupportComponent";
+import LineofBussinessComponent from "./Components/LineofBussinessComponent/LineoofBussinessComponent";
+import CategoryComponent from "./Components/CategoryComponent/CategoryComponent";
+import OrganizationDetailsComponent from "./Components/OrganizationDetailsComponent/OrganizationDetailsComponent";
 
 function App() {
   return (
@@ -37,6 +40,15 @@ function App() {
           element={<SubscriptionRequestComponent />}
         />
         <Route path="/support" element={<SupportComponent />} />
+        <Route
+          path="/line-of-bussiness"
+          element={<LineofBussinessComponent />}
+        />
+        <Route path="/category" element={<CategoryComponent />} />
+        <Route
+          path="/organization"
+          element={<OrganizationDetailsComponent />}
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -96,6 +96,7 @@ const DashboardHeaderComponent = () => {
                     to={eachOption.link}
                     id={eachOption.id}
                     className="admin-link-style"
+                    onClick={() => setIsAdminToggle(false)}
                   >
                     {eachOption.name}
                   </Link>

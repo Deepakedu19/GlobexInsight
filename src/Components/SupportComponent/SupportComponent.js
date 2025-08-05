@@ -1,12 +1,11 @@
 import DashboardHeaderComponent from "../DashboardHeaderComponent/DashBoardHeaderComponent";
 import DashboardMinHeader from "../DashboardMinHeader/DashboardMinHeader";
 import FooterComponent from "../FooterComponent/FooterComponent";
-import { useState } from "react";
+
 import "./index.css";
 import { BiSolidEdit } from "react-icons/bi";
 import { IoSearchOutline } from "react-icons/io5";
-import { IoCloseSharp } from "react-icons/io5";
-import { IoCaretBackCircle } from "react-icons/io5";
+
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 
@@ -36,24 +35,22 @@ const SupportComponent = () => {
         </div>
 
         <div className="support-table">
-          <table className="support-table-style">
-            <tr className="support-table-header-style">
-              <th className="common-font-style subject-style">Subject</th>
-              <th className="common-font-style comment-style">Comment</th>
-              <th className="common-font-style status-style">Status</th>
-              <th className="common-font-style Date-style">Date Created</th>
-              <th className="common-font-style edit-style">Edit</th>
+          <table className="new-support-table-style">
+            <tr className="new-support-table-header-style">
+              <th className="support-common-font-style subject-style ">
+                Subject
+              </th>
+              <th className="support-common-font-style comment-style">
+                Comment
+              </th>
+              <th className="support-common-font-style status-style">Status</th>
+              <th className="support-common-font-style Date-style">
+                Date Created
+              </th>
+              <th className="support-common-font-style Date-style">Edit</th>
             </tr>
 
-            <tr className="support-desciption-row-style">
-              <td className="table-header name-style"></td>
-              <td className="table-header name-style"></td>
-              <td className="table-header organization-style"></td>
-              <td className="table-header organization-style"></td>
-              <td className="table-header edit-style font-style">
-                <BiSolidEdit />
-              </td>
-            </tr>
+            <tr className="support-desciption-row-style"></tr>
           </table>
           <div className="table-footer">
             <span className="pagination-content-new">Show entries</span>
