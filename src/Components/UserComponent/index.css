@@ -1,0 +1,91 @@
+.user-main-container {
+  overflow: auto;
+}
+
+.user-description-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.user-content-main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-content-container {
+  width: 100%;
+}
+.checkbox-contianer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: rgb(74, 74, 74);
+}
+.user-btn-container {
+  text-align: center;
+}
+.user-additional-btn {
+  width: 150px;
+}
+.user-content-final-container {
+  width: 33.5%;
+}
+
+.user-table-main-container {
+  width: 100%;
+  margin-top: 20px;
+  height: 60vh;
+  overflow-y: auto;
+}
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.user-table-header {
+  background-color: rgb(215, 232, 255);
+  height: 42px;
+}
+
+.user-header-font {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(111, 111, 111);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.name-style {
+  width: 10%;
+  text-align: left;
+}
+
+.email-style {
+  width: 17%;
+  text-align: left;
+}
+
+.org-style {
+  width: 18%;
+  text-align: left;
+}
+.LOB-style {
+  width: 18%;
+  text-align: left;
+}
+.user-btn-style {
+  width: 1%;
+  text-align: left;
+}
+.user-description-row {
+  background-color: rgb(247, 246, 251);
+  height: 40px;
+  color: rgb(16, 16, 16);
+  font-size: small;
+  font-weight: 300;
+}
+
+.space-style {
+  padding-left: 6px;
+}

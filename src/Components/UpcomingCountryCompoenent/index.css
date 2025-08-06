@@ -1,0 +1,6 @@
+.upcoming-country-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 72vh;
+  overflow: auto;
+}

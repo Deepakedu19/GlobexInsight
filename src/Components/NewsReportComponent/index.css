@@ -1,0 +1,45 @@
+.newletter-content-container {
+  display: flex;
+}
+
+.textarea--style {
+  border-color: rgb(209, 207, 207);
+}
+.newsletter-btn-container {
+  margin: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: auto;
+  height: 40px;
+}
+
+.newsletter-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 73vh;
+}
+
+.newsletter-table-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.newsletter-table-header {
+  width: 100%;
+  height: 43px;
+  background-color: rgb(208, 228, 254);
+}
+.newsletter-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.file-name-style {
+  width: 40%;
+}
+
+.newsletter-table-description {
+  background-color: rgb(249, 251, 255);
+  height: 40px;
+}

@@ -11,6 +11,10 @@ import SupportComponent from "./Components/SupportComponent/SupportComponent";
 import LineofBussinessComponent from "./Components/LineofBussinessComponent/LineoofBussinessComponent";
 import CategoryComponent from "./Components/CategoryComponent/CategoryComponent";
 import OrganizationDetailsComponent from "./Components/OrganizationDetailsComponent/OrganizationDetailsComponent";
+import UserComponent from "./Components/UserComponent/UserComponent";
+import QuestionnairComponent from "./Components/QuestionnairComponent/QuestionnairComponent";
+import NewsReportComponent from "./Components/NewsReportComponent/NewsReportComponent";
+import UpcomingCountryComponent from "./Components/UpcomingCountryCompoenent/UpcomingCountryComponent";
 
 function App() {
   return (
@@ -48,6 +52,13 @@ function App() {
         <Route
           path="/organization"
           element={<OrganizationDetailsComponent />}
+        />
+        <Route path="/user" element={<UserComponent />} />
+        <Route path="/questionnair" element={<QuestionnairComponent />} />
+        <Route path="/news-report" element={<NewsReportComponent />} />
+        <Route
+          path="/upcoming-country"
+          element={<UpcomingCountryComponent />}
         />
       </Routes>
     </BrowserRouter>
