@@ -15,6 +15,10 @@ import UserComponent from "./Components/UserComponent/UserComponent";
 import QuestionnairComponent from "./Components/QuestionnairComponent/QuestionnairComponent";
 import NewsReportComponent from "./Components/NewsReportComponent/NewsReportComponent";
 import UpcomingCountryComponent from "./Components/UpcomingCountryCompoenent/UpcomingCountryComponent";
+import UserProfileCompoenent from "./Components/UserProfileCompoenent/UserProfileCompoenent";
+import AddCountryDataComponent from "./Components/AddCountryDataComponent/AddCountryDataComponent";
+import EditCountryDataComponent from "./Components/EditCountryDataComponent/EditCountryDataComponent";
+import ViewCountryDataComponent from "./Components/ViewCountryDataComponent/ViewCountryDataComponent";
 
 function App() {
   return (
@@ -59,6 +63,16 @@ function App() {
         <Route
           path="/upcoming-country"
           element={<UpcomingCountryComponent />}
+        />
+        <Route path="/my-profile" element={<UserProfileCompoenent />} />
+        <Route path="/add-country-data" element={<AddCountryDataComponent />} />
+        <Route
+          path="/edit-country-data"
+          element={<EditCountryDataComponent />}
+        />
+        <Route
+          path="/view-country-data"
+          element={<ViewCountryDataComponent />}
         />
       </Routes>
     </BrowserRouter>

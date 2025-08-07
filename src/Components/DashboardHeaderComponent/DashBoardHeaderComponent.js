@@ -5,6 +5,24 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+const countryData = [
+  {
+    id: 1,
+    link: "/add-country-data",
+    name: "Add Country Data",
+  },
+  {
+    id: 2,
+    link: "/edit-country-data",
+    name: "Edit Country Data",
+  },
+  {
+    id: 3,
+    link: "/view-country-data",
+    name: "View Country Data",
+  },
+];
+
 const adminOptions = [
   {
     id: 1,
@@ -79,11 +97,18 @@ const DashboardHeaderComponent = () => {
               Country Data {countryToggleIcon}
             </button>
             {isCountryToggle && (
-              <ul className="country-data-dropdown-container">
-                <li className="country-list-style">Add Country Data</li>
-                <li className="country-list-style">Edit Country Data</li>
-                <li className="country-list-style">View Country Data</li>
-              </ul>
+              <div className="country-data-dropdown-container">
+                {countryData.map((eachCountry) => (
+                  <Link
+                    to={eachCountry.link}
+                    key={eachCountry.id}
+                    className="admin-link-style"
+                    onClick={() => setIsCountryToggle(!isCountryToggle)}
+                  >
+                    {eachCountry.name}
+                  </Link>
+                ))}
+              </div>
             )}
             {/* Admin  drop-down */}
             <button className="select-dropdown" onClick={onAdminToggle}>
@@ -118,7 +143,9 @@ const DashboardHeaderComponent = () => {
           </div>
         </div>
         <div>
-          <Link className="link-style">My Profile</Link>
+          <Link className="link-style" to="/my-profile">
+            My Profile
+          </Link>
           <Link to="/" className="link-style">
             Logout
           </Link>

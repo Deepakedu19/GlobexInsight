@@ -1,0 +1,26 @@
+.add-country-contianer {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 70vh;
+}
+
+.country-option-container {
+  height: 35px;
+  border: solid 1px rgb(161, 161, 161);
+  color: rgb(125, 125, 125);
+  margin-top: 11px;
+  width: 100%;
+  font-family: Roboto;
+  outline: none;
+}
+
+.add-country-details-contianer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  margin-bottom: 30px;
+}
+.details-container {
+  width: 100%;
+}
