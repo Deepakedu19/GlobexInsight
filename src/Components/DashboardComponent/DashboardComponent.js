@@ -48,7 +48,7 @@ const DashboardComponent = () => {
           </div>
           <div className="content-info-container">
             <IoAlertCircle className="icon-style extra-icon-style" />
-            <h2 className="heading-style">Other Services</h2>
+            <h2 className="heading-style">About Us</h2>
             <p className="paragraph-style">
               Globex International Group, with its global reach powered by its
               offices in Connecticut, Beijing, London and Paris provides

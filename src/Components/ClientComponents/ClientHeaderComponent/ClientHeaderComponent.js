@@ -1,9 +1,9 @@
 import { FaLinkedin } from "react-icons/fa";
-import "./index.css";
 
-const DashboardMinHeader = () => {
+const ClientHeaderComponent = () => {
+  // const [isContact, setIsContact] = useState(true);
   return (
-    <div className="login-header mini-header-position">
+    <div className="login-header">
       <div>
         <h1 className="header-logo">
           Globex <span className="logo-style extra-style-in">In</span>sight
@@ -26,4 +26,4 @@ const DashboardMinHeader = () => {
   );
 };
 
-export default DashboardMinHeader;
+export default ClientHeaderComponent;

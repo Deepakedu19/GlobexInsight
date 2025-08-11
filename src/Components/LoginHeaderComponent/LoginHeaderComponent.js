@@ -12,7 +12,7 @@ const LoginHeaderComponent = () => {
     <div className="login-header">
       <div>
         <h1 className="header-logo">
-          Globex <span className="logo-style">In</span>sight
+          Globex <span className="logo-style extra-style-in">In</span>sight
         </h1>
         <p className="logo-style">
           Your international insurance intelligence database

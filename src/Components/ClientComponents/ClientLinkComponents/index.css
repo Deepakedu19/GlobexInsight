@@ -1,0 +1,70 @@
+.options-Link-main-contianer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+}
+.client-dashboard-links-contianer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: Roboto;
+  height: 40px;
+  width: 265px;
+  font-size: 15px;
+  margin: 3px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition-duration: 0.3s;
+  background-color: rgb(77, 77, 77);
+  /* border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px; */
+  color: rgba(255, 255, 255, 0.99);
+}
+
+.client-dashboard-links-contianer:hover {
+  /* width: 203px; */
+  font-size: 15px;
+  border-radius: 10px;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  /* background-color: rgb(54, 54, 54);
+  color: rgb(255, 250, 243); */
+}
+.client-header-icon-style {
+  font-size: larger;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.green-container:hover {
+  background-color: rgb(62, 179, 15);
+}
+.blue-container:hover {
+  background-color: rgb(0, 91, 202);
+}
+.yellow-container:hover {
+  background-color: rgb(255, 175, 2);
+  /* color: black; */
+}
+.skyblue-container:hover {
+  background-color: rgb(1, 213, 224);
+}
+
+.orange-container:hover {
+  background-color: rgb(252, 82, 3);
+}
+
+.active-link {
+  width: 203px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+}

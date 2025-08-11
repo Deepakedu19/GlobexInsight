@@ -1,0 +1,75 @@
+.clientDatabase-container-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  height: 15vh;
+}
+.client-database-btn-container {
+  padding: 12px 0;
+}
+
+.clientDatabase-container {
+  background-image: url("https://images.unsplash.com/photo-1602828889956-45ec6cee6758?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 70vh;
+  background-size: cover;
+  background-position: bottom;
+}
+.clientDatabase-inner-container {
+  height: 70vh;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.949),
+    rgba(58, 37, 0, 0.503),
+    rgba(0, 0, 0, 0.531)
+  );
+}
+.home-icon {
+  color: rgba(186, 186, 186, 0.384);
+  font-size: 24px;
+  border: solid rgba(180, 180, 180, 0) 1px;
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.home-icon-label {
+  color: rgba(186, 186, 186, 0);
+  font-size: 14px;
+  margin-left: 8px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.home-icon:hover {
+  color: rgba(180, 180, 180, 0.805);
+  border: solid rgba(180, 180, 180, 0.805) 1px;
+  border-radius: 50%;
+}
+
+.home-icon:hover + .home-icon-label {
+  color: rgba(180, 180, 180, 0.836);
+  display: block;
+}
+
+.home-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 28px;
+  width: 98%;
+  padding-top: 15px;
+}
+.Client-database-lineof-business-container {
+  width: 100%;
+  height: 10vh;
+  padding: 10px;
+  color: rgb(106, 106, 106);
+  font-family: Roboto;
+  font-size: small;
+  margin-top: 5px;
+  outline: none;
+  border: solid 1px rgb(115, 115, 115);
+  border-radius: 8px;
+}

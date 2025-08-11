@@ -19,6 +19,11 @@ import UserProfileCompoenent from "./Components/UserProfileCompoenent/UserProfil
 import AddCountryDataComponent from "./Components/AddCountryDataComponent/AddCountryDataComponent";
 import EditCountryDataComponent from "./Components/EditCountryDataComponent/EditCountryDataComponent";
 import ViewCountryDataComponent from "./Components/ViewCountryDataComponent/ViewCountryDataComponent";
+import ClientDahboardComponent from "./Components/ClientComponents/ClientDashboardCompoent/ClienDashboardComponent";
+import ClientDatabaseComponent from "./Components/ClientComponents/ClientDatabaseComponent/ClientDatabaseComponent";
+import ClientSupportComponent from "./Components/ClientComponents/ClientSupportComponent/ClientSupportComponent";
+import ClientAboutUsComponent from "./Components/ClientComponents/ClientAboutUsComponent/ClientAboutUsComponent";
+import ClientOtherServicesComponent from "./Components/ClientComponents/ClientOtherServicesComponent/ClientOtherServicesComponent";
 
 function App() {
   return (
@@ -73,6 +78,14 @@ function App() {
         <Route
           path="/view-country-data"
           element={<ViewCountryDataComponent />}
+        />
+        <Route path="/client-dashboard" element={<ClientDahboardComponent />} />
+        <Route path="/client-database" element={<ClientDatabaseComponent />} />
+        <Route path="/client-support" element={<ClientSupportComponent />} />
+        <Route path="/client-about-us" element={<ClientAboutUsComponent />} />
+        <Route
+          path="/client-other-services"
+          element={<ClientOtherServicesComponent />}
         />
       </Routes>
     </BrowserRouter>
