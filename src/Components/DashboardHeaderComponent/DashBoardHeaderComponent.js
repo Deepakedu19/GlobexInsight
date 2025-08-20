@@ -1,5 +1,6 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdArrowDropUp } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
 
 import "./index.css";
 import { Link } from "react-router-dom";
@@ -73,21 +74,26 @@ const DashboardHeaderComponent = () => {
     <nav className="main-Header-component">
       <div className="links-container">
         <div className="min-links-container">
-          <div className="options-container">
+          <div >
             {/* Country data drop-down */}
-            <button className="select-dropdown " onClick={onCountryToggle}>
-              Country Data {countryToggleIcon}
+            <button
+              className={`link-style ${isCountryToggle ? 'active-link' : ''}`}
+              onClick={onCountryToggle}
+            >
+              Country Data <span className="dropdown-icon">{countryToggleIcon}</span>
             </button>
             {isCountryToggle && (
               <ul className="country-data-dropdown-container">
-                <li className="country-list-style">Add Country Data</li>
-                <li className="country-list-style">Edit Country Data</li>
-                <li className="country-list-style">View Country Data</li>
+                <li className="admin-link-style">Add Country Data</li>
+                <li className="admin-link-style">Edit Country Data</li>
+                <li className="admin-link-style">View Country Data</li>
               </ul>
             )}
             {/* Admin  drop-down */}
-            <button className="select-dropdown" onClick={onAdminToggle}>
-              Admin {adminToggleIcon}
+            <button
+              className={`link-style ${isAdminToggle ? 'active-link' : ''}`}
+              onClick={onAdminToggle}>
+              Admin <span className="dropdown-icon">{adminToggleIcon}</span>
             </button>
             {isAdminToggle && (
               <div className="admin-drop-down-container">
@@ -105,16 +111,25 @@ const DashboardHeaderComponent = () => {
             )}
           </div>
           <div>
-            <Link className="link-style" to="/dashboard">
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) =>
+                isActive && !isAdminToggle && !isCountryToggle ? 'link-style active-link' : 'link-style'
+              }
+            >
               Dashboard
-            </Link>
-            <Link className="link-style support-style" to="/support">
+            </NavLink>
+
+            <NavLink to="/support" className={({ isActive }) =>
+              isActive  && !isAdminToggle && !isCountryToggle ? 'link-style active-link' : 'link-style'} >
               Support
               <div className="notification-cotnainer">0</div>
-            </Link>
-            <Link className="link-style" to="/subscription-request">
+            </NavLink>
+            <NavLink to="/subscription-request"
+              className={({ isActive }) =>
+                isActive  && !isAdminToggle && !isCountryToggle? 'link-style active-link' : 'link-style'}>
               Subscription Request
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div>

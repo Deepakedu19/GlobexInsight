@@ -31,16 +31,7 @@
   display: flex;
   align-items: center;
 }
-.link-style {
-  text-decoration: none;
-  color: rgb(156, 156, 156);
-  margin-right: 13px;
-  font-family: Roboto;
-  font-weight: 0px;
-  font-size: 13px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
 .support-style {
   background-color: rgb(79, 78, 78);
   color: rgb(163, 163, 163);
@@ -166,3 +157,46 @@
   position: relative;
   top: -10px;
 }
+
+.link-style {
+  /* text-decoration: none; */
+  /* color: rgb(156, 156, 156); */
+  margin-right: 13px;
+  font-family: Roboto;
+  font-weight: 0px;
+  font-size: 13px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+ background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+    /* transition: background-color 0.3s ease; */
+}
+
+.dropdown-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 4px; /* Optional spacing */
+}
+
+.active-link {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  background-color: black;
+  border-radius: 4px;
+}
+.country-list-style {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.country-list-style:hover {
+  background-color: #222;
+  color: white;
+}
+/*Color to use as bg in dashboard  background-color: rgb(17, 17, 17);
+  */
