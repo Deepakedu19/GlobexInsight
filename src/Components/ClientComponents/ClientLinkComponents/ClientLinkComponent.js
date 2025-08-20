@@ -53,6 +53,7 @@ const ClientLinkComponent = () => {
             to={eachOption.link}
             key={eachOption.id}
             className={eachOption.linkStyle}
+            title={eachOption.name}
           >
             {eachOption.icon}
             {eachOption.name}

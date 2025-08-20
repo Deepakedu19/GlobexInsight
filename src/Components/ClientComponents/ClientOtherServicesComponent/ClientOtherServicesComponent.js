@@ -15,16 +15,16 @@ const ClientOtherServicesComponent = () => {
       <div className="client-other-services-main-container">
         <div className="client-other-services-content-filter">
           <div className="home-icon-container">
-            <>
+            <div>
               <h2 className="home-icon-title">
                 What other services Globex Underwriting Services offer?
+                <IoHome
+                  className="home-exit-icon"
+                  onClick={() => navigate("/client-dashboard")}
+                />
               </h2>
-            </>
-            <IoHome
-              className="home-icon"
-              onClick={() => navigate("/client-dashboard")}
-            />
-            <label className="home-icon-label">Home</label>
+            </div>
+            {/*  */}
           </div>
           <div className="image-container">
             <img

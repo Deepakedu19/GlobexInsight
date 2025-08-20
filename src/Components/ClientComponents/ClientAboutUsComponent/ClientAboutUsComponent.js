@@ -20,7 +20,7 @@ const ClientAboutUsComponent = () => {
         <div className="container-about-us-filter">
           <div className="home-icon-container">
             <IoHome
-              className="home-icon"
+              className="about-us-home-exit-icon"
               onClick={() => navigate("/client-dashboard")}
             />
             <label className="home-icon-label">Home</label>

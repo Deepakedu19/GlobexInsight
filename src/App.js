@@ -15,7 +15,7 @@ import UserComponent from "./Components/UserComponent/UserComponent";
 import QuestionnairComponent from "./Components/QuestionnairComponent/QuestionnairComponent";
 import NewsReportComponent from "./Components/NewsReportComponent/NewsReportComponent";
 import UpcomingCountryComponent from "./Components/UpcomingCountryCompoenent/UpcomingCountryComponent";
-import UserProfileCompoenent from "./Components/UserProfileCompoenent/UserProfileCompoenent";
+import UserProfileComponent from "./Components/UserProfileComponent/UserProfileComponent";
 import AddCountryDataComponent from "./Components/AddCountryDataComponent/AddCountryDataComponent";
 import EditCountryDataComponent from "./Components/EditCountryDataComponent/EditCountryDataComponent";
 import ViewCountryDataComponent from "./Components/ViewCountryDataComponent/ViewCountryDataComponent";
@@ -24,6 +24,7 @@ import ClientDatabaseComponent from "./Components/ClientComponents/ClientDatabas
 import ClientSupportComponent from "./Components/ClientComponents/ClientSupportComponent/ClientSupportComponent";
 import ClientAboutUsComponent from "./Components/ClientComponents/ClientAboutUsComponent/ClientAboutUsComponent";
 import ClientOtherServicesComponent from "./Components/ClientComponents/ClientOtherServicesComponent/ClientOtherServicesComponent";
+import ClientLatestNewsLetterComponent from "./Components/ClientComponents/ClientLatestNewsLetterComponent/ClientLatestNewsLetterComponent";
 
 function App() {
   return (
@@ -69,7 +70,7 @@ function App() {
           path="/upcoming-country"
           element={<UpcomingCountryComponent />}
         />
-        <Route path="/my-profile" element={<UserProfileCompoenent />} />
+        <Route path="/my-profile" element={<UserProfileComponent />} />
         <Route path="/add-country-data" element={<AddCountryDataComponent />} />
         <Route
           path="/edit-country-data"
@@ -86,6 +87,10 @@ function App() {
         <Route
           path="/client-other-services"
           element={<ClientOtherServicesComponent />}
+        />
+        <Route
+          path="/client-latestNewsLetter"
+          element={<ClientLatestNewsLetterComponent />}
         />
       </Routes>
     </BrowserRouter>

@@ -37,120 +37,138 @@ const UserComponent = () => {
             </button>
           </div>
           {addUserToggle && (
-            <div>
-              <div className="user-content-main-container">
-                <div className="user-content-container">
-                  <label className="label-name">
-                    First Name <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
+            <div className="user-add-content-container">
+              <div className="user-add-content-detail-container">
+                <div className="add-user-header">
+                  <h2 className="header-title">Add User</h2>
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Last Name <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
+                <div className="user-content-main-container">
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      First Name{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Last Name{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Email{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Email <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
+                <br />
+                {/* Contianer - 2 */}
+                <div className="user-content-main-container">
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Organization Name
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Account Type{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      User Type{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
                 </div>
-              </div>
-              <br />
-              {/* Contianer - 2 */}
-              <div className="user-content-main-container">
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Organization Name{" "}
-                    <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
+                <br />
+                {/*  Container -3 */}
+                <div className="user-content-main-container">
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Address{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Phone{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      City <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Account Type{" "}
-                    <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
+                <br />
+                {/*  Container -4 */}
+                <div className="user-content-main-container">
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Country{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      Zip <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
+                  <div className="user-content-container">
+                    <label className="label-name">
+                      User Status{" "}
+                      <FaStarOfLife className="user-required-icon-style" />
+                    </label>
+                    <input type="text" className="user-text-input" />
+                  </div>
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    User Type <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
+                <div className="checkbox-contianer">
+                  <p>
+                    Line of Business{" "}
+                    <FaStarOfLife className="user-required-icon-style" />
+                  </p>
+                  <input type="checkbox" />
+                  <label>Cyber</label>
+                  <input type="checkbox" />
+                  <label>D&O</label>
+                  <input type="checkbox" />
+                  <label>General Liability</label>
+                  <input type="checkbox" />
+                  <label>Marine</label>
+                  <input type="checkbox" />
+                  <label>Professional Indemnity</label>
+                  <input type="checkbox" />
+                  <label>Property</label>
                 </div>
-              </div>
-              <br />
-              {/*  Container -3 */}
-              <div className="user-content-main-container">
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Address <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
+                <div className="user-btn-container">
+                  <button className="add-btn user-additional-btn ">
+                    Register
+                  </button>
+                  <button
+                    className="search-btn user-additional-btn"
+                    onClick={() => {
+                      setAddUserToggle(false);
+                    }}
+                  >
+                    Clear
+                  </button>
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Phone <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    City <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-              </div>
-              <br />
-              {/*  Container -4 */}
-              <div className="user-content-main-container">
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Country <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Zip <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    User Status <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-              </div>
-              <div className="checkbox-contianer">
-                <p>
-                  Line of Business{" "}
-                  <FaStarOfLife className="required-icon-style" />
-                </p>
-                <input type="checkbox" />
-                <label>Cyber</label>
-                <input type="checkbox" />
-                <label>D&O</label>
-                <input type="checkbox" />
-                <label>General Liability</label>
-                <input type="checkbox" />
-                <label>Marine</label>
-                <input type="checkbox" />
-                <label>Professional Indemnity</label>
-                <input type="checkbox" />
-                <label>Property</label>
-              </div>
-              <div className="user-btn-container">
-                <button className="add-btn user-additional-btn ">
-                  Register
-                </button>
-                <button className="search-btn user-additional-btn">
-                  Clear
-                </button>
               </div>
             </div>
           )}

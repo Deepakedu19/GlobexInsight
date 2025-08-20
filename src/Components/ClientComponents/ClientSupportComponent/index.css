@@ -1,0 +1,155 @@
+.client-support-container {
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 70vh;
+  background-size: cover;
+  background-position: bottom;
+
+  /* filter: grayscale(50%); */
+}
+.client-support-filter-container {
+  height: 70vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.589),
+    rgba(255, 166, 0, 0.26),
+    rgba(255, 255, 255, 0.26),
+    rgba(0, 53, 167, 0.476),
+    rgba(0, 15, 177, 0.469),
+    rgba(0, 0, 0, 0.548)
+  );
+  padding: 20px;
+}
+.client-support-filter-container-active {
+  filter: blur(70%);
+}
+.contact-add-btn {
+  background-color: rgb(71, 157, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px 20px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0px;
+}
+.contact-add-btn:hover {
+  background-color: rgb(8, 152, 255);
+}
+.client-support-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.client-support-table-header-row {
+  background-color: rgba(141, 141, 141, 0.959);
+  color: rgb(255, 255, 255);
+  height: 45px;
+}
+.header-font-style {
+  font-weight: lighter;
+  text-align: left;
+  padding: 12px 15px;
+}
+.comment-width {
+  width: 50%;
+}
+
+.client-support-table-description-row {
+  background-color: rgba(255, 255, 255, 0.904);
+  height: 40px;
+}
+.client-support-table-data {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.1);
+  color: rgb(33, 33, 33);
+}
+.form-container-addRecord {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.62);
+  height: 70vh;
+  width: 100%;
+  top: 20%;
+  left: 0%;
+}
+.form-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: white;
+  flex-direction: column;
+  width: 40%;
+  height: 50vh;
+}
+
+.input-container {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.add-record-input-container {
+  width: 80%;
+}
+.submit-btn {
+  background-color: rgb(0, 119, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0px;
+}
+
+.clear-btn {
+  background-color: rgba(0, 174, 255, 0.966);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0px;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+.form-header-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: rgb(82, 82, 82);
+  width: 100%;
+  margin-top: 0px;
+  height: 47px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: Roboto;
+  font-weight: 500;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.home-btn-style {
+  background-color: rgba(0, 0, 0, 0.623);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px 20px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.home-btn-style:hover {
+  background-color: rgba(0, 119, 255, 1);
+}
+.home-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

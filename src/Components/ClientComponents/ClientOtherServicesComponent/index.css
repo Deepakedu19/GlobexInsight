@@ -135,7 +135,15 @@
 }
 .home-icon-title {
   color: rgb(255, 127, 6);
-  position: relative;
-  left: -22%;
+  text-align: center;
   font-weight: lighter;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.home-exit-icon {
+  color: rgba(189, 189, 189, 0.661);
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  left: 25%;
 }

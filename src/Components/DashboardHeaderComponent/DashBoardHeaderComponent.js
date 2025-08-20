@@ -80,11 +80,21 @@ const DashboardHeaderComponent = () => {
   const onAdminToggle = () => {
     setIsAdminToggle(!isAdminToggle);
     setIsCountryToggle(false);
+    window.onclick = (e) => {
+      if (!e.target.closest(".select-dropdown")) {
+        setIsAdminToggle(false);
+      }
+    };
   };
 
   const onCountryToggle = () => {
     setIsAdminToggle(false);
     setIsCountryToggle(!isCountryToggle);
+    window.onclick = (e) => {
+      if (!e.target.closest(".select-dropdown")) {
+        setIsCountryToggle(false);
+      }
+    };
   };
 
   return (
