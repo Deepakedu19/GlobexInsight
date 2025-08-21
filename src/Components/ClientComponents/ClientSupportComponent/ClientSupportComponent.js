@@ -2,7 +2,8 @@ import ClientHeaderComponent from "../ClientHeaderComponent/ClientHeaderComponen
 import ClientLinkComponent from "../ClientLinkComponents/ClientLinkComponent";
 import FooterComponent from "../../FooterComponent/FooterComponent";
 import { IoMdAdd } from "react-icons/io";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { DataContext } from "../../ContextComponent/ContextComponent";
 import { IoHome } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
@@ -10,6 +11,7 @@ import "./index.css";
 const ClientSupportComponent = () => {
   const [onToggleAdd, setOnToggleAdd] = useState(false);
   const navigate = useNavigate();
+  const { setClientActiveLinkId } = useContext(DataContext);
 
   const onAddRecord = () => {
     setOnToggleAdd(!onToggleAdd);
@@ -27,7 +29,10 @@ const ClientSupportComponent = () => {
             </button>
             <button
               className="home-btn-style"
-              onClick={() => navigate("/client-dashboard")}
+              onClick={() => {
+                navigate("/client-dashboard");
+                setClientActiveLinkId(0);
+              }}
             >
               <IoHome className="home-icon-icon" />
             </button>

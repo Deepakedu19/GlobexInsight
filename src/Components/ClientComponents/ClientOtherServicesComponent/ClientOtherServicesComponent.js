@@ -4,9 +4,12 @@ import { IoHome } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 import FooterComponent from "../../FooterComponent/FooterComponent";
+import { useContext } from "react";
+import { DataContext } from "../../ContextComponent/ContextComponent";
 
 const ClientOtherServicesComponent = () => {
   const navigate = useNavigate();
+  const { setClientActiveLinkId } = useContext(DataContext);
 
   return (
     <div>
@@ -20,7 +23,10 @@ const ClientOtherServicesComponent = () => {
                 What other services Globex Underwriting Services offer?
                 <IoHome
                   className="home-exit-icon"
-                  onClick={() => navigate("/client-dashboard")}
+                  onClick={() => {
+                    navigate("/client-dashboard");
+                    setClientActiveLinkId(0);
+                  }}
                 />
               </h2>
             </div>

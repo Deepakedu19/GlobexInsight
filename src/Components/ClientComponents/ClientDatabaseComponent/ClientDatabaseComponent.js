@@ -8,8 +8,9 @@ import "./index.css";
 import FooterComponent from "../../FooterComponent/FooterComponent";
 import { IoHome } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { IoFilter } from "react-icons/io5";
+import { DataContext } from "../../ContextComponent/ContextComponent";
 
 const lineOfBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -21,7 +22,7 @@ const lineOfBusinessOptions = [
 ];
 
 const ClientDatabaseComponent = () => {
-  // const [selectedLineOfBusiness, setSelectedLineOfBusiness] = useState("");
+  const { setClientActiveLinkId } = useContext(DataContext);
 
   const [onTogglePopMenu, setOnTogglePopMenu] = useState(false);
   const [onToggleCountry, setOnToggleCountry] = useState(false);
@@ -76,7 +77,10 @@ const ClientDatabaseComponent = () => {
             </button>
             <IoHome
               className="home-icon"
-              onClick={() => navigate("/client-dashboard")}
+              onClick={() => {
+                navigate("/client-dashboard");
+                setClientActiveLinkId(0);
+              }}
             />
           </div>
 

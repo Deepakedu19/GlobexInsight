@@ -6,7 +6,8 @@ import { BsFilePdfFill } from "react-icons/bs";
 import { IoIosJournal } from "react-icons/io";
 import { IoMdArrowDropright } from "react-icons/io";
 import { BiSolidFilePdf } from "react-icons/bi";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { DataContext } from "../../ContextComponent/ContextComponent";
 import { HiViewGrid } from "react-icons/hi";
 
 import { HiOutlineViewList } from "react-icons/hi";
@@ -14,6 +15,7 @@ import { IoHome } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 const ClientLatestNewsLetterComponent = () => {
+  const { setClientActiveLinkId } = useContext(DataContext);
   const [toggleListView, setToggleListView] = useState(false);
 
   const navigate = useNavigate();
@@ -35,7 +37,10 @@ const ClientLatestNewsLetterComponent = () => {
               />
               <IoHome
                 className="home-icon home-active-btn"
-                onClick={() => navigate("/client-dashboard")}
+                onClick={() => {
+                  navigate("/client-dashboard");
+                  setClientActiveLinkId(0);
+                }}
               />
             </div>
             {toggleListView && (
