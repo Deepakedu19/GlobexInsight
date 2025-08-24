@@ -25,6 +25,7 @@ import ClientSupportComponent from "./Components/ClientComponents/ClientSupportC
 import ClientAboutUsComponent from "./Components/ClientComponents/ClientAboutUsComponent/ClientAboutUsComponent";
 import ClientOtherServicesComponent from "./Components/ClientComponents/ClientOtherServicesComponent/ClientOtherServicesComponent";
 import ClientLatestNewsLetterComponent from "./Components/ClientComponents/ClientLatestNewsLetterComponent/ClientLatestNewsLetterComponent";
+import ClientUserProfileComponent from "./Components/ClientComponents/ClientUserProfileComponent/ClientUserProfileComponent";
 
 function App() {
   return (
@@ -91,6 +92,10 @@ function App() {
         <Route
           path="/client-latestNewsLetter"
           element={<ClientLatestNewsLetterComponent />}
+        />
+        <Route
+          path="/client-user-profile"
+          element={<ClientUserProfileComponent />}
         />
       </Routes>
     </BrowserRouter>

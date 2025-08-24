@@ -184,18 +184,19 @@ const ClientDatabaseComponent = () => {
               </div>
             </div>
           )}
-          {!onToggleTable && (
-            <div className="client-database-title">
-              <h2 className="database-note-text">
-                <RiStickyNoteAddFill />
-                click Add ticket for the details
-              </h2>
-            </div>
-          )}
-          {onToggleTable && (
+          {!onToggleTable ||
+            (selectedCountries.length === 0 && (
+              <div className="client-database-title">
+                <h2 className="database-note-text">
+                  <RiStickyNoteAddFill />
+                  No records found
+                </h2>
+              </div>
+            ))}
+          {onToggleTable && selectedCountries.length > 0 && (
             <div className="table-client-container">
               <div className="btn-excel-container">
-                <span className="countrylist-container">
+                {/* <span className="countrylist-container">
                   {selectedCountries.length > 0
                     ? selectedCountries.length > 1
                       ? `${
@@ -205,7 +206,7 @@ const ClientDatabaseComponent = () => {
                           selectedCountries.length
                         } country selected: ${selectedCountries.join(", ")}`
                     : "No countries selected"}
-                </span>
+                </span> */}
                 <button className="export-excel-button">Export to Excel</button>
               </div>
               <div className="table-header-container">
