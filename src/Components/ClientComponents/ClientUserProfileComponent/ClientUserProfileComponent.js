@@ -15,12 +15,14 @@ import { FaGlobe } from "react-icons/fa";
 import { LiaSatelliteDishSolid } from "react-icons/lia";
 import { FaLock } from "react-icons/fa";
 import { IoIosCheckbox } from "react-icons/io";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { DataContext } from "../../ContextComponent/ContextComponent";
 import { FaStarOfLife } from "react-icons/fa";
 
 const ClientUserProfileComponent = () => {
   const [onEditToggle, setOnEditToggle] = useState(false);
-  const [onEditResetPassword, setOnEditResetPassword] = useState(false);
+  const { onEditResetPassword, setOnEditResetPassword } =
+    useContext(DataContext);
   return (
     <>
       <ClientHeaderComponent />

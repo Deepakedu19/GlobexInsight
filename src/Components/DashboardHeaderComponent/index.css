@@ -20,7 +20,7 @@
 .links-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 53px;
 
   width: 100%;
@@ -249,11 +249,12 @@
   align-items: center;
   justify-content: flex-end;
   width: 5%;
+  margin-right: 20px;
 }
 .menu-dropdown-container {
   position: absolute;
-  top: 50px;
-  right: 5%;
+  top: 40px;
+  right: 3%;
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;

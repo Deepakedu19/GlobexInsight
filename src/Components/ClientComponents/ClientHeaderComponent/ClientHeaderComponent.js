@@ -1,7 +1,7 @@
 import { FaLinkedin } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
-import { CiMenuKebab } from "react-icons/ci";
+import { HiOutlineMenu } from "react-icons/hi";
 
 import { CgProfile } from "react-icons/cg";
 import { PiPasswordFill } from "react-icons/pi";
@@ -12,7 +12,8 @@ import { DataContext } from "../../ContextComponent/ContextComponent";
 import "./index.css";
 
 const ClientHeaderComponent = () => {
-  const { setClientActiveLinkId } = useContext(DataContext);
+  const { setClientActiveLinkId, setOnEditResetPassword } =
+    useContext(DataContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   // const [isContact, setIsContact] = useState(true);
@@ -45,7 +46,7 @@ const ClientHeaderComponent = () => {
         >
           Follow us on LinkedIn <FaLinkedin className="img-logo" />
         </a>
-        <CiMenuKebab
+        <HiOutlineMenu
           className="client-menu-icon"
           onClick={() => {
             setIsMenuOpen(!isMenuOpen);
@@ -60,6 +61,7 @@ const ClientHeaderComponent = () => {
                 onClick={() => {
                   navigate("/client-user-profile");
                   setIsMenuOpen(false);
+                  setOnEditResetPassword(false);
                 }}
               >
                 <CgProfile className="header-icon" />
@@ -70,6 +72,7 @@ const ClientHeaderComponent = () => {
                 onClick={() => {
                   navigate("/client-user-profile");
                   setIsMenuOpen(false);
+                  setOnEditResetPassword(true);
                 }}
               >
                 <PiPasswordFill className="header-icon" />

@@ -7,6 +7,7 @@
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
 }
+
 .client-menu-icon {
   cursor: pointer;
   color: rgb(166, 168, 181);
@@ -15,28 +16,32 @@
   padding-left: 3%;
   rotate: 0deg;
   transition: all 0.3s ease-in-out;
+  border: solid 1px rgba(252, 252, 252, 0);
+  border-radius: 50%;
+  padding: 1px;
 }
 .client-menu-icon:hover {
-  color: rgb(219, 219, 219);
-  rotate: 90deg;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
 }
 .header-icon {
-  border: solid 1px rgb(199, 199, 199);
   border-radius: 50%;
   margin-left: 5px;
   margin-right: 15px;
   padding: 5px;
   transition: all 0.2s ease-in-out;
 }
+/*
 .header-icon:hover {
   background-color: rgb(59, 59, 59);
   color: white;
-}
+} */
 .logout-icon:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(86, 86, 86);
   margin-right: 10px;
-
-  /* height: 35px; */
+  background-color: #dedede;
+  padding: 3px;
+  border-radius: 5px;
 }
 .header-right-container {
   display: flex;
@@ -54,7 +59,7 @@
   right: 3%;
   width: 20%;
   height: 27vh;
-  background-color: rgba(255, 255, 255, 0.979);
+  background-color: rgb(255, 255, 255);
   border-top-left-radius: 28px;
   border-bottom-right-radius: 28px;
   box-shadow: rgba(120, 120, 120, 0.661) 0px 1px 2px 0px,
