@@ -1,6 +1,6 @@
 import DashboardHeaderComponent from "../DashboardHeaderComponent/DashBoardHeaderComponent";
 import DashboardMinHeader from "../DashboardMinHeader/DashboardMinHeader";
-import { getNames } from "country-list";
+import { getNames, getCode } from "country-list";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
 import { IoFilter } from "react-icons/io5";
@@ -31,15 +31,35 @@ const ViewCountryDataComponent = () => {
   const [onPopupMenu, setOnPopupMenu] = useState(false);
   const [onToggleCategory, setOnToggleCategory] = useState(false);
   const [onToggleCountry, setOnToggleCountry] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
+  // State to hold the IDs of selected categories
+  const [checkedCategories, setCheckedCategories] = useState([]);
+
+  // A variable to check if all categories are selected
+  const isAllCategoriesSelected =
+    checkedCategories.length === categoryOptions.length;
 
   const onHandleCategory = () => {
     setOnToggleCategory(!onToggleCategory);
     setOnToggleCountry(false);
+    window.onclick = (e) => {
+      if (!e.target.closest(".view-small-input-container")) {
+        setOnToggleCategory(false);
+      }
+    };
   };
 
   const onHandleCountry = () => {
     setOnToggleCountry(!onToggleCountry);
+    setOnToggleCategory(false);
+    window.onclick = (e) => {
+      if (!e.target.closest(".view-small-input-container-2")) {
+        setOnToggleCountry(false);
+      }
+    };
   };
+
   const onHandleRequest = () => {
     setOnPopupMenu(!onPopupMenu);
   };
@@ -48,7 +68,40 @@ const ViewCountryDataComponent = () => {
     setOnPopupMenu(false);
     setOnToggleData(false);
   };
+
+  // Handler for the "Select all" checkbox
+  const handleSelectAllCategory = (e) => {
+    if (e.target.checked) {
+      const allCategoryIds = categoryOptions.map((option) => option.id);
+      const allCategoryValue = categoryOptions.map((option) => option.name);
+      setCheckedCategories(allCategoryIds);
+      setSelectedCategories(allCategoryValue);
+    } else {
+      setCheckedCategories([]);
+      setSelectedCategories([]);
+    }
+  };
+
+  // Handler for individual category checkboxes
+  const handleIndividualCategory = (e) => {
+    const categoryId = parseInt([e.target.value.split(",")[0]]);
+    const categoryValue = e.target.value.split(",")[1];
+    // const categoryId = parseInt(e.target.value);
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+      setCheckedCategories([...checkedCategories, categoryId]);
+      setSelectedCategories([...selectedCategories, categoryValue]);
+    } else {
+      setCheckedCategories(checkedCategories.filter((id) => id !== categoryId));
+      setSelectedCategories(
+        selectedCategories.filter((id) => id !== categoryValue)
+      );
+    }
+  };
+
   const countries = getNames();
+
   return (
     <>
       <DashboardHeaderComponent />
@@ -99,15 +152,25 @@ const ViewCountryDataComponent = () => {
                     </label>
                     {onToggleCategory && (
                       <div className="view-category-options">
+                        <label className="selectall-option">
+                          <input
+                            type="checkbox"
+                            className="selectall-checkbox-style"
+                            checked={isAllCategoriesSelected}
+                            onChange={handleSelectAllCategory}
+                          />{" "}
+                          Select all
+                        </label>
                         {categoryOptions.map((option) => (
                           <label
-                            value={option.name}
+                            key={option.id}
                             className="view-category-option-label"
                           >
                             <input
                               type="checkbox"
-                              key={option.id}
-                              value={option.name}
+                              value={[option.id, option.name]}
+                              checked={checkedCategories.includes(option.id)}
+                              onChange={handleIndividualCategory}
                               className="view-input-option-checkbox"
                             />
                             {option.name}
@@ -116,8 +179,8 @@ const ViewCountryDataComponent = () => {
                       </div>
                     )}
                   </div>
-                  {/* Country Selection */}
-                  <div className="view-small-input-container">
+                  {/* Country Selection (no change) */}
+                  <div className="view-small-input-container-2">
                     <label className="view-data-label">Country</label>
                     <br />
                     <label
@@ -128,14 +191,13 @@ const ViewCountryDataComponent = () => {
                     </label>
                     {onToggleCountry && (
                       <div className="view-country-options">
-                        {countries.map((option) => (
+                        {countries.map((option, index) => (
                           <label
-                            value={option.name}
+                            key={index}
                             className="view-category-option-label"
                           >
                             <input
                               type="checkbox"
-                              key={option.id}
                               value={option}
                               className="view-input-option-checkbox"
                             />
@@ -154,6 +216,41 @@ const ViewCountryDataComponent = () => {
                   >
                     Cancel
                   </button>
+                </div>
+              </div>
+              <div className="view-selected-data-container">
+                <div className="view-data-contianer">
+                  <label className="selected-data-cotnainer-label">
+                    Selected Category
+                  </label>
+                  {isAllCategoriesSelected ? (
+                    <ul className="view-selected-option-list-container">
+                      {selectedCategories.map((eachOption) => (
+                        <li
+                          className="selected-option-list-style"
+                          key={eachOption}
+                        >
+                          {eachOption}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <ul className="view-selected-option-list-container">
+                      {selectedCategories.map((eachOption) => (
+                        <li
+                          className="selected-option-list-style"
+                          key={eachOption}
+                        >
+                          {eachOption}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <div className="view-data-contianer">
+                  <label className="selected-data-cotnainer-label">
+                    Selected Country
+                  </label>
                 </div>
               </div>
             </div>

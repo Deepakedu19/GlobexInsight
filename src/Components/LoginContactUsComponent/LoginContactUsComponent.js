@@ -11,7 +11,7 @@ import "./index.css";
 
 const LoginContactUsComponent = () => {
   return (
-    <div className="login-contact-us">
+    <div>
       <LoginHeaderComponent />
       <div className="contact-us-container">
         <form className="contact-us-form">
@@ -136,12 +136,12 @@ const LoginContactUsComponent = () => {
               label="Comments"
               variant="outlined"
               multiline
-              rows={2}
+              rows={4}
               sx={{
                 "& .MuiInputBase-root": {
-                  height: "38px", // Adjust height as needed
+                  height: "72px", // Adjust height as needed
                   fontSize: "0.8rem", // Adjust font size as needed
-                  padding: "0 10px", // Reduce padding to keep text vertically centered
+                  padding: "40px 20px", // Reduce padding to keep text vertically centered
                   width: "825px", // Ensure it takes full width
                 },
                 "& .MuiInputLabel-root": {

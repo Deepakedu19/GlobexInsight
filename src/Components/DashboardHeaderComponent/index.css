@@ -139,6 +139,7 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding-top: 15px;
+  z-index: 7;
 }
 .country-list-style {
   display: block;
@@ -177,6 +178,7 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding-top: 10px;
   padding-bottom: 6px;
+  z-index: 7;
 }
 .admin-link-style {
   text-decoration: none;

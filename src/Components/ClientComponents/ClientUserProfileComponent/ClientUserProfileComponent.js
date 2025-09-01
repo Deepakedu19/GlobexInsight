@@ -208,15 +208,6 @@ const ClientUserProfileComponent = () => {
                   <br />
                   <div className="reset-password-detail-container">
                     <label className="edit-label-name">
-                      Reset Password{" "}
-                      <FaStarOfLife className="reqire-edit-icon" />
-                    </label>
-                    <br />
-                    <input className="reset-password-input-form" type="text" />
-                  </div>
-                  <br />
-                  <div className="reset-password-detail-container">
-                    <label className="edit-label-name">
                       Confirm Password{" "}
                       <FaStarOfLife className="reqire-edit-icon" />
                     </label>

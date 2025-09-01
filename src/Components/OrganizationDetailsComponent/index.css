@@ -1,10 +1,10 @@
 .organization-container {
-  height: 70vh;
+  height: 79vh;
 }
 
 .add-btn {
   height: 25px;
-  width: 50px;
+  width: 80px;
   margin-right: 10px;
   border: none;
   background-color: rgb(32, 87, 160);
@@ -12,7 +12,19 @@
   border-radius: 4px;
   cursor: pointer;
 }
-
+.add-btn-content {
+  height: 25px;
+  width: 80px;
+  margin-right: 10px;
+  border: none;
+  background-color: rgb(32, 87, 160);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .search-btn {
   height: 25px;
   width: 80px;
@@ -38,7 +50,7 @@
   width: 100%;
 }
 .table-header-style {
-  background-color: rgb(215, 232, 255);
+  background-color: rgb(235, 235, 235);
   width: 100%;
   padding-left: 20px;
   height: 40px;
@@ -47,7 +59,7 @@
 .font-style {
   color: rgb(61, 61, 61);
   font-size: small;
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
   padding-left: 20px;
 }
@@ -64,12 +76,12 @@
 }
 
 .table-content-style {
-  background-color: rgb(248, 250, 252);
+  background-color: rgb(253, 253, 253);
   width: 100%;
   height: 40px;
 }
 .pagination-style {
-  background-color: rgb(215, 232, 255);
+  background-color: rgb(235, 235, 235);
   height: 43px;
   display: flex;
   justify-content: flex-end;
@@ -88,30 +100,34 @@
 }
 
 .add-orgainization-details-container {
-  height: 80vh;
+  height: 70vh;
   border: solid 1px white;
-  width: 65%;
+  width: 75%;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
 }
 
-.label-name {
+.organization-label-name {
   color: rgb(136, 136, 136);
   font-family: Roboto;
   display: flex;
   align-items: center;
+  font-size: 14px;
 }
 .text-input {
   height: 30px;
-  width: 92%;
+  width: 88%;
   border: solid 1px rgb(152, 152, 152);
   border-radius: 4px;
-  margin-top: 10px;
+  margin-top: 5px;
+  outline-color: rgb(134, 168, 254);
+  outline-width: 1px;
+  padding-left: 15px;
 }
 .required-icon-style {
   color: rgba(184, 0, 0, 0.733);
-  font-size: 10px;
-  margin-left: 10px;
+  font-size: 5px;
+  margin-left: 5px;
 }
 
 .container-header {
@@ -129,14 +145,22 @@
   margin-bottom: 10px;
 }
 .contianer-titles {
-  font-family: Roboto;
-  font-size: 19px;
-  margin-top: 0px;
+  font-size: 22px;
+  margin-top: -1px;
   font-weight: lighter;
-  color: rgb(76, 76, 76);
+  color: rgb(110, 0, 0);
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: rgb(218, 218, 218);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .details-container {
   padding-left: 20px;
@@ -145,13 +169,13 @@
 .container-row-alignment {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 .container-data-alignment {
   width: 100%;
 }
-.btn-container {
+.organization-btn-container {
   margin-top: 40px;
   text-align: center;
 }
@@ -168,11 +192,17 @@
 .search-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
-  width: 70%;
-  margin-bottom: 20px;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: center;
+  width: 73%;
+  height: 9vh;
+  padding-left: 2%;
+  border-radius: 4px;
+  border-top-left-radius: 15px;
+  background-color: rgb(235, 235, 235);
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(156, 156, 156, 0.274) 0px 0px 0px 1px;
 }
 .search-content-container {
   width: 100%;

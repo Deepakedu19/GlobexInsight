@@ -17,6 +17,16 @@ const ClientHeaderComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   // const [isContact, setIsContact] = useState(true);
+
+  const onToggleOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+    window.onclick = (e) => {
+      if (!e.target.closest(".client-menu-icon")) {
+        setIsMenuOpen(false);
+      }
+    };
+  };
+
   return (
     <div className="login-header">
       <div>
@@ -46,12 +56,7 @@ const ClientHeaderComponent = () => {
         >
           Follow us on LinkedIn <FaLinkedin className="img-logo" />
         </a>
-        <HiOutlineMenu
-          className="client-menu-icon"
-          onClick={() => {
-            setIsMenuOpen(!isMenuOpen);
-          }}
-        />
+        <HiOutlineMenu className="client-menu-icon" onClick={onToggleOpen} />
 
         {isMenuOpen && (
           <>

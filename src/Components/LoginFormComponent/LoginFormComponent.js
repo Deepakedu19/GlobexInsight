@@ -14,36 +14,23 @@ const LoginFormComponent = () => {
   };
 
   return (
-    <div className="login-form-container">
-      <form className="login-form" onSubmit={onDetailsSubmit}>
-        <h2 className="login-form-title">Login</h2>
-        <div className="login-input-container">
-          <div className="login-input-icon-container">
-            <FaUser className="login-input-icon" />
-          </div>
-          <input
-            type="text"
-            id="username"
-            placeholder="Enter your username"
-            className="login-input-tag"
-          />
-        </div>
-        <div className="login-input-container">
-          <div className="login-input-icon-container">
-            <MdKey className="login-input-icon" />
-          </div>
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-            className="login-input-tag"
-          />
-        </div>
-        <button type="submit" className="login-btn">
+    <div className="login-container">
+      <h2 className="login-form-heading">Login </h2>
+      <label id="label-container">
+        <FaUser className="login-icon-style" />{" "}
+        <input type="text" id="login-input-feild" placeholder="UserName" />
+      </label>
+      <label id="label-container">
+        <MdKey className="login-icon-style" />{" "}
+        <input type="password" id="login-input-feild" placeholder="Password" />
+      </label>
+      <div className="login-btn-contianer">
+        <button className="login-page-btn" onClick={onDetailsSubmit}>
           <CiLogin className="login-btn-icon" />
           Login
         </button>
-      </form>
+        <span className="forgot-password-btn">Forgot password?</span>
+      </div>
     </div>
   );
 };

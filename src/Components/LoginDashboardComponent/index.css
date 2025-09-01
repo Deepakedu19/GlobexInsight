@@ -37,20 +37,21 @@
 }
 
 .login-button {
-  padding: 10px 15px;
+  padding: 5px 5px;
   border: none;
   border-radius: 4px;
-  background-color: #0b1585;
-  width: 300px;
-  color: white;
+  background-color: #050d65;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.777);
   cursor: pointer;
-  height: 30vh;
+  height: 20vh;
   font-size: 18px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .logo-subscription-btn-style {
-  font-size: 25px;
+  font-size: 28px;
+  color: white;
 }
 
 .login-btn-container {

@@ -1,6 +1,41 @@
 .upcoming-country-container {
   padding-left: 20px;
   padding-right: 20px;
-  height: 72vh;
+  height: 80vh;
   overflow: auto;
+}
+.upcoming-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 18px;
+}
+.upcomming-country-label-name {
+  color: grey;
+  font-size: 14px;
+}
+.upcoming-country-lob-dropdown {
+  height: 35px;
+  width: 100%;
+  border-color: rgb(191, 191, 191);
+  color: grey;
+  outline-color: rgb(141, 181, 255);
+  border-radius: 5px;
+}
+
+.upcoming-country-title-layout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  margin-bottom: 1px;
+}
+.questionnair-content-final-container {
+  display: flex;
+  align-items: center;
+  width: 79%;
+  height: 8vh;
+}
+.upcoming-country-btn-container {
+  display: flex;
+  align-items: end;
 }

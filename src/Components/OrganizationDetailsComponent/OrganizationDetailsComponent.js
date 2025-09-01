@@ -6,12 +6,23 @@ import { TfiArrowCircleLeft } from "react-icons/tfi";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaStarOfLife } from "react-icons/fa6";
 import { useState } from "react";
+import { MdOutlinePlaylistAdd } from "react-icons/md";
 
 import "./index.css";
 
 const OrganizationDetailsComponent = () => {
   const [addContainerToggle, setAddContainerToggle] = useState(false);
   const [searchContainerToggle, setSearchContainerToggle] = useState(false);
+
+  const onHandleSubmitOrganizationDetails = () => {
+    setAddContainerToggle(!addContainerToggle);
+    // window.onclick = (e) => {
+    //   if (!e.target.closest(".add-btn")) {
+    //     setAddContainerToggle(false);
+    //   }
+    // };
+  };
+
   return (
     <>
       <DashboardHeaderComponent />
@@ -20,37 +31,34 @@ const OrganizationDetailsComponent = () => {
         <div className="organization-header-container">
           <h1 className="header-title">Organization Details</h1>
           <button
-            className="add-btn"
-            onClick={() => setAddContainerToggle(true)}
+            className="add-btn-content"
+            onClick={onHandleSubmitOrganizationDetails}
           >
+            <MdOutlinePlaylistAdd className="add-icon" />
             Add
           </button>
-          <button
-            className="search-btn"
-            onClick={() => setSearchContainerToggle(!searchContainerToggle)}
-          >
-            Search
-          </button>
-        </div>
-        {searchContainerToggle && (
           <div className="search-container">
             <div className="search-content-container">
-              <label className="label-name">
+              {/* <label className="organization-label-name">
                 Organization Name{" "}
                 <FaStarOfLife className="required-icon-style" />
-              </label>
-              <input type="text" className="text-input" />
+              </label> */}
+              <input
+                type="text"
+                className="text-input"
+                placeholder="Organization Name"
+              />
             </div>
             <div className="search-content-container">
-              <label className="label-name">
+              {/* <label className="organization-label-name">
                 City <FaStarOfLife className="required-icon-style" />
-              </label>
-              <input type="text" className="text-input" />
+              </label> */}
+              <input type="text" className="text-input" placeholder="City" />
             </div>
             <button className="add-btn new-additional-btn ">search</button>
             <button className="search-btn new-additional-btn">clear</button>
           </div>
-        )}
+        </div>
         <div className="organization-details-table-container">
           <table className="organization-table">
             <tr className="table-header-style">
@@ -87,36 +95,37 @@ const OrganizationDetailsComponent = () => {
       {addContainerToggle && (
         <div className="add-orgainization-contianer">
           <div className="add-orgainization-details-container">
-            <div className="container-header">
-              <h1 className="contianer-titles">Add Organization Details</h1>
+            <h2 className="contianer-titles">
+              Add Organization Details{" "}
               <IoCloseSharp
                 className="close-btn"
                 onClick={() => setAddContainerToggle(false)}
               />
-            </div>
+            </h2>
+
             <div className="container-row-alignment">
               <div className="container-data-alignment">
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     Organization Name{" "}
                     <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     Address <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     City <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     Status <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
@@ -124,33 +133,33 @@ const OrganizationDetailsComponent = () => {
               </div>
               <div className="container-data-alignment">
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     Country
                     <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     Zip <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     Website <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
                 <div className="details-container">
-                  <label className="label-name">
+                  <label className="organization-label-name">
                     Comments <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
               </div>
             </div>
-            <div className="btn-container">
+            <div className="organization-btn-container">
               <button className="add-btn">Add</button>
               <button className="search-btn">Clear</button>
             </div>

@@ -29,7 +29,6 @@ const ClientAboutUsComponent = () => {
                 setClientActiveLinkId(0);
               }}
             />
-            <label className="home-icon-label">Home</label>
           </div>
           <div className="about-us-content-main-container">
             <div className="about-us-content-container">
