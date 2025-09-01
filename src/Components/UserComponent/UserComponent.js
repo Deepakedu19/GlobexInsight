@@ -173,7 +173,11 @@ const UserComponent = () => {
             </div>
           )}
           {searchUserToggle && (
-            <div>
+            <div className="user-add-content-container">
+              <div className="user-add-content-detail-container">
+                <div className="add-user-header">
+                  <h2 className="header-title">Search User</h2>
+                </div>
               <div className="user-content-main-container">
                 <div className="user-content-container">
                   <label className="label-name">
@@ -233,6 +237,7 @@ const UserComponent = () => {
                 <button className="search-btn user-additional-btn">
                   Clear
                 </button>
+              </div>
               </div>
             </div>
           )}

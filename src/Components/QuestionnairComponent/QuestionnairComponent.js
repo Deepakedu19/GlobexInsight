@@ -37,7 +37,11 @@ const QuestionnairComponent = () => {
             </button>
           </div>
           {addUserToggle && (
-            <div>
+            <div className="user-add-content-container">
+              <div className="user-add-content-detail-container">
+                <div className="add-user-header">
+                  <h2 className="header-title">Add Question</h2>
+                </div>
               <div className="user-content-main-container">
                 <div className="user-content-container">
                   <label className="label-name">
@@ -85,10 +89,15 @@ const QuestionnairComponent = () => {
                   Clear
                 </button>
               </div>
+              </div>
             </div>
           )}
           {searchUserToggle && (
-            <div>
+            <div className="user-add-content-container">
+              <div className="user-add-content-detail-container">
+                <div className="add-user-header">
+                  <h2 className="header-title">Add Question</h2>
+                </div>
               <div className="user-content-main-container">
                 <div className="user-content-container">
                   <label className="label-name">
@@ -120,6 +129,7 @@ const QuestionnairComponent = () => {
                 <button className="search-btn user-additional-btn">
                   Clear
                 </button>
+              </div>
               </div>
             </div>
           )}
