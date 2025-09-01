@@ -32,7 +32,7 @@ const AddCountryDataComponent = () => {
         <h1 className="header-title">Add Country</h1>
         <div className="add-country-details-contianer">
           <div className="details-container">
-            <label className="label-name">Country</label>
+            <label className="add-country-label-name">Country</label>
             <select className="country-option-container" required>
               <option value="" disabled selected>
                 Select Country
@@ -47,7 +47,7 @@ const AddCountryDataComponent = () => {
           {/* Line of bussiness DropDown */}
 
           <div className="details-container">
-            <label className="label-name">Line of Business</label>
+            <label className="add-country-label-name">Line of Business</label>
             <select className="country-option-container">
               <option disabled selected>
                 select
@@ -60,7 +60,7 @@ const AddCountryDataComponent = () => {
 
           {/* {categoryDropDown} */}
           <div className="details-container">
-            <label className="label-name">Category Name</label>
+            <label className="add-country-label-name">Category Name</label>
             <select className="country-option-container">
               <option disabled selected>
                 select category

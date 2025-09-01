@@ -8,19 +8,38 @@
   height: 35px;
   border: solid 1px rgb(161, 161, 161);
   color: rgb(125, 125, 125);
-  margin-top: 11px;
+  margin-top: 3px;
   width: 100%;
   font-family: Roboto;
-  outline: none;
+  outline-color: rgb(165, 182, 255);
+  border-radius: 3px;
 }
 
 .add-country-details-contianer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
   outline: none;
-  margin-bottom: 30px;
+  margin-top: 0px;
+
+  padding-top: 0px;
+  height: 10vh;
 }
 .details-container {
   width: 100%;
+  margin-top: 0px;
+
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  padding-top: 0px;
+}
+.add-country-label-name {
+  font-family: Roboto;
+  color: grey;
+  font-size: 15px;
+
+  margin-top: 0px;
 }

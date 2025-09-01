@@ -27,18 +27,23 @@ const categoryOptions = [
 ];
 
 const ViewCountryDataComponent = () => {
+  const countries = getNames();
+
+  //----------------state--variables---------------------------
   const [onToggleData, setOnToggleData] = useState(false);
   const [onPopupMenu, setOnPopupMenu] = useState(false);
   const [onToggleCategory, setOnToggleCategory] = useState(false);
   const [onToggleCountry, setOnToggleCountry] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState([]);
-
+  const [checkedCountries, setCheckedCountries] = useState([]);
   // State to hold the IDs of selected categories
   const [checkedCategories, setCheckedCategories] = useState([]);
 
   // A variable to check if all categories are selected
   const isAllCategoriesSelected =
     checkedCategories.length === categoryOptions.length;
+
+  const isAllCountriesSelected = checkedCountries.length === countries.length;
 
   const onHandleCategory = () => {
     setOnToggleCategory(!onToggleCategory);
@@ -67,6 +72,9 @@ const ViewCountryDataComponent = () => {
   const onCancelRequest = () => {
     setOnPopupMenu(false);
     setOnToggleData(false);
+    setCheckedCategories([]);
+    setCheckedCountries([]);
+    setSelectedCategories([]);
   };
 
   // Handler for the "Select all" checkbox
@@ -79,6 +87,28 @@ const ViewCountryDataComponent = () => {
     } else {
       setCheckedCategories([]);
       setSelectedCategories([]);
+    }
+  };
+
+  const handleSelectAllCountry = (e) => {
+    if (e.target.checked) {
+      const allCountries = countries.map((eachCountry) => eachCountry);
+      setCheckedCountries(allCountries);
+    } else {
+      setCheckedCountries([]);
+    }
+  };
+
+  const handleIndividualCountry = (e) => {
+    const countryValue = e.target.value;
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+      setCheckedCountries([...checkedCountries, countryValue]);
+    } else {
+      setCheckedCountries(
+        checkedCountries.filter((option) => option !== countryValue)
+      );
     }
   };
 
@@ -99,8 +129,6 @@ const ViewCountryDataComponent = () => {
       );
     }
   };
-
-  const countries = getNames();
 
   return (
     <>
@@ -124,6 +152,7 @@ const ViewCountryDataComponent = () => {
             <div className="filter-options-container">
               <h2 className="view-filter-title">Select the Data</h2>
               <div className="view-data-container">
+                {/* {Lob Selection} */}
                 <div className="view-input-container">
                   <label className="view-data-label">Line of Business</label>
                   <br />
@@ -191,6 +220,15 @@ const ViewCountryDataComponent = () => {
                     </label>
                     {onToggleCountry && (
                       <div className="view-country-options">
+                        <label className="selectall-country-option">
+                          <input
+                            type="checkbox"
+                            className="selectall-checkbox-style"
+                            checked={isAllCountriesSelected}
+                            onChange={handleSelectAllCountry}
+                          />
+                          Select all
+                        </label>
                         {countries.map((option, index) => (
                           <label
                             key={index}
@@ -200,6 +238,8 @@ const ViewCountryDataComponent = () => {
                               type="checkbox"
                               value={option}
                               className="view-input-option-checkbox"
+                              checked={checkedCountries.includes(option)}
+                              onChange={handleIndividualCountry}
                             />
                             {option}
                           </label>
@@ -208,6 +248,7 @@ const ViewCountryDataComponent = () => {
                     )}
                   </div>
                 </div>
+                {/* {buttons contianer} */}
                 <div className="view-button-container">
                   <button className="filter-submit-btn">Submit</button>
                   <button
@@ -218,6 +259,7 @@ const ViewCountryDataComponent = () => {
                   </button>
                 </div>
               </div>
+              {/* {selected options info container} */}
               <div className="view-selected-data-container">
                 <div className="view-data-contianer">
                   <label className="selected-data-cotnainer-label">
@@ -251,6 +293,13 @@ const ViewCountryDataComponent = () => {
                   <label className="selected-data-cotnainer-label">
                     Selected Country
                   </label>
+                  <ul className="view-selected-option-list-container">
+                    {checkedCountries.map((eachCountry) => (
+                      <li className="selected-option-list-style">
+                        {eachCountry}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

@@ -146,8 +146,8 @@
   position: relative;
   top: 0%;
   background-color: rgb(251, 251, 251);
+  border-top: none;
   border-radius: 10px;
-  padding: 10px;
 }
 .view-category-option-label {
   font-weight: lighter;
@@ -188,9 +188,18 @@
   top: 0%;
   background-color: rgb(251, 251, 251);
   border-radius: 10px;
-  padding: 10px;
-  height: 30vh;
+  border-top: none;
+  height: 35vh;
   overflow-y: scroll;
+}
+
+.selectall-country-option {
+  background-color: rgb(244, 244, 244);
+  padding: 10px;
+  margin-bottom: 5px;
+  color: grey;
+  border: solid 1px rgb(183, 183, 183);
+  border-top-left-radius: 10px;
 }
 .filter-submit-btn {
   background-color: rgb(25, 61, 223);
@@ -220,15 +229,16 @@
 }
 .selectall-option {
   margin-bottom: 10px;
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(240, 240, 240);
   margin-top: 0px;
-  height: 35px;
+  height: 40px;
   display: flex;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 7px;
   padding-left: 10px;
   color: rgb(94, 94, 94);
   cursor: pointer;
+  border: solid 1px rgb(176, 176, 176);
 }
 .selectall-checkbox-style {
   margin-right: 15px;
@@ -265,12 +275,17 @@
 .view-selected-option-list-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px;
   padding-left: 20px;
   font-weight: 100;
+  overflow-y: auto;
+  height: 21vh;
+}
+
+.view-selected-option-list-container::scroll-marker {
 }
 .selected-data-cotnainer-label {
   font-weight: 100;
