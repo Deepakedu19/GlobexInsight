@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaStarOfLife } from "react-icons/fa6";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
+import { IoCloseSharp } from "react-icons/io5";
 
 const QuestionnairComponent = () => {
   const [addUserToggle, setAddUserToggle] = useState(false);
@@ -37,11 +38,7 @@ const QuestionnairComponent = () => {
             </button>
           </div>
           {addUserToggle && (
-            <div className="user-add-content-container">
-              <div className="user-add-content-detail-container">
-                <div className="add-user-header">
-                  <h2 className="header-title">Add Question</h2>
-                </div>
+            <div>
               <div className="user-content-main-container">
                 <div className="user-content-container">
                   <label className="label-name">
@@ -56,48 +53,50 @@ const QuestionnairComponent = () => {
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Category <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-              </div>
-              <br />
-              {/* Contianer - 2 */}
-              <div className="questionnair-content-final-container">
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Question Type
-                    <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-                <div className="user-content-container">
-                  <label className="label-name">
-                    Line of Business{" "}
-                    <FaStarOfLife className="required-icon-style" />
-                  </label>
-                  <input type="text" className="text-input" />
-                </div>
-              </div>
-              <br />
+                <br />
+                {/* Contianer - 2 */}
 
-              <div className="user-btn-container">
-                <button className="add-btn user-additional-btn ">Submit</button>
-                <button className="search-btn user-additional-btn">
-                  Clear
-                </button>
+                <div className="user-content-main-container">
+                  <div className="questionnair-user-content-container">
+                    <label className="questionnair-label-name">
+                      Category <FaStarOfLife className="required-icon-style" />
+                    </label>
+                    <input type="text" className="questionnair-text-input" />
+                  </div>
+                  <div className="questionnair-user-content-container">
+                    <label className="questionnair-label-name">
+                      Question Type
+                      <FaStarOfLife className="required-icon-style" />
+                    </label>
+                    <input type="text" className="questionnair-text-input" />
+                  </div>
+                </div>
+
+                <br />
+                <div className="user-content-main-final-container">
+                  <div className="questionnair-user-content-container">
+                    <label className="questionnair-label-name">
+                      Line of Business{" "}
+                      <FaStarOfLife className="required-icon-style" />
+                    </label>
+                    <input type="text" className="questionnair-text-input" />
+                  </div>
+                </div>
+
+                <div className="user-btn-container">
+                  <button className="add-btn user-additional-btn ">
+                    Submit
+                  </button>
+                  <button className="search-btn user-additional-btn">
+                    Clear
+                  </button>
+                </div>
               </div>
               </div>
             </div>
           )}
           {searchUserToggle && (
-            <div className="user-add-content-container">
-              <div className="user-add-content-detail-container">
-                <div className="add-user-header">
-                  <h2 className="header-title">Add Question</h2>
-                </div>
+            <div>
               <div className="user-content-main-container">
                 <div className="user-content-container">
                   <label className="label-name">
@@ -106,29 +105,31 @@ const QuestionnairComponent = () => {
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
+                <br />
+                <div className="questionair-search-content-container">
+                  <label className="questionnair-label-name">
                     Line of Business{" "}
                     <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="user-content-container">
-                  <label className="label-name">
+                <br />
+                <div className="questionair-search-content-container">
+                  <label className="questionnair-label-name">
                     Category <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-              </div>
-              <br />
-
-              <div className="user-btn-container">
-                <button className="add-btn user-additional-btn ">
-                  QSearch
-                </button>
-                <button className="search-btn user-additional-btn">
-                  Clear
-                </button>
+                <br />
+                <br />
+                <div className="user-btn-container">
+                  <button className="add-btn user-additional-btn ">
+                    QSearch
+                  </button>
+                  <button className="search-btn user-additional-btn">
+                    Clear
+                  </button>
+                </div>
               </div>
               </div>
             </div>
@@ -143,12 +144,12 @@ const QuestionnairComponent = () => {
                 <th className="questionnair-font-style category-style">
                   Category
                 </th>
-                <th className="questionnair-font-style s.no-style">
+                <th className="questionnair-font-style s-no-style">
                   Question Type
                 </th>
                 <th className="questionnair-font-style category-style">LOB</th>
-                <th className="questionnair-font-style s.no-style">Edit </th>
-                <th className="questionnair-font-style s.no-style">Delete</th>
+                <th className="questionnair-font-style s-no-style">Edit </th>
+                <th className="questionnair-font-style s-no-style">Delete</th>
               </tr>
               <tr className="questionnair-row-description">
                 <td className="questionnair-font-style s-no-style">Q Number</td>
@@ -158,12 +159,12 @@ const QuestionnairComponent = () => {
                 <td className="questionnair-font-style category-style">
                   Category
                 </td>
-                <td className="questionnair-font-style s.no-style">
+                <td className="questionnair-font-style s-no-style">
                   Question Type
                 </td>
                 <td className="questionnair-font-style category-style">LOB</td>
-                <td className="questionnair-font-style s.no-style">Edit </td>
-                <td className="questionnair-font-style s.no-style">Delete</td>
+                <td className="questionnair-font-style s-no-style">Edit </td>
+                <td className="questionnair-font-style s-no-style">Delete</td>
               </tr>
             </table>
             <div className="pagination-style">

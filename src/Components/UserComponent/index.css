@@ -1,7 +1,31 @@
 .user-main-container {
   overflow: auto;
+  height: 80vh;
+  width: 100%;
 }
-
+.admin-user-header-title {
+  color: rgb(145, 0, 0);
+  font-weight: lighter;
+  margin-top: 0px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: rgb(223, 223, 223);
+  height: 8vh;
+}
+.exit-icon {
+  color: grey;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.exit-icon:hover {
+  color: red;
+}
 .user-description-container {
   padding-left: 20px;
   padding-right: 20px;
@@ -9,7 +33,7 @@
 }
 .user-content-main-container {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -20,16 +44,16 @@
   background-color: rgba(0, 0, 0, 0.524);
   z-index: 1;
   border: solid 1px black;
-  height: 76vh;
-  width: 100%;
+  height: 80vh;
+  width: 99.89%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .user-add-content-detail-container {
   background-color: white;
-  height: 60vh;
-  width: 90%;
+  height: 68vh;
+  width: 97%;
   border-radius: 12px;
   padding: 10px;
   padding-top: 0px;
@@ -38,38 +62,39 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 8px;
-  width: 70%;
+  width: 90%;
+  margin-right: 15px;
+  outline-color: rgb(93, 167, 240);
 }
 .user-required-icon-style {
-  font-size: 5px;
+  font-size: 8px;
   color: rgba(161, 6, 6, 0.856);
-  padding-left: 2px;
+  padding-left: 5px;
 }
-/* .label-name {
+.label-name {
   width: 30%;
-} */
+}
 .add-user-header {
-  text-align: center;
+  text-align: left;
   background-color: rgb(255, 255, 255);
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-bottom: solid 1px rgba(0, 0, 0, 0.175);
 }
-.user-content-container {
+.admin-user-content-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-right: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  padding-left: 17px;
+}
+.para-label-name {
+  font-family: Roboto;
+  font-size: smaller;
+  color: grey;
+  padding-left: 17px;
 }
 
-.label-name {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: Roboto;
-  font-size: 14px;
-}
 .checkbox-contianer {
   display: flex;
   flex-direction: row;
@@ -89,7 +114,7 @@
 
 .user-table-main-container {
   width: 100%;
-  margin-top: 20px;
+
   height: 60vh;
   overflow-y: auto;
 }
@@ -98,14 +123,14 @@
   border-collapse: collapse;
 }
 .user-table-header {
-  background-color: rgb(215, 232, 255);
+  background-color: rgb(235, 235, 235);
   height: 42px;
 }
 
 .user-header-font {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
-  color: rgb(111, 111, 111);
+  color: rgb(57, 57, 57);
   padding-left: 6px;
   padding-right: 6px;
 }
@@ -133,7 +158,7 @@
   text-align: left;
 }
 .user-description-row {
-  background-color: rgb(247, 246, 251);
+  background-color: rgb(253, 253, 253);
   height: 40px;
   color: rgb(16, 16, 16);
   font-size: small;
@@ -142,4 +167,38 @@
 
 .space-style {
   padding-left: 6px;
+}
+.admin-user-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.user-search-content-detail-container {
+  background-color: white;
+  width: 78%;
+  height: 70vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-user-content-main-final-container {
+  width: 53.5%;
+}
+
+.admin-search-user-header-title {
+  background-color: rgb(220, 220, 220);
+  margin-top: 0px;
+  height: 9vh;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  color: rgb(155, 6, 6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 100;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.admin-search-content-details-contianer {
+  padding-left: 20px;
 }

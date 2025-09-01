@@ -1,0 +1,323 @@
+.client-user-profile-cover-image {
+  background-image: url("https://images.unsplash.com/photo-1615057905828-78d3c0d01268?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 35vh;
+  width: 90%;
+  margin-top: 8%;
+  margin-left: 3%;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.client-user-profile-overlay {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.466),
+    rgba(0, 0, 0, 0.531),
+    rgba(0, 0, 0, 0.432)
+  );
+  height: 35vh;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.client-user-profile-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  top: 80%;
+  left: 13%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.client-user-profile-initials {
+  font-size: 24px;
+  font-weight: bold;
+  color: #828282;
+  border: solid 5px rgb(233, 233, 233);
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-user-profile-details {
+  border: solid 1px black;
+  height: 35vh;
+  width: 90%;
+  margin-left: 14%;
+  border-top: solid 1px rgb(218, 218, 218);
+  border-bottom: solid 1px rgb(218, 218, 218);
+  border-left: solid 1px rgb(218, 218, 218);
+  border-right: solid 1px rgb(218, 218, 218);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.client-user-profile-name {
+  font-size: 25px;
+  font-weight: 400;
+  color: #4e4e4e;
+  margin: 0px;
+  font-family: Roboto;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.client-user-profile-email {
+  font-size: 15px;
+  font-weight: 400;
+  color: #8f8f8f;
+  font-family: Roboto;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.client-user-profile-main-contianer {
+  /* border: solid 1px black; */
+  background-color: #fafcff;
+  height: 78vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.client-profil-desc-icons {
+  padding-right: 10px;
+  color: rgb(192, 116, 2);
+  font-weight: bolder;
+}
+.client-user-profile-container {
+  width: 25%;
+}
+.user-contact-mini-details-container {
+  margin-top: 20px;
+  text-align: center;
+}
+.client-main-info-contianer {
+  margin-left: 30px;
+  width: 75%;
+  background-color: rgb(247, 247, 247);
+  border-left: solid 2px rgb(240, 240, 240);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.client-personal-info-contact-container {
+  border: solid 1px rgb(253, 253, 253);
+  height: 71vh;
+  width: 50%;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.client-user-edit-btn {
+  text-align: end;
+  padding-right: 10px;
+  color: rgb(157, 157, 157);
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.client-edit-btn:hover {
+  color: rgb(148, 0, 0);
+  cursor: pointer;
+}
+.client-profil-header-title {
+  margin-left: 20px;
+  font-weight: lighter;
+  color: #650000;
+}
+.editable-info-style {
+  font-family: Roboto;
+  color: #7c7d7e;
+  display: flex;
+  align-items: center;
+}
+.editable-info-container {
+  margin-left: 20px;
+}
+.contact-value-label {
+  padding-left: 30px;
+}
+.location-contianer {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.client-profil-desc-perosnal-icons {
+  color: #6faab3;
+  font-size: larger;
+  margin-right: 10px;
+}
+.client-other-details-main-container {
+  width: 44%;
+  height: 71vh;
+  border-radius: 20px;
+  margin-left: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.client-profie-lob-style {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox-style {
+  color: rgb(2, 190, 2);
+  margin-right: 10px;
+}
+.lob-style {
+  display: flex;
+  justify-content: flex-start;
+  font-family: Roboto;
+  margin-top: 0px;
+  color: grey;
+}
+.password-reset-container {
+  margin-top: 16%;
+}
+.reset-password-style {
+  color: rgb(46, 0, 250);
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.reset-password-style:hover {
+  color: red;
+}
+.client-editable-details-container {
+  height: 70vh;
+  width: 97%;
+  margin: 2%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.edit-header-title {
+  font-weight: lighter;
+  font-family: Roboto;
+  color: grey;
+  text-align: center;
+}
+.editable-form-detail-contianer {
+  border: solid 2px rgb(239, 239, 239);
+  width: 93%;
+  height: 58vh;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 1%;
+}
+.edit-name-container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.editable-common-feild-contianer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-label-name {
+  color: grey;
+  font-family: Roboto;
+  font-size: small;
+}
+.editable-input-form {
+  height: 30px;
+  border: solid 1px rgb(188, 188, 188);
+  border-radius: 5px;
+  margin-top: 5px;
+  outline: none;
+  padding-left: 10px;
+}
+.reqire-edit-icon {
+  font-size: 6px;
+  color: rgba(16, 127, 253, 0.771);
+}
+.submit-btn-primary {
+  background-color: rgb(34, 58, 198);
+  height: 30px;
+  width: 13%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.cancel-btn-primary {
+  background-color: rgb(34, 135, 198);
+  height: 30px;
+  width: 13%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.editable-btn-contianer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+}
+.reset-password-container {
+  padding: 20px;
+}
+.reset-password-input-form {
+  width: 100%;
+  height: 30px;
+  border: solid 1px rgb(184, 184, 184);
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.submit-btn-password {
+  width: 25%;
+  height: 30px;
+  background-color: rgb(40, 40, 217);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.submit-btn-cancel {
+  width: 25%;
+  height: 30px;
+  background-color: rgb(40, 146, 217);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}

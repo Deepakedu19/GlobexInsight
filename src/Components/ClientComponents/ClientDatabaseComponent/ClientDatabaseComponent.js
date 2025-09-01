@@ -8,8 +8,10 @@ import "./index.css";
 import FooterComponent from "../../FooterComponent/FooterComponent";
 import { IoHome } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { IoFilter } from "react-icons/io5";
+import { DataContext } from "../../ContextComponent/ContextComponent";
+import { BiWindowOpen } from "react-icons/bi";
 
 const lineOfBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -21,7 +23,7 @@ const lineOfBusinessOptions = [
 ];
 
 const ClientDatabaseComponent = () => {
-  // const [selectedLineOfBusiness, setSelectedLineOfBusiness] = useState("");
+  const { setClientActiveLinkId } = useContext(DataContext);
 
   const [onTogglePopMenu, setOnTogglePopMenu] = useState(false);
   const [onToggleCountry, setOnToggleCountry] = useState(false);
@@ -32,12 +34,16 @@ const ClientDatabaseComponent = () => {
     setSelectedCountries((prevSelected) => {
       if (prevSelected.includes(e.target.value)) {
         return prevSelected.filter((c) => c !== e.target.value);
-      } else {
-        return [...prevSelected, e.target.value];
       }
+
+      return [...prevSelected, e.target.value];
     });
+  };
+
+  const onHandleCountry = () => {
+    setOnToggleCountry(!onToggleCountry);
     window.onclick = (e) => {
-      if (!e.target.closest(".pop-menu-content")) {
+      if (!e.target.closest(".client-lob-container")) {
         setOnToggleCountry(false);
       }
     };
@@ -76,21 +82,22 @@ const ClientDatabaseComponent = () => {
             </button>
             <IoHome
               className="home-icon"
-              onClick={() => navigate("/client-dashboard")}
+              onClick={() => {
+                navigate("/client-dashboard");
+                setClientActiveLinkId(0);
+              }}
             />
           </div>
 
           {onTogglePopMenu && (
             <div className="pop-menu-background">
               <div className="pop-menu-content">
-                <div className="client-pop-up-content">
-                  <h2 className="pop-menu-title">Select the Data</h2>
-                </div>
+                <h2 className="pop-menu-title">Select the Data</h2>
                 <div className="client-drop-down-container-layout">
                   <div className="client-drop-down-container">
                     {/* line of business container */}
                     <div className="client-lob-container">
-                      <label className="client-lob-label">
+                      <label className="client-database-lob-label">
                         Line of Business
                       </label>
                       <br />
@@ -105,31 +112,41 @@ const ClientDatabaseComponent = () => {
                         ))}
                       </select>
                     </div>
-                    {/* Country container */}
-                    {onToggleCountry && (
+
+                    <div className="client-lob-container">
                       <div>
+                        {/* Country container */}
                         <ul className="country-list">
-                          {countries.map((country, index) => (
-                            <label key={index} className="country-item-label  ">
-                              <input
-                                type="checkbox"
-                                className="country-checkbox"
-                                onClick={onHandleCountrySelect}
-                                value={country}
-                                checked={selectedCountries.includes(country)}
-                              />
-                              {country}
-                            </label>
-                          ))}
+                          {onToggleCountry && (
+                            <div>
+                              {countries.map((country, index) => (
+                                <label
+                                  key={index}
+                                  className="country-item-label  "
+                                >
+                                  <input
+                                    type="checkbox"
+                                    className="country-checkbox"
+                                    value={country}
+                                    checked={selectedCountries.includes(
+                                      country
+                                    )}
+                                    onClick={onHandleCountrySelect}
+                                  />
+                                  {country}
+                                </label>
+                              ))}
+                            </div>
+                          )}
                         </ul>
                       </div>
-                    )}
-                    <div className="client-lob-container">
-                      <label className="client-lob-label">Country</label>
+                      <label className="client-database-lob-label">
+                        Country
+                      </label>
                       <br />
                       <p
                         className="client-Country-container"
-                        onClick={() => setOnToggleCountry(!onToggleCountry)}
+                        onClick={onHandleCountry}
                       >
                         Select Countries
                         <RiArrowDropDownLine className="icon-drop-down" />
@@ -180,18 +197,20 @@ const ClientDatabaseComponent = () => {
               </div>
             </div>
           )}
-          {!onToggleTable && (
-            <div className="client-database-title">
-              <h2 className="database-note-text">
-                <RiStickyNoteAddFill />
-                click Add ticket for the details
-              </h2>
-            </div>
-          )}
-          {onToggleTable && (
+          {/* {table toggle based on the data} */}
+          {!onToggleTable ||
+            (selectedCountries.length === 0 && (
+              <div className="client-database-title">
+                <h2 className="database-note-text">
+                  <RiStickyNoteAddFill />
+                  No records found
+                </h2>
+              </div>
+            ))}
+          {onToggleTable && selectedCountries.length > 0 && (
             <div className="table-client-container">
               <div className="btn-excel-container">
-                <span className="countrylist-container">
+                {/* <span className="countrylist-container">
                   {selectedCountries.length > 0
                     ? selectedCountries.length > 1
                       ? `${
@@ -201,7 +220,7 @@ const ClientDatabaseComponent = () => {
                           selectedCountries.length
                         } country selected: ${selectedCountries.join(", ")}`
                     : "No countries selected"}
-                </span>
+                </span> */}
                 <button className="export-excel-button">Export to Excel</button>
               </div>
               <div className="table-header-container">

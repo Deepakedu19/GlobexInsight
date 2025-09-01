@@ -46,13 +46,12 @@ const LoginDashboardComponent = () => {
               className="login-button"
               onClick={() => setSwitchLink(false)}
             >
-              Click here to learn more about <br />
+              Click here to learn more about
               <br />
               <span className="logo-subscription-btn-style">
                 Globex <span className="logo-style">In</span>sight
               </span>{" "}
-              <br />
-              <br />& apply for subscriptions
+              <br />&<br /> apply for subscriptions
             </button>
           </Link>
         </div>

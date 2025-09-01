@@ -5,6 +5,8 @@ import { LuNewspaper } from "react-icons/lu";
 import { IoInformationCircleSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import "./index.css";
+import { useContext, useState } from "react";
+import { DataContext } from "../../ContextComponent/ContextComponent";
 
 const dashboardOptions = [
   {
@@ -45,6 +47,38 @@ const dashboardOptions = [
 ];
 
 const ClientLinkComponent = () => {
+  const {
+    clientActiveLinkId,
+    setClientActiveLinkId,
+    activeLinkstyle,
+    setActiveLinkStyle,
+  } = useContext(DataContext);
+
+  const handleLink = (id) => {
+    setClientActiveLinkId(id);
+    if (id === 1) {
+      setActiveLinkStyle(
+        "client-dashboard-links-contianer blue-style active-link"
+      );
+    } else if (id === 2) {
+      setActiveLinkStyle(
+        "client-dashboard-links-contianer green-style active-link"
+      );
+    } else if (id === 3) {
+      setActiveLinkStyle(
+        "client-dashboard-links-contianer orange-style active-link"
+      );
+    } else if (id === 4) {
+      setActiveLinkStyle(
+        "client-dashboard-links-contianer yellow-style active-link"
+      );
+    } else if (id === 5) {
+      setActiveLinkStyle(
+        "client-dashboard-links-contianer skyblue-style active-link"
+      );
+    }
+  };
+
   return (
     <>
       <div className="options-Link-main-contianer">
@@ -52,8 +86,13 @@ const ClientLinkComponent = () => {
           <Link
             to={eachOption.link}
             key={eachOption.id}
-            className={eachOption.linkStyle}
+            className={
+              clientActiveLinkId === eachOption.id
+                ? activeLinkstyle
+                : eachOption.linkStyle
+            }
             title={eachOption.name}
+            onClick={() => handleLink(eachOption.id)}
           >
             {eachOption.icon}
             {eachOption.name}

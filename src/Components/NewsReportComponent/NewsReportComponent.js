@@ -5,8 +5,12 @@ import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
+import { MdOutlinePlaylistAdd } from "react-icons/md";
+import { useState } from "react";
+import { IoCloseOutline } from "react-icons/io5";
 
 const NewsReportComponent = () => {
+  const [isToggleAddReport, setIsToggleAddReport] = useState(false);
   return (
     <>
       <DashboardHeaderComponent />
@@ -14,7 +18,12 @@ const NewsReportComponent = () => {
       <div className="newsletter-container">
         <h1 className="header-title">Newsletter</h1>
         <div className="newletter-content-container">
-          
+          <div>
+            <label className="label-name">
+              Latest Newsletter <FaStarOfLife className="required-icon-style" />
+            </label>
+            <input type="file" />
+          </div>
           <div>
             <label className="label-name">
               News Content <FaStarOfLife className="required-icon-style" />
@@ -24,13 +33,6 @@ const NewsReportComponent = () => {
           <div className="newsletter-btn-container">
             <button className="add-btn user-additional-btn ">Save</button>
             <button className="search-btn user-additional-btn">Clear</button>
-          </div>
-
-          <div style={{paddingLeft:'40px'}}> 
-            <label className="label-name" >
-              Latest Newsletter <FaStarOfLife className="required-icon-style" />
-            </label>
-            <input type="file" />
           </div>
         </div>
         {/* <div className="newsletter-btn-container">

@@ -8,9 +8,12 @@ import { GiTeamIdea } from "react-icons/gi";
 import { FaBusinessTime } from "react-icons/fa6";
 import { GrNetwork } from "react-icons/gr";
 import { SiAudiobookshelf } from "react-icons/si";
+import { useContext } from "react";
+import { DataContext } from "../../ContextComponent/ContextComponent";
 
 const ClientAboutUsComponent = () => {
   const navigate = useNavigate();
+  const { setClientActiveLinkId } = useContext(DataContext);
 
   return (
     <div>
@@ -21,9 +24,11 @@ const ClientAboutUsComponent = () => {
           <div className="home-icon-container">
             <IoHome
               className="about-us-home-exit-icon"
-              onClick={() => navigate("/client-dashboard")}
+              onClick={() => {
+                navigate("/client-dashboard");
+                setClientActiveLinkId(0);
+              }}
             />
-            <label className="home-icon-label">Home</label>
           </div>
           <div className="about-us-content-main-container">
             <div className="about-us-content-container">

@@ -7,13 +7,13 @@
 }
 .client-other-services-content-filter {
   background-image: linear-gradient(
-    rgb(10, 10, 10),
-    rgba(10, 10, 10, 0.658),
-    rgba(19, 10, 84, 0.363),
-    rgba(110, 69, 15, 0.401),
-    rgba(23, 12, 105, 0.414),
-    rgba(10, 10, 10, 0.658),
-    rgb(10, 10, 10)
+    rgba(0, 0, 0, 0.89),
+    rgba(192, 192, 192, 0.658),
+    rgba(182, 193, 213, 0.592),
+    rgba(235, 235, 235, 0.685),
+    rgba(176, 190, 201, 0.644),
+    rgba(255, 255, 255, 0.692),
+    rgba(124, 177, 252, 0.918)
   );
 
   border-radius: 5px;
@@ -41,13 +41,14 @@
   padding-left: 13px;
   background-image: radial-gradient(
     circle,
-    rgba(18, 52, 164, 0.784),
-    rgba(2, 18, 71, 0.784),
-    rgb(0, 0, 0)
+    rgba(224, 224, 224, 0.89),
+    rgba(215, 221, 242, 0.959),
+    rgba(0, 52, 101, 0.815)
   );
   position: relative;
   left: 40%;
   top: 20%;
+  border: solid 1px rgb(127, 155, 184);
 }
 .information-title {
   position: relative;
@@ -58,7 +59,7 @@
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(14, 125, 165, 0.719);
+  background-color: rgba(0, 0, 0, 0.866);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -72,7 +73,7 @@
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(14, 125, 165, 0.719);
+  background-color: rgba(0, 0, 0, 0.866);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -86,7 +87,7 @@
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(14, 125, 165, 0.719);
+  background-color: rgba(0, 0, 0, 0.866);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -100,7 +101,7 @@
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(14, 125, 165, 0.719);
+  background-color: rgba(0, 0, 0, 0.866);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -114,7 +115,7 @@
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(14, 125, 165, 0.719);
+  background-color: rgba(0, 0, 0, 0.866);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -128,20 +129,21 @@
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(14, 125, 165, 0.719);
+  background-color: rgba(0, 0, 0, 0.866);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
 .home-icon-title {
-  color: rgb(255, 127, 6);
+  color: rgb(255, 106, 37);
   text-align: center;
-  font-weight: lighter;
+  font-weight: 500;
+  font-family: Roboto;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 .home-exit-icon {
-  color: rgba(189, 189, 189, 0.661);
+  color: rgba(243, 243, 243, 0.661);
   cursor: pointer;
   position: relative;
   top: 10px;

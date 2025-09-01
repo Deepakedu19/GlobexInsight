@@ -6,34 +6,57 @@ import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 import FooterComponent from "../FooterComponent/FooterComponent";
 
+const LineofBusinessOptions = [
+  { id: 1, name: "Cyber" },
+  { id: 2, name: "D&O" },
+  { id: 3, name: "General Liability" },
+  { id: 4, name: "Marine" },
+  { id: 5, name: "Professional Indemnity" },
+  { id: 6, name: "Property" },
+];
+
 const UpcomingCountryComponent = () => {
   return (
     <>
       <DashboardHeaderComponent />
       <DashboardMinHeader />
-      <div className="upcoming-country-container">
-        <h1 className="header-title">Add Upcoming Country</h1>
-        <div className="questionnair-content-final-container">
-          <div className="user-content-container">
-            <label className="label-name">
-              Line of Business
-              <FaStarOfLife className="required-icon-style" />
-            </label>
-            <input type="text" className="text-input" />
-          </div>
-          <div className="user-content-container">
-            <label className="label-name">
-              Country <FaStarOfLife className="required-icon-style" />
-            </label>
-            <input type="text" className="text-input" />
+      <div className="upcoming-country-container ">
+        <div className="upcoming-country-title-layout">
+          <h1 className="header-title">Add Upcoming Country</h1>
+          <div className="questionnair-content-final-container">
+            <div className="upcoming-content-container">
+              {/* <label className="upcomming-country-label-name">
+                Line of Business
+                <FaStarOfLife className="required-icon-style" />
+              </label> */}
+              <select className="upcoming-country-lob-dropdown">
+                <option disabled selected>
+                  select Line of Business
+                </option>
+                {LineofBusinessOptions.map((eachOption) => (
+                  <option key={eachOption.id}>{eachOption.name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="upcoming-content-container">
+              {/* <label className="upcomming-country-label-name">
+                Country <FaStarOfLife className="required-icon-style" />
+              </label> */}
+              <select className="upcoming-country-lob-dropdown">
+                <option disabled selected>
+                  select Country
+                </option>
+                {LineofBusinessOptions.map((eachOption) => (
+                  <option key={eachOption.id}>{eachOption.name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="upcoming-country-btn-container">
+              <button className="add-btn user-additional-btn ">Submit</button>
+              <button className="search-btn user-additional-btn">Clear</button>
+            </div>
           </div>
         </div>
-        <br />
-        <div className="user-btn-container">
-          <button className="add-btn user-additional-btn ">Submit</button>
-          <button className="search-btn user-additional-btn">Clear</button>
-        </div>
-        <br />
         <div className="newsletter-table-container">
           <table className="newsletter-table">
             <tr className="newsletter-table-header">

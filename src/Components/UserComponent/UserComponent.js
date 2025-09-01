@@ -6,6 +6,7 @@ import { FaStarOfLife } from "react-icons/fa6";
 import { useState } from "react";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
+import { IoCloseSharp } from "react-icons/io5";
 
 const UserComponent = () => {
   const [addUserToggle, setAddUserToggle] = useState(false);
@@ -14,18 +15,28 @@ const UserComponent = () => {
   const onToggleAddUser = () => {
     setAddUserToggle(!addUserToggle);
     setSearchUserToggle(false);
+    // window.onclick = (e) => {
+    //   if (!e.target.closest(".add-btn")) {
+    //     setAddUserToggle(false);
+    //   }
+    // };
   };
 
   const onToggleSearchUser = () => {
     setSearchUserToggle(!searchUserToggle);
     setAddUserToggle(false);
+    // window.onclick = (e) => {
+    //   if (!e.target.closest(".search-btn")) {
+    //     setSearchUserToggle(false);
+    //   }
+    //};
   };
 
   return (
     <>
+      <DashboardHeaderComponent />
+      <DashboardMinHeader />
       <div className="user-main-container">
-        <DashboardHeaderComponent />
-        <DashboardMinHeader />
         <div className="user-description-container">
           <div className="organization-header-container">
             <h1 className="header-title">User Registration</h1>
@@ -39,26 +50,32 @@ const UserComponent = () => {
           {addUserToggle && (
             <div className="user-add-content-container">
               <div className="user-add-content-detail-container">
-                <div className="add-user-header">
-                  <h2 className="header-title">Add User</h2>
-                </div>
+                <h2 className="admin-user-header-title">
+                  Add User
+                  <IoCloseSharp
+                    className="exit-icon"
+                    onClick={() => {
+                      setAddUserToggle(false);
+                    }}
+                  />
+                </h2>
                 <div className="user-content-main-container">
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       First Name{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Last Name{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Email{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
@@ -68,22 +85,22 @@ const UserComponent = () => {
                 <br />
                 {/* Contianer - 2 */}
                 <div className="user-content-main-container">
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Organization Name
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Account Type{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       User Type{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
@@ -93,22 +110,22 @@ const UserComponent = () => {
                 <br />
                 {/*  Container -3 */}
                 <div className="user-content-main-container">
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Address{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Phone{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       City <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
@@ -117,21 +134,21 @@ const UserComponent = () => {
                 <br />
                 {/*  Container -4 */}
                 <div className="user-content-main-container">
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Country{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       Zip <FaStarOfLife className="user-required-icon-style" />
                     </label>
                     <input type="text" className="user-text-input" />
                   </div>
-                  <div className="user-content-container">
-                    <label className="label-name">
+                  <div className="admin-user-content-container">
+                    <label className="user-label-name">
                       User Status{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
@@ -139,24 +156,26 @@ const UserComponent = () => {
                   </div>
                 </div>
                 <div className="checkbox-contianer">
-                  <p>
+                  <p className="para-label-name">
                     Line of Business{" "}
                     <FaStarOfLife className="user-required-icon-style" />
                   </p>
                   <input type="checkbox" />
-                  <label>Cyber</label>
+                  <label className="user-label-name">Cyber</label>
                   <input type="checkbox" />
-                  <label>D&O</label>
+                  <label className="user-label-name">D&O</label>
                   <input type="checkbox" />
-                  <label>General Liability</label>
+                  <label className="user-label-name">General Liability</label>
                   <input type="checkbox" />
-                  <label>Marine</label>
+                  <label className="user-label-name">Marine</label>
                   <input type="checkbox" />
-                  <label>Professional Indemnity</label>
+                  <label className="user-label-name">
+                    Professional Indemnity
+                  </label>
                   <input type="checkbox" />
-                  <label>Property</label>
+                  <label className="user-label-name">Property</label>
                 </div>
-                <div className="user-btn-container">
+                <div className="admin-user-btn-container">
                   <button className="add-btn user-additional-btn ">
                     Register
                   </button>
@@ -172,12 +191,10 @@ const UserComponent = () => {
               </div>
             </div>
           )}
+
+          {/* {search-container} */}
           {searchUserToggle && (
-            <div className="user-add-content-container">
-              <div className="user-add-content-detail-container">
-                <div className="add-user-header">
-                  <h2 className="header-title">Search User</h2>
-                </div>
+            <div>
               <div className="user-content-main-container">
                 <div className="user-content-container">
                   <label className="label-name">

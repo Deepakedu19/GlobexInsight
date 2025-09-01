@@ -101,6 +101,11 @@ const DashboardHeaderComponent = () => {
     setIsCountryToggle(false);
     setIsAdminToggle(false);
     contextValue.setActiveLinkId(0);
+    window.onclick = (e) => {
+      if (!e.target.closest(".menu-icon")) {
+        setIsMenuOpen(false);
+      }
+    };
   };
 
   const onAdminToggle = () => {
