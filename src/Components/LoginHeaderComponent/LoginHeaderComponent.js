@@ -41,7 +41,7 @@ const LoginHeaderComponent = () => {
           href="https://www.linkedin.com/company/globex-insight"
           target="_blank"
           rel="noopener noreferrer"
-          className="link-styles"
+          className="link-styles-inActive"
         >
           Follow us on LinkedIn <FaLinkedin className="img-logo" />
         </a>
