@@ -93,7 +93,6 @@ const ClientAboutUsComponent = () => {
             </div>
           </div>
         </div>
-        <div></div>
       </div>
       <FooterComponent />
     </div>

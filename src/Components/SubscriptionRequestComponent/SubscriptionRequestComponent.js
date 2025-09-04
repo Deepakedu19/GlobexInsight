@@ -84,7 +84,7 @@ const SubscriptionRequestComponent = () => {
               </td>
             </tr>
           </table>
-          <div className="subscription-table-footer">
+          <div className="pagination-style">
             <span className="pagination-content-new">Show entries</span>
             <select className="drop-down-selection">
               <option>10</option>

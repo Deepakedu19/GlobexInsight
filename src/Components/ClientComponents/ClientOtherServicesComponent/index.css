@@ -1,9 +1,8 @@
 .client-other-services-main-container {
   background-image: url("https://images.unsplash.com/photo-1587860166238-7b3c5d8bc34d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  height: 70vh;
+  height: 75vh;
   background-size: cover;
   background-position: center;
-  padding-bottom: 20px;
 }
 .client-other-services-content-filter {
   background-image: linear-gradient(
@@ -17,7 +16,7 @@
   );
 
   border-radius: 5px;
-  height: 73vh;
+  height: 75vh;
 }
 .filter-1 {
   background-color: rgba(247, 247, 247, 0.575);
@@ -47,14 +46,14 @@
   );
   position: relative;
   left: 40%;
-  top: 20%;
+  top: 7rem;
   border: solid 1px rgb(127, 155, 184);
 }
 .information-title {
   position: relative;
-  top: -250px;
+  top: -50%;
   left: 35%;
-  color: rgb(246, 246, 246);
+  color: rgb(166, 166, 166);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
@@ -66,9 +65,9 @@
 }
 .TE-title {
   position: relative;
-  top: -210px;
+  top: -12.5rem;
   left: 9%;
-  color: rgb(246, 246, 246);
+  color: rgb(166, 166, 166);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
@@ -80,9 +79,9 @@
 }
 .PA-title {
   position: relative;
-  top: -135px;
+  top: -8.5rem;
   left: 9%;
-  color: rgb(246, 246, 246);
+  color: rgb(166, 166, 166);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
@@ -94,9 +93,9 @@
 }
 .PAdmin-title {
   position: relative;
-  top: -89px;
+  top: -5rem;
   left: 35%;
-  color: rgb(246, 246, 246);
+  color: rgb(166, 166, 166);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
@@ -108,9 +107,9 @@
 }
 .IE-title {
   position: relative;
-  top: -402px;
+  top: -25rem;
   left: 60%;
-  color: rgb(246, 246, 246);
+  color: rgb(166, 166, 166);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
@@ -122,9 +121,9 @@
 }
 .PAS-title {
   position: relative;
-  top: -326px;
+  top: -21rem;
   left: 60%;
-  color: rgb(246, 246, 246);
+  color: rgb(166, 166, 166);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
@@ -135,12 +134,15 @@
   border-bottom-right-radius: 25px;
 }
 .home-icon-title {
-  color: rgb(255, 106, 37);
+  color: rgb(236, 78, 4);
   text-align: center;
-  font-weight: 500;
+  font-weight: 300;
   font-family: Roboto;
   margin-top: 0px;
   margin-bottom: 0px;
+
+  padding-top: 8px;
+  height: 35px;
 }
 .home-exit-icon {
   color: rgba(243, 243, 243, 0.661);

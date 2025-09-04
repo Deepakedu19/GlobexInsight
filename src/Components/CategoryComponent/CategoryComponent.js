@@ -22,15 +22,17 @@ const CategoryComponent = () => {
       <div className="organization-container">
         <div className="header-container">
           <h1 className="header-title">Category</h1>
-          <label className="category-label-style">Category Name</label>
-          <select className="category-option-container">
-            <option disabled selected>
-              select category
-            </option>
-            {categoryOptions.map((eachOption) => (
-              <option key={eachOption.id}>{eachOption.name}</option>
-            ))}
-          </select>
+          <div className="category-dropdown-style-contianer">
+            <label className="category-label-style">Category Name</label>
+            <select className="category-option-container">
+              <option disabled selected>
+                select category
+              </option>
+              {categoryOptions.map((eachOption) => (
+                <option key={eachOption.id}>{eachOption.name}</option>
+              ))}
+            </select>
+          </div>
         </div>
         <div className="table-container">
           <table className="LOB-table-style">

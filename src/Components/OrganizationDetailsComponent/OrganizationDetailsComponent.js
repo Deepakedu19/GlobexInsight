@@ -28,7 +28,7 @@ const OrganizationDetailsComponent = () => {
       <DashboardHeaderComponent />
       <DashboardMinHeader />
       <div className="organization-container">
-        <div className="organization-header-container">
+        <div className="organization-header-container ">
           <h1 className="header-title">Organization Details</h1>
           <button
             className="add-btn-content"
@@ -37,7 +37,7 @@ const OrganizationDetailsComponent = () => {
             <MdOutlinePlaylistAdd className="add-icon" />
             Add
           </button>
-          <div className="search-container">
+          <div className="search-container ">
             <div className="search-content-container">
               {/* <label className="organization-label-name">
                 Organization Name{" "}
@@ -105,26 +105,26 @@ const OrganizationDetailsComponent = () => {
 
             <div className="container-row-alignment">
               <div className="container-data-alignment">
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     Organization Name{" "}
                     <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     Address <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     City <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     Status <FaStarOfLife className="required-icon-style" />
                   </label>
@@ -132,26 +132,26 @@ const OrganizationDetailsComponent = () => {
                 </div>
               </div>
               <div className="container-data-alignment">
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     Country
                     <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     Zip <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     Website <FaStarOfLife className="required-icon-style" />
                   </label>
                   <input type="text" className="text-input" />
                 </div>
-                <div className="details-container">
+                <div className="org-details-container">
                   <label className="organization-label-name">
                     Comments <FaStarOfLife className="required-icon-style" />
                   </label>

@@ -83,7 +83,7 @@
   font-weight: lighter;
   text-align: center;
   font-family: Roboto;
-  padding: 5px;
+  padding-top: 5px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   margin-top: 0px;
@@ -100,7 +100,7 @@
 .pop-menu-background {
   background-color: rgba(170, 169, 169, 0.377);
   position: absolute;
-  top: 17.5%;
+  top: 120px;
   left: 0;
   right: 0;
   height: 80vh;
@@ -111,7 +111,7 @@
 }
 .pop-menu-content {
   background: rgb(255, 255, 255);
-  height: 50vh;
+  height: 20rem;
   width: 80%;
   border-radius: 12px;
 }
@@ -121,25 +121,9 @@
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 18px;
-  height: 38vh;
+  height: 15rem;
 }
 
-.country-list {
-  width: 32.5%;
-  position: absolute;
-  top: 15.5%;
-  left: 12.4%;
-  display: flex;
-  flex-direction: column;
-  max-height: 200px;
-  overflow-y: auto;
-  background-color: white;
-  color: rgb(107, 107, 107);
-  font-size: small;
-  border-top-left-radius: 10px;
-  font-family: Roboto;
-  padding-left: 0;
-}
 .country-item-label:hover {
   background-color: rgb(214, 214, 214);
   color: rgb(32, 32, 32);
@@ -150,6 +134,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .country-checkbox {
   margin-right: 10px;
   margin-left: 10px;
@@ -331,4 +316,36 @@
   display: flex;
   align-items: center;
   font-size: 14px;
+}
+
+.country-list {
+  width: 25%;
+  position: absolute;
+  top: 61%;
+  left: 12.4%;
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  color: rgb(107, 107, 107);
+  font-size: small;
+  border-top-left-radius: 3px;
+  font-family: Roboto;
+  padding-left: 0;
+}
+.clientDatabase-selectall-contianer {
+  height: 40px;
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+.client-databse-select-all-label {
+  color: rgb(44, 44, 44);
+  font-size: larger;
+  font-weight: 100;
+}
+.new-checkbox-style {
+  margin-right: 10px;
 }

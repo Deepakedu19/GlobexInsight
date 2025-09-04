@@ -1,13 +1,7 @@
 .support-main-container {
   height: 70vh;
 }
-.support-header-component {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: -10px;
-}
+
 .btn-search-ticket {
   background-color: rgb(35, 76, 146);
   border: none;
@@ -21,26 +15,28 @@
 
 .content-style {
   color: rgb(71, 71, 71);
-  background-color: rgb(222, 222, 222);
-  height: 33px;
+  background-color: rgb(235, 235, 235);
+  height: 34px;
   width: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px rgb(190, 190, 190);
+  border: solid 1px rgb(230, 230, 230);
   font-size: small;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
+  border-top-left-radius: 5px;
+  border-bottom: none;
+  margin-bottom: 0px;
 }
 
 .drop-down-ticket {
-  width: 30%;
+  width: 25%;
   height: 35px;
   padding-left: 15px;
   outline: none;
-  border: solid 1px rgb(190, 190, 190);
+  border: solid 1px rgb(230, 230, 230);
   border-left: none;
   border-right: none;
+  border-bottom: none;
   color: rgb(94, 94, 94);
 }
 
@@ -48,19 +44,18 @@
   height: 35px;
   width: 35px;
   border-left: none;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-top-right-radius: 5px;
 
   /* border-right: none; */
   /* border-right: solid 1px rgb(229, 229, 229); */
-  border-top: solid 1px rgb(184, 184, 184);
-  border-bottom: solid 1px rgb(190, 190, 190);
-  border-right: solid 1px rgb(190, 190, 190);
+  border-top: solid 1px rgb(230, 230, 230);
+  border-bottom: none;
+  border-right: solid 1px rgb(230, 230, 230);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(236, 236, 236);
   font-size: 16px;
   color: rgb(128, 128, 128);
 }
@@ -108,11 +103,11 @@
 .Date-style {
   width: 15%;
 }
-.table-header-style {
+/* .table-header-style {
   background-color: rgb(235, 235, 235);
   height: 35px;
   color: rgb(226, 251, 251);
-}
+} */
 
 .support-common-font-style {
   font-weight: 100;
@@ -126,8 +121,8 @@
   align-items: center;
 }
 .new-support-table-header-style {
-  background-color: rgb(211, 223, 244);
-  height: 40px;
+  height: 43px;
+  background-color: rgb(235, 235, 235);
   border: none;
   font-family: Roboto;
   width: 100%;
@@ -189,4 +184,19 @@
   color: rgb(97, 97, 97);
   font-size: small;
   font-family: Roboto;
+}
+.support-search-contanier {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 5vh;
+}
+.support-header-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-end;
+  height: 5vh;
+  padding-bottom: 0px;
 }

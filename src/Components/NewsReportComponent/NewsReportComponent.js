@@ -29,7 +29,7 @@ const NewsReportComponent = () => {
           </button>
         </div>
         {isToggleAddReport && (
-          <div className="newletter-content-container">
+          <div className="newletter-content-container ">
             <div className="add-newsletter-content-details-contianer">
               <h2 className="add-newsletter-title">
                 Add Newsletter{" "}

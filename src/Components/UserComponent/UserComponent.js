@@ -48,7 +48,7 @@ const UserComponent = () => {
             </button>
           </div>
           {addUserToggle && (
-            <div className="user-add-content-container">
+            <div className="user-add-content-container ">
               <div className="user-add-content-detail-container">
                 <h2 className="admin-user-header-title">
                   Add User

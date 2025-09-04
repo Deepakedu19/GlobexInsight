@@ -4,6 +4,7 @@ import "./index.css";
 import { FaEdit } from "react-icons/fa";
 import { IoIosPin } from "react-icons/io";
 import { BiRename } from "react-icons/bi";
+import { MdBusinessCenter } from "react-icons/md";
 
 import { MdContactPage } from "react-icons/md";
 import { IoIosCheckbox } from "react-icons/io";
@@ -14,6 +15,9 @@ import { MdLocationCity } from "react-icons/md";
 import { BiWorld } from "react-icons/bi";
 import { MdPushPin } from "react-icons/md";
 import { MdMapsHomeWork } from "react-icons/md";
+import { LiaIndustrySolid } from "react-icons/lia";
+import { MdPrivacyTip } from "react-icons/md";
+import { FaUserAlt } from "react-icons/fa";
 
 const UserProfileComponent = () => {
   const [firstName, setFirstName] = useState("John");
@@ -296,21 +300,33 @@ const UserProfileComponent = () => {
                   <span>Other Details</span>
                 </p>
                 <div className="personal-detail-organization-container">
-                  <label className="label-detail-name">Organization Name</label>
+                  <label className="label-detail-name">
+                    <LiaIndustrySolid className="other-details-logo-style" />
+                    Organization Name
+                  </label>
                   <span className="other-personal-detail-value">
                     Globex Corporation
                   </span>
                 </div>
                 <div className="personal-detail-organization-container">
-                  <label className="label-detail-name">Account Type</label>
+                  <label className="label-detail-name">
+                    {" "}
+                    <MdPrivacyTip className="other-details-logo-style" />
+                    Account Type
+                  </label>
                   <span className="other-personal-detail-value">Premium</span>
                 </div>
                 <div className="personal-detail-organization-container">
-                  <label className="label-detail-name">User Type</label>
+                  <label className="label-detail-name">
+                    <FaUserAlt className="other-details-logo-style" /> Type
+                  </label>
                   <span className="other-personal-detail-value">Admin</span>
                 </div>
                 <div className="lob-personal-detail-organization-container">
-                  <label className="label-detail-name">Line of Business</label>
+                  <label className="label-detail-name">
+                    <MdBusinessCenter className="other-details-logo-style" />
+                    Line of Business
+                  </label>
                   <span className="other-personal-detail-value">
                     <li className="other-personal-detail-item">
                       <IoIosCheckbox className="checkbox-icon" />
