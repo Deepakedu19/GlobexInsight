@@ -52,31 +52,20 @@ const QuestionnairComponent = () => {
             </button>
           </div>
           {addUserToggle && (
-            <div className="questionnair-main-container">
-              <div className="questionnair-detail-container">
-                <h2 className="add-question-title">
-                  Add Question
-                  <IoCloseSharp
-                    className="header-close-btn"
-                    onClick={() => {
-                      setAddUserToggle(false);
-                    }}
-                  />
-                </h2>
-                <div className="user-content-main-container">
-                  <div className="questionnair-user-content-container">
-                    <label className="questionnair-label-name">
-                      Question Number{" "}
-                      <FaStarOfLife className="required-icon-style" />
-                    </label>
-                    <input type="text" className="questionnair-text-input" />
-                  </div>
-                  <div className="questionnair-user-content-container">
-                    <label className="questionnair-label-name">
-                      Question <FaStarOfLife className="required-icon-style" />
-                    </label>
-                    <input type="text" className="questionnair-text-input" />
-                  </div>
+            <div>
+              <div className="user-content-main-container">
+                <div className="user-content-container">
+                  <label className="label-name">
+                    Question Number{" "}
+                    <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
+                </div>
+                <div className="user-content-container">
+                  <label className="label-name">
+                    Question <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
                 </div>
                 <br />
                 {/* Contianer - 2 */}
@@ -118,23 +107,14 @@ const QuestionnairComponent = () => {
                 </div>
                 <ToastContainer />
               </div>
+              </div>
             </div>
           )}
           {searchUserToggle && (
-            <div className="questionnair-main-container">
-              <div className="Questionnair-search-main-container">
-                <h2 className="search-question-title">
-                  {" "}
-                  Search Question
-                  <IoCloseSharp
-                    className="header-close-btn"
-                    onClick={() => {
-                      setSearchUserToggle(false);
-                    }}
-                  />
-                </h2>
-                <div className="questionair-search-content-container">
-                  <label className="questionnair-label-name">
+            <div>
+              <div className="user-content-main-container">
+                <div className="user-content-container">
+                  <label className="label-name">
                     Question Type{" "}
                     <FaStarOfLife className="required-icon-style" />
                   </label>
@@ -165,6 +145,7 @@ const QuestionnairComponent = () => {
                     Clear
                   </button>
                 </div>
+              </div>
               </div>
             </div>
           )}

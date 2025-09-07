@@ -29,6 +29,7 @@ const NewsReportComponent = () => {
       <DashboardHeaderComponent />
       <DashboardMinHeader />
       <div className="newsletter-container">
+
         <div className="newsletter-header-contianer">
           <h1 className="header-title">Newsletter</h1>
           <button
@@ -81,8 +82,27 @@ const NewsReportComponent = () => {
               </div>
               <ToastContainer />
             </div>
+
+        <h1 className="header-title">Newsletter</h1>
+        <div className="newletter-content-container">
+          <div>
+            <label className="label-name">
+              Latest Newsletter <FaStarOfLife className="required-icon-style" />
+            </label>
+            <input type="file" />
           </div>
-        )}
+          <div>
+            <label className="label-name">
+              News Content <FaStarOfLife className="required-icon-style" />
+            </label>
+            <textarea rows="3" cols="70" className="textarea--style" />
+
+          </div>
+          <div className="newsletter-btn-container">
+            <button className="add-btn user-additional-btn ">Save</button>
+            <button className="search-btn user-additional-btn">Clear</button>
+          </div>
+        </div>
         {/* <div className="newsletter-btn-container">
           <button className="add-btn user-additional-btn ">Save</button>
           <button className="search-btn user-additional-btn">Clear</button>
