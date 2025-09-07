@@ -1,12 +1,13 @@
 import DashboardHeaderComponent from "../DashboardHeaderComponent/DashBoardHeaderComponent";
 import DashboardMinHeader from "../DashboardMinHeader/DashboardMinHeader";
-import { getNames, getCode } from "country-list";
+import { getNames } from "country-list";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
 import { IoFilter } from "react-icons/io5";
-import { MdExtensionOff } from "react-icons/md";
 import { useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
+import { TfiArrowCircleRight } from "react-icons/tfi";
+import { TfiArrowCircleLeft } from "react-icons/tfi";
 
 const LineofBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -18,7 +19,7 @@ const LineofBusinessOptions = [
 ];
 
 const categoryOptions = [
-  { id: 1, name: "Accounting" },
+  { id: 1, name: " Accounting" },
   { id: 2, name: "Claims Handling" },
   { id: 3, name: "General Information" },
   { id: 4, name: "Policy Related" },
@@ -30,7 +31,7 @@ const ViewCountryDataComponent = () => {
   const countries = getNames();
 
   //----------------state--variables---------------------------
-  const [onToggleData, setOnToggleData] = useState(false);
+  // const [onToggleData, setOnToggleData] = useState(false);
   const [onPopupMenu, setOnPopupMenu] = useState(false);
   const [onToggleCategory, setOnToggleCategory] = useState(false);
   const [onToggleCountry, setOnToggleCountry] = useState(false);
@@ -71,7 +72,7 @@ const ViewCountryDataComponent = () => {
 
   const onCancelRequest = () => {
     setOnPopupMenu(false);
-    setOnToggleData(false);
+    // setOnToggleData(false);
     setCheckedCategories([]);
     setCheckedCountries([]);
     setSelectedCategories([]);
@@ -135,18 +136,17 @@ const ViewCountryDataComponent = () => {
       <DashboardHeaderComponent />
       <DashboardMinHeader />
       <div className="view-content-container">
-        <h1 className="header-title">View Country Data</h1>
-        <button className="filter-btn" onClick={onHandleRequest}>
-          <IoFilter className="view-filter-icon" />
-          Filter
-        </button>
-        {!onToggleData && (
-          <div className="no-records-found">
-            <h2 className="no-records-title">
-              <MdExtensionOff /> No records found
-            </h2>
-          </div>
-        )}
+        <div className="view-country-data-title-contianer">
+          <h1 className="view-header-title">View Country Data</h1>
+          <button
+            className="view-country-data-filter-btn"
+            onClick={onHandleRequest}
+          >
+            <IoFilter className="view-filter-icon" />
+            Filter
+          </button>
+        </div>
+
         {onPopupMenu && (
           <div className="view-details-popup-menu">
             <div className="filter-options-container">
@@ -305,6 +305,33 @@ const ViewCountryDataComponent = () => {
             </div>
           </div>
         )}
+        <div className="view-country-data-table-container">
+          <table className="view-country-data-table">
+            <thead>
+              <tr className="view-country-data-table-header-row">
+                <th className="view-country-data-table-header-row-data"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="view-country-data-table-description-row">
+                <td className="view-country-data-table-description-row-data">
+                  No data Found
+                </td>
+              </tr>
+            </tbody>
+            <div className="pagination-style">
+              <span className="pagination-content-new">Show entries</span>
+              <select className="drop-down-selection">
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+              </select>
+              <TfiArrowCircleLeft className="pagination-font-style" />
+              <TfiArrowCircleRight className="pagination-font-style" />
+              <span className="pagination-content">Page 1 of 1</span>
+            </div>
+          </table>
+        </div>
       </div>
       <FooterComponent />
     </>

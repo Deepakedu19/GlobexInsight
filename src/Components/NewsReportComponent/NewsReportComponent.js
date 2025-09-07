@@ -8,14 +8,81 @@ import "./index.css";
 import { MdOutlinePlaylistAdd } from "react-icons/md";
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
+import { ToastContainer, toast } from "react-toastify";
 
 const NewsReportComponent = () => {
   const [isToggleAddReport, setIsToggleAddReport] = useState(false);
+
+  const onSaveNewsContent = () => {
+    toast.success("Newsletter Added Successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
+  };
   return (
     <>
       <DashboardHeaderComponent />
       <DashboardMinHeader />
       <div className="newsletter-container">
+
+        <div className="newsletter-header-contianer">
+          <h1 className="header-title">Newsletter</h1>
+          <button
+            className="newsletter-add-btn "
+            onClick={() => {
+              setIsToggleAddReport(!isToggleAddReport);
+            }}
+          >
+            <MdOutlinePlaylistAdd />
+            Add
+          </button>
+        </div>
+        {isToggleAddReport && (
+          <div className="newletter-content-container ">
+            <div className="add-newsletter-content-details-contianer">
+              <h2 className="add-newsletter-title">
+                Add Newsletter{" "}
+                <IoCloseOutline
+                  className="close-btn"
+                  onClick={() => setIsToggleAddReport(!isToggleAddReport)}
+                />
+              </h2>
+              <div className="add-newsletter-content-container">
+                <label className="newletter-label-name">
+                  Latest Newsletter{" "}
+                  <FaStarOfLife className="required-icon-style" />
+                </label>
+                <input
+                  type="file"
+                  className="newsletter-file-attacment-style"
+                />
+              </div>
+              <br />
+              <div className="add-newsletter-content-container">
+                <label className="newletter-label-name">
+                  News Content <FaStarOfLife className="required-icon-style" />
+                </label>
+                <textarea rows="5" cols="70" className="textarea--style" />
+              </div>
+              <div className="newsletter-btn-container">
+                <button
+                  className="add-btn user-additional-btn "
+                  onClick={onSaveNewsContent}
+                >
+                  Save
+                </button>
+                <button className="search-btn user-additional-btn">
+                  Clear
+                </button>
+              </div>
+              <ToastContainer />
+            </div>
+
         <h1 className="header-title">Newsletter</h1>
         <div className="newletter-content-container">
           <div>
@@ -29,6 +96,7 @@ const NewsReportComponent = () => {
               News Content <FaStarOfLife className="required-icon-style" />
             </label>
             <textarea rows="3" cols="70" className="textarea--style" />
+
           </div>
           <div className="newsletter-btn-container">
             <button className="add-btn user-additional-btn ">Save</button>

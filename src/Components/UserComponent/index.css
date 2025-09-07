@@ -39,8 +39,8 @@
 
 .user-add-content-container {
   position: absolute;
-  top: 18%;
-  left: 0%;
+  top: 123px;
+  left: 0px;
   background-color: rgba(0, 0, 0, 0.524);
   z-index: 1;
   border: solid 1px black;
@@ -61,10 +61,10 @@
 .user-text-input {
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 8px;
   width: 90%;
   margin-right: 15px;
   outline-color: rgb(93, 167, 240);
+  height: 35px;
 }
 .user-required-icon-style {
   font-size: 8px;
@@ -175,7 +175,7 @@
 .user-search-content-detail-container {
   background-color: white;
   width: 78%;
-  height: 70vh;
+  height: 30rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;

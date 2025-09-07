@@ -21,15 +21,17 @@ const LineofBussinessComponent = () => {
       <div className="organization-container">
         <div className="header-container">
           <h1 className="header-title">Line of Business</h1>
-          <label className="category-label-style">Line of Business</label>
-          <select className="category-option-container">
-            <option disabled selected>
-              select
-            </option>
-            {LineofBusinessOptions.map((eachOption) => (
-              <option key={eachOption.id}>{eachOption.name}</option>
-            ))}
-          </select>
+          <div className="category-dropdown-style-contianer">
+            <label className="category-label-style">Line of Business</label>
+            <select className="category-option-container">
+              <option disabled selected>
+                select Line of Business
+              </option>
+              {LineofBusinessOptions.map((eachOption) => (
+                <option key={eachOption.id}>{eachOption.name}</option>
+              ))}
+            </select>
+          </div>
         </div>
         <div className="table-container">
           <table className="LOB-table-style">

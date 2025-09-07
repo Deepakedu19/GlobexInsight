@@ -26,8 +26,8 @@
 .upcoming-country-title-layout {
   display: flex;
   justify-content: flex-start;
-  align-items: end;
-  margin-bottom: 1px;
+  align-items: center;
+  height: 7vh;
 }
 .questionnair-content-final-container {
   display: flex;

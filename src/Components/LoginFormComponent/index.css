@@ -1,7 +1,7 @@
 .login-container {
   width: 50%;
   border: solid 1px rgba(110, 110, 110, 0.928);
-  height: 50vh;
+  height: 21rem;
   background-color: rgba(4, 4, 4, 0.801);
   display: flex;
   flex-direction: column;
@@ -9,7 +9,13 @@
   align-items: center;
   border-radius: 10px;
 }
-
+#forget-password-label-container {
+  color: rgb(181, 181, 181);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 15px;
+  text-align: left;
+}
 #login-input-feild {
   border-radius: 0px;
   height: 45px;
@@ -65,6 +71,19 @@
   background-color: rgb(0, 162, 190);
   border: none;
   color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.sendpassword-page-btn {
+  height: 35px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 100, 188);
+  border: none;
+  color: rgb(224, 224, 224);
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;

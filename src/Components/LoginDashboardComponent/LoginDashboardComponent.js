@@ -34,7 +34,7 @@ const LoginDashboardComponent = () => {
     backgroundImage: backgroundImages[bgIndex],
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "76.6vh",
+    height: "80vh",
   };
 
   return (

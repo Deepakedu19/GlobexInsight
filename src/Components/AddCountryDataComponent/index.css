@@ -1,7 +1,20 @@
+.add-country-mother-container {
+  height: 78vh;
+}
+.add-header-title {
+  font-weight: 300;
+  font-size: 25px;
+  color: brown;
+  width: 150px;
+}
 .add-country-contianer {
   padding-left: 20px;
   padding-right: 20px;
-  height: 70vh;
+  height: 7vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
 }
 
 .country-option-container {
@@ -9,7 +22,7 @@
   border: solid 1px rgb(161, 161, 161);
   color: rgb(125, 125, 125);
   margin-top: 3px;
-  width: 100%;
+  width: 95%;
   font-family: Roboto;
   outline-color: rgb(165, 182, 255);
   border-radius: 3px;
@@ -18,28 +31,98 @@
 .add-country-details-contianer {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
   outline: none;
   margin-top: 0px;
-
   padding-top: 0px;
-  height: 10vh;
+  height: 7vh;
+  margin-top: 5px;
+  width: 77%;
 }
 .details-container {
   width: 100%;
   margin-top: 0px;
-
-  height: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: start;
   padding-top: 0px;
 }
 .add-country-label-name {
   font-family: Roboto;
   color: grey;
-  font-size: 15px;
-
+  font-size: 14px;
   margin-top: 0px;
+}
+.adduser-btn-container {
+  margin-left: 5px;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: end;
+}
+.add-category-lable-name {
+  border: solid 1px black;
+  height: 34px;
+  margin-bottom: 0px;
+  margin-top: 3px;
+  color: grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  width: 94%;
+  border: solid 1px rgb(170, 170, 170);
+  font-size: 13px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Roboto;
+  cursor: default;
+}
+.add-category-dropdown-options {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px rgb(217, 217, 217);
+  width: 25%;
+  height: 35vh;
+  margin-top: 4px;
+  position: absolute;
+  top: 10.7rem;
+  left: 61.5%;
+  z-index: 5;
+}
+.add-category-dropdown-lable {
+  color: grey;
+  padding: 8px;
+  padding-left: 30px;
+  font-family: Roboto;
+  font-size: smaller;
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+}
+.add-category-dropdown-lable:hover {
+  background-color: rgb(80, 80, 80);
+  color: white;
+}
+
+.add-category-select-all-options-style {
+  background-color: rgb(197, 197, 197);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: rgb(82, 82, 82);
+  font-weight: 300;
+}
+.add-category-details-container {
+  width: 97%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.add-country-details-main-container {
+  height: 70vh;
 }

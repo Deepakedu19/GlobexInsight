@@ -3,7 +3,7 @@
   background-color: #f7f8ff;
   margin-top: 0px;
   padding-top: 0px;
-  height: 70vh;
+  height: 75vh;
 }
 /* .user-profile-content {
   border: 3px double rgb(5, 153, 216);
@@ -20,6 +20,10 @@
   );
   background-color: rgb(8, 168, 242);
 } */
+
+.other-details-logo-style {
+  padding-right: 10px;
+}
 
 .address-icon-specific {
   font-size: 30px;

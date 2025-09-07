@@ -2,10 +2,13 @@ import { FaUser } from "react-icons/fa";
 import { MdKey } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { IoMdKey } from "react-icons/io";
 
 import "./index.css";
 
 const LoginFormComponent = () => {
+  const [onToggleForgetPassword, setOnToggleForgtPassword] = useState(false);
   const navigate = useNavigate();
 
   const onDetailsSubmit = (e) => {
@@ -13,25 +16,71 @@ const LoginFormComponent = () => {
     navigate("/dashboard");
   };
 
+  const onHandleLogin = () => {
+    setOnToggleForgtPassword(true);
+  };
+
   return (
-    <div className="login-container">
-      <h2 className="login-form-heading">Login </h2>
-      <label id="label-container">
-        <FaUser className="login-icon-style" />{" "}
-        <input type="text" id="login-input-feild" placeholder="UserName" />
-      </label>
-      <label id="label-container">
-        <MdKey className="login-icon-style" />{" "}
-        <input type="password" id="login-input-feild" placeholder="Password" />
-      </label>
-      <div className="login-btn-contianer">
-        <button className="login-page-btn" onClick={onDetailsSubmit}>
-          <CiLogin className="login-btn-icon" />
-          Login
-        </button>
-        <span className="forgot-password-btn">Forgot password?</span>
-      </div>
-    </div>
+    <>
+      {!onToggleForgetPassword && (
+        <div className="login-container">
+          <h2 className="login-form-heading">Login </h2>
+          <label id="label-container">
+            <FaUser className="login-icon-style" />{" "}
+            <input type="text" id="login-input-feild" placeholder="UserName" />
+          </label>
+          <label id="label-container">
+            <MdKey className="login-icon-style" />{" "}
+            <input
+              type="password"
+              id="login-input-feild"
+              placeholder="Password"
+            />
+          </label>
+          <div className="login-btn-contianer">
+            <button className="login-page-btn" onClick={onDetailsSubmit}>
+              <CiLogin className="login-btn-icon" />
+              Login
+            </button>
+
+            <span
+              className="forgot-password-btn"
+              onClick={() => {
+                setOnToggleForgtPassword(true);
+              }}
+            >
+              Forgot password?
+            </span>
+          </div>
+        </div>
+      )}
+      {onToggleForgetPassword && (
+        <div className="login-container">
+          <h2 className="login-form-heading">Forget Password </h2>
+          <label id="forget-password-label-container">
+            Enter your GlobexInsight Username, password will be sent to your
+            email id.
+          </label>
+          <label id="label-container">
+            <FaUser className="login-icon-style" />{" "}
+            <input
+              type="password"
+              id="login-input-feild"
+              placeholder="Username"
+            />
+          </label>
+          <div className="login-btn-contianer">
+            <button className="sendpassword-page-btn">
+              <IoMdKey className="login-btn-icon" />
+              Send Password
+            </button>
+            <span className="forgot-password-btn" onClick={onHandleLogin}>
+              Login
+            </span>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

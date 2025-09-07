@@ -1,9 +1,10 @@
 import ClientHeaderComponent from "../ClientHeaderComponent/ClientHeaderComponent";
 import "./index.css";
+import { FaUserTag } from "react-icons/fa6";
 import FooterComponent from "../../FooterComponent/FooterComponent";
 import { CiMail } from "react-icons/ci";
 import { BsTelephone } from "react-icons/bs";
-import { FaUserTag } from "react-icons/fa";
+
 import { PiClockUserBold } from "react-icons/pi";
 import { FaEdit } from "react-icons/fa";
 import { BiRename } from "react-icons/bi";
@@ -18,6 +19,10 @@ import { IoIosCheckbox } from "react-icons/io";
 import { useState, useContext } from "react";
 import { DataContext } from "../../ContextComponent/ContextComponent";
 import { FaStarOfLife } from "react-icons/fa";
+import { LiaIndustrySolid } from "react-icons/lia";
+import { MdPrivacyTip } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
+import { MdBusinessCenter } from "react-icons/md";
 
 const ClientUserProfileComponent = () => {
   const [onEditToggle, setOnEditToggle] = useState(false);
@@ -133,31 +138,31 @@ const ClientUserProfileComponent = () => {
                 </div>
                 <div className="location-contianer">
                   <label className="editable-info-style">
-                    <GiHomeGarage className="client-profil-desc-perosnal-icons" />{" "}
+                    <LiaIndustrySolid className="client-profil-desc-perosnal-icons" />{" "}
                     Organization Name
                     <span className="contact-value-label">CBSIT</span>
                   </label>
                   <br />
                   <label className="editable-info-style">
-                    <FaLocationDot className="client-profil-desc-perosnal-icons" />{" "}
+                    <MdPrivacyTip className="client-profil-desc-perosnal-icons" />{" "}
                     Account Type
                     <span className="contact-value-label">Basic</span>
                   </label>
                   <br />
                   <label className="editable-info-style">
-                    <FaGlobe className="client-profil-desc-perosnal-icons" />{" "}
+                    <FaUser className="client-profil-desc-perosnal-icons" />{" "}
                     User Status
                     <span className="contact-value-label">Active</span>
                   </label>
                   <br />
                   <label className="editable-info-style">
-                    <LiaSatelliteDishSolid className="client-profil-desc-perosnal-icons" />{" "}
+                    <FaUserTag className="client-profil-desc-perosnal-icons" />{" "}
                     User Type
                     <span className="contact-value-label">Annual User</span>
                   </label>
                   <br />
                   <label className=" lob-style">
-                    <LiaSatelliteDishSolid className="client-profil-desc-perosnal-icons" />{" "}
+                    <MdBusinessCenter className="client-profil-desc-perosnal-icons" />{" "}
                     Line of Business
                     <div className="client-profie-lob-style">
                       <span className="contact-value-label">

@@ -93,7 +93,7 @@
 .client-user-profile-main-contianer {
   /* border: solid 1px black; */
   background-color: #fafcff;
-  height: 78vh;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

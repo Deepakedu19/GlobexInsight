@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { IoFilter } from "react-icons/io5";
 import { DataContext } from "../../ContextComponent/ContextComponent";
-import { BiWindowOpen } from "react-icons/bi";
+// import { BiWindowOpen } from "react-icons/bi";
 
 const lineOfBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -23,13 +23,15 @@ const lineOfBusinessOptions = [
 ];
 
 const ClientDatabaseComponent = () => {
+  const countries = getNames();
+
   const { setClientActiveLinkId } = useContext(DataContext);
 
   const [onTogglePopMenu, setOnTogglePopMenu] = useState(false);
   const [onToggleCountry, setOnToggleCountry] = useState(false);
   const [onToggleTable, setOnToggleTable] = useState(false);
   const [selectedCountries, setSelectedCountries] = useState([]);
-
+  const onSelectAllCoutries = countries.length === selectedCountries.length;
   const onHandleCountrySelect = (e) => {
     setSelectedCountries((prevSelected) => {
       if (prevSelected.includes(e.target.value)) {
@@ -49,6 +51,15 @@ const ClientDatabaseComponent = () => {
     };
   };
 
+  const onHandleSelectAllCountries = (e) => {
+    const onchecked = e.target.checked;
+    if (onchecked) {
+      setSelectedCountries(countries);
+    } else {
+      setSelectedCountries([]);
+    }
+  };
+
   const handleSubmit = () => {
     if (selectedCountries.length > 0) {
       setOnTogglePopMenu(false);
@@ -63,7 +74,6 @@ const ClientDatabaseComponent = () => {
   };
 
   const navigate = useNavigate();
-  const countries = getNames();
 
   return (
     <>
@@ -113,16 +123,28 @@ const ClientDatabaseComponent = () => {
                       </select>
                     </div>
 
+                    {/* Country dropdown */}
                     <div className="client-lob-container">
                       <div>
                         {/* Country container */}
                         <ul className="country-list">
                           {onToggleCountry && (
                             <div>
+                              <div className="clientDatabase-selectall-contianer">
+                                <label className="client-databse-select-all-label">
+                                  <input
+                                    type="checkbox"
+                                    className="new-checkbox-style"
+                                    onChange={onHandleSelectAllCountries}
+                                    checked={onSelectAllCoutries}
+                                  />
+                                  Select all
+                                </label>
+                              </div>
                               {countries.map((country, index) => (
                                 <label
                                   key={index}
-                                  className="country-item-label  "
+                                  className="country-item-label"
                                 >
                                   <input
                                     type="checkbox"

@@ -1,11 +1,8 @@
 import DashboardHeaderComponent from "../DashboardHeaderComponent/DashBoardHeaderComponent";
 import DashboardMinHeader from "../DashboardMinHeader/DashboardMinHeader";
 import FooterComponent from "../FooterComponent/FooterComponent";
-
 import "./index.css";
-import { BiSolidEdit } from "react-icons/bi";
 import { IoSearchOutline } from "react-icons/io5";
-
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 
@@ -18,7 +15,7 @@ const SupportComponent = () => {
         <div className="support-header-component">
           <h2 className="subscrition-title">Support</h2>
 
-          <div className="search-contanier">
+          <div className="support-search-contanier">
             <p className="content-style">Status</p>
             <select className="drop-down-ticket">
               <option disabled selected>
@@ -52,7 +49,7 @@ const SupportComponent = () => {
 
             <tr className="support-desciption-row-style"></tr>
           </table>
-          <div className="table-footer">
+          <div className="pagination-style">
             <span className="pagination-content-new">Show entries</span>
             <select className="drop-down-selection">
               <option>10</option>

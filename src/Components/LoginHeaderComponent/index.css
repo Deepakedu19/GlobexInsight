@@ -12,10 +12,16 @@
   font-family: Roboto;
   font-size: medium;
   text-decoration: none;
-  color: rgb(220, 218, 218);
+  color: rgb(3, 132, 192);
   margin-left: 15px;
 }
-
+.link-styles-inActive {
+  font-family: Roboto;
+  font-size: medium;
+  text-decoration: none;
+  color: rgb(203, 203, 203);
+  margin-left: 15px;
+}
 .img-logo {
   margin: 0px;
   padding: 0px;

@@ -3,6 +3,8 @@ import DashboardMinHeader from "../DashboardMinHeader/DashboardMinHeader";
 import { getNames, getCode } from "country-list";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
+import { FaAngleDown } from "react-icons/fa6";
+import { useState } from "react";
 
 const LineofBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -23,60 +25,136 @@ const categoryOptions = [
 ];
 
 const AddCountryDataComponent = () => {
+  const [onToggleCategory, setOnToggleCategory] = useState(true);
+  const [onSelectCategories, setOnSelectCategories] = useState([]);
+
+  const isAllCategoriesSelected =
+    onSelectCategories.length === categoryOptions.length;
+
   const countries = getNames();
+  const onhandleCategory = () => {
+    setOnToggleCategory(false);
+  };
+
+  const onhandleAllSelect = (e) => {
+    if (e.target.checked) {
+      const allCategories = categoryOptions.map(
+        (eachOption) => eachOption.name
+      );
+
+      setOnSelectCategories(allCategories);
+
+      console.log(categoryOptions.length === onSelectCategories.length);
+    } else {
+      setOnSelectCategories([]);
+      // console.log(categoryOptions.length === onToggleCategories.length);
+    }
+  };
+
+  const handleIndividualCategory = (e) => {
+    const isChecked = e.target.checked;
+    console.log(e.target.value);
+    console.log(isChecked);
+    if (isChecked) {
+      setOnSelectCategories([...onSelectCategories, e.target.value]);
+    } else {
+      setOnSelectCategories(
+        onSelectCategories.filter((value) => value !== e.target.value)
+      );
+    }
+  };
+
   return (
-    <>
+    <div
+    // onClick={() => {
+    //   setOnToggleCategory(false);
+    // }}
+    >
       <DashboardHeaderComponent />
       <DashboardMinHeader />
-      <div className="add-country-contianer">
-        <h1 className="header-title">Add Country</h1>
-        <div className="add-country-details-contianer">
-          <div className="details-container">
-            <label className="add-country-label-name">Country</label>
-            <select className="country-option-container" required>
-              <option value="" disabled selected>
-                Select Country
-              </option>
-              {countries.map((country, index) => (
-                <option key={index} value={country} id={getCode(country)}>
-                  {country}
+      <div className="add-country-mother-container">
+        <div className="add-country-contianer ">
+          <h1 className="add-header-title">Add Country</h1>
+          <div className="add-country-details-contianer">
+            <div className="details-container">
+              {/* <lable className="add-country-label-name">Country</lable> */}
+              <select className="country-option-container" required>
+                <option value="" disabled selected>
+                  Select Country
                 </option>
-              ))}
-            </select>
-          </div>
-          {/* Line of bussiness DropDown */}
+                {countries.map((country, index) => (
+                  <option key={index} value={country} id={getCode(country)}>
+                    {country}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Line of bussiness DropDown */}
 
-          <div className="details-container">
-            <label className="add-country-label-name">Line of Business</label>
-            <select className="country-option-container">
-              <option disabled selected>
-                select
-              </option>
-              {LineofBusinessOptions.map((eachOption) => (
-                <option key={eachOption.id}>{eachOption.name}</option>
-              ))}
-            </select>
-          </div>
+            <div className="details-container">
+              {/* <label className="add-country-label-name">Line of Business</label> */}
+              <select className="country-option-container">
+                <option disabled selected>
+                  Select Line of Business
+                </option>
+                {LineofBusinessOptions.map((eachOption) => (
+                  <option key={eachOption.id}>{eachOption.name}</option>
+                ))}
+              </select>
+            </div>
 
-          {/* {categoryDropDown} */}
-          <div className="details-container">
-            <label className="add-country-label-name">Category Name</label>
-            <select className="country-option-container">
-              <option disabled selected>
-                select category
-              </option>
-              {categoryOptions.map((eachOption) => (
-                <option key={eachOption.id}>{eachOption.name}</option>
-              ))}
-            </select>
+            {/* {categoryDropDown} */}
+
+            <div className="details-container">
+              <p className="add-category-lable-name" onClick={onhandleCategory}>
+                Select Category Name
+                <FaAngleDown />
+              </p>
+            </div>
+            {!onToggleCategory && (
+              <div className="add-category-dropdown-options">
+                <label className="add-category-select-all-options-style">
+                  {" "}
+                  <input
+                    type="checkbox"
+                    className="checkbox-style"
+                    onChange={onhandleAllSelect}
+                    checked={isAllCategoriesSelected}
+                  />
+                  Select All
+                </label>
+                {categoryOptions.map((eachOption) => (
+                  <label
+                    className="add-category-dropdown-lable"
+                    key={eachOption.id}
+                  >
+                    <input
+                      type="checkbox"
+                      className="checkbox-style"
+                      checked={onSelectCategories.includes(eachOption.name)}
+                      onChange={handleIndividualCategory}
+                      value={eachOption.name}
+                    />{" "}
+                    {eachOption.name}
+                  </label>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="adduser-btn-container ">
+            <button className="submit-btn ">Submit</button>
+            <button className="clear-btn  ">clear</button>
           </div>
         </div>
-        <div className="user-btn-container ">
-          <button className="add-btn user-additional-btn ">Submit</button>
-        </div>
+        <div
+          className="add-country-details-main-container"
+          onClick={() => {
+            setOnToggleCategory(true);
+          }}
+        ></div>
       </div>
       <FooterComponent />
-    </>
+    </div>
   );
 };
 
