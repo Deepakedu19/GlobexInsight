@@ -7,6 +7,7 @@ import { FaStarOfLife } from "react-icons/fa6";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
 import { IoCloseSharp } from "react-icons/io5";
+import { ToastContainer, toast } from "react-toastify";
 
 const QuestionnairComponent = () => {
   const [addUserToggle, setAddUserToggle] = useState(false);
@@ -21,6 +22,19 @@ const QuestionnairComponent = () => {
     setSearchUserToggle(!searchUserToggle);
     setAddUserToggle(false);
   };
+
+  const onAddQuestionnair = () => {
+    toast.success("Question Added Successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
+  };
+
   return (
     <>
       <div>
@@ -66,7 +80,6 @@ const QuestionnairComponent = () => {
                 </div>
                 <br />
                 {/* Contianer - 2 */}
-
                 <div className="user-content-main-container">
                   <div className="questionnair-user-content-container">
                     <label className="questionnair-label-name">
@@ -82,7 +95,6 @@ const QuestionnairComponent = () => {
                     <input type="text" className="questionnair-text-input" />
                   </div>
                 </div>
-
                 <br />
                 <div className="user-content-main-final-container">
                   <div className="questionnair-user-content-container">
@@ -93,15 +105,18 @@ const QuestionnairComponent = () => {
                     <input type="text" className="questionnair-text-input" />
                   </div>
                 </div>
-
                 <div className="user-btn-container">
-                  <button className="add-btn user-additional-btn ">
+                  <button
+                    className="add-btn user-additional-btn "
+                    onClick={onAddQuestionnair}
+                  >
                     Submit
                   </button>
                   <button className="search-btn user-additional-btn">
                     Clear
                   </button>
                 </div>
+                <ToastContainer />
               </div>
             </div>
           )}

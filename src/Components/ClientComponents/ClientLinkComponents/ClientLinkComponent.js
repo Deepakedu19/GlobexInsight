@@ -5,7 +5,7 @@ import { LuNewspaper } from "react-icons/lu";
 import { IoInformationCircleSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import "./index.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { DataContext } from "../../ContextComponent/ContextComponent";
 
 const dashboardOptions = [

@@ -7,6 +7,7 @@ import { useState } from "react";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
 import { IoCloseSharp } from "react-icons/io5";
+import { ToastContainer, toast } from "react-toastify";
 
 const UserComponent = () => {
   const [addUserToggle, setAddUserToggle] = useState(false);
@@ -30,6 +31,18 @@ const UserComponent = () => {
     //     setSearchUserToggle(false);
     //   }
     //};
+  };
+
+  const OnRegisterDetails = () => {
+    toast.success("User Added Successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
   };
 
   return (
@@ -176,7 +189,10 @@ const UserComponent = () => {
                   <label className="user-label-name">Property</label>
                 </div>
                 <div className="admin-user-btn-container">
-                  <button className="add-btn user-additional-btn ">
+                  <button
+                    className="add-btn user-additional-btn "
+                    onClick={OnRegisterDetails}
+                  >
                     Register
                   </button>
                   <button
@@ -187,6 +203,7 @@ const UserComponent = () => {
                   >
                     Clear
                   </button>
+                  <ToastContainer />
                 </div>
               </div>
             </div>

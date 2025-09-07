@@ -16,6 +16,10 @@ const LoginFormComponent = () => {
     navigate("/dashboard");
   };
 
+  const onHandleLogin = () => {
+    setOnToggleForgtPassword(true);
+  };
+
   return (
     <>
       {!onToggleForgetPassword && (
@@ -38,6 +42,7 @@ const LoginFormComponent = () => {
               <CiLogin className="login-btn-icon" />
               Login
             </button>
+
             <span
               className="forgot-password-btn"
               onClick={() => {
@@ -69,12 +74,7 @@ const LoginFormComponent = () => {
               <IoMdKey className="login-btn-icon" />
               Send Password
             </button>
-            <span
-              className="forgot-password-btn"
-              onClick={() => {
-                setOnToggleForgtPassword(false);
-              }}
-            >
+            <span className="forgot-password-btn" onClick={onHandleLogin}>
               Login
             </span>
           </div>

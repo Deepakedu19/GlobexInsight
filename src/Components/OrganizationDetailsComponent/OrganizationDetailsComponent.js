@@ -7,7 +7,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { FaStarOfLife } from "react-icons/fa6";
 import { useState } from "react";
 import { MdOutlinePlaylistAdd } from "react-icons/md";
-
+import { ToastContainer, toast } from "react-toastify";
 import "./index.css";
 
 const OrganizationDetailsComponent = () => {
@@ -21,6 +21,19 @@ const OrganizationDetailsComponent = () => {
     //     setAddContainerToggle(false);
     //   }
     // };
+  };
+
+  const onAddOrganizationDetails = () => {
+    toast.success("Successfully Added", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   return (
@@ -160,9 +173,13 @@ const OrganizationDetailsComponent = () => {
               </div>
             </div>
             <div className="organization-btn-container">
-              <button className="add-btn">Add</button>
+              <button className="add-btn" onClick={onAddOrganizationDetails}>
+                Add
+              </button>
+
               <button className="search-btn">Clear</button>
             </div>
+            <ToastContainer />
           </div>
         </div>
       )}
