@@ -23,7 +23,7 @@ const SubscriptionRequestComponent = () => {
           <select className="drop-down-style" htmlFor="pagination-element">
             <option>25</option>
             <option>50</option>
-            <option>100</option>
+            <option>100</option> 
             <option>150</option>
           </select>
           <span className="label-style">entries</span>
@@ -84,17 +84,17 @@ const SubscriptionRequestComponent = () => {
               </td>
             </tr>
           </table>
-          <div className="pagination-style">
-            <span className="pagination-content-new">Show entries</span>
-            <select className="drop-down-selection">
-              <option>10</option>
-              <option>25</option>
-              <option>50</option>
-            </select>
-            <TfiArrowCircleLeft className="pagination-font-style" />
-            <TfiArrowCircleRight className="pagination-font-style" />
-            <span className="pagination-content">Page 1 of 1</span>
-          </div>
+        </div>
+        <div className="pagination-style">
+          <span className="pagination-content-new">Show entries</span>
+          <select className="drop-down-selection">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+          <TfiArrowCircleLeft className="pagination-font-style" />
+          <TfiArrowCircleRight className="pagination-font-style" />
+          <span className="pagination-content">Page 1 of 1</span>
         </div>
       </div>
 

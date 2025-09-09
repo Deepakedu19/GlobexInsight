@@ -201,17 +201,17 @@ const QuestionnairComponent = () => {
                 <td className="questionnair-font-style s-no-style">Delete</td>
               </tr>
             </table>
-            <div className="pagination-style">
-              <span className="pagination-content-new">Show entries</span>
-              <select className="drop-down-selection">
-                <option>10</option>
-                <option>25</option>
-                <option>50</option>
-              </select>
-              <TfiArrowCircleLeft className="pagination-font-style" />
-              <TfiArrowCircleRight className="pagination-font-style" />
-              <span className="pagination-content">Page 1 of 1</span>
-            </div>
+          </div>
+          <div className="pagination-style">
+            <span className="pagination-content-new">Show entries</span>
+            <select className="drop-down-selection">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+            <TfiArrowCircleLeft className="pagination-font-style" />
+            <TfiArrowCircleRight className="pagination-font-style" />
+            <span className="pagination-content">Page 1 of 1</span>
           </div>
         </div>
       </div>

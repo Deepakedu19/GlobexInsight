@@ -1,12 +1,13 @@
 import LoginHeaderComponent from "../LoginHeaderComponent/LoginHeaderComponent";
 // import "./index.css";
-import { Stack, TextField } from "@mui/material";
+
 import { getNames, getCode } from "country-list";
 import { IoIosMail, IoMdClose } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { FaFax } from "react-icons/fa";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { useState } from "react";
+import { FaStarOfLife } from "react-icons/fa6";
 
 const AnnualSubscriptionComponent = () => {
   // Get the list of countries and their codes
@@ -24,19 +25,137 @@ const AnnualSubscriptionComponent = () => {
       <>
         <div className="trial-subscription-container">
           <form className="trial-subscription-form">
-            <Stack
+            <h2 className=" header-style">
+              Welcome to the Annual Subscription Registration
+            </h2>
+            <h2 className="header-style subtitle-style">Company Information</h2>
+
+            {/** Company Information Fields */}
+            <div className="trail-sub-info-container">
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Organization Name <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Address <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+            </div>
+            <div className="trail-sub-info-container">
+              {/** City Field */}
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  City <FaStarOfLife className="required-icon" />
+                </label>
+
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Country <FaStarOfLife className="required-icon" />
+                </label>
+
+                <select className="trail-sub-input-country-style" required>
+                  <option value="" disabled selected>
+                    Select Country
+                  </option>
+                  {countries.map((country, index) => (
+                    <option key={index} value={country} id={getCode(country)}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <h2 className=" header-style subtitle-style">User Information</h2>
+
+            {/** User Information Fields */}
+            <div className="trail-sub-info-container">
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  First Name <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Last Name <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+            </div>
+            <div className="trail-sub-info-container">
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Email Address <FaStarOfLife className="required-icon" />
+                </label>
+                <input
+                  type="email"
+                  className="trail-sub-input-style"
+                  required
+                />
+              </div>
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Phone Number <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="tel" className="trail-sub-input-style" required />
+              </div>
+            </div>
+
+            <div className="trail-sub-info-container">
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Zip Code <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Country <FaStarOfLife className="required-icon" />
+                </label>
+                <select className="trail-sub-input-country-style" required>
+                  <option value="" disabled selected>
+                    Select Country
+                  </option>
+                  {countries.map((country, index) => (
+                    <option key={index} value={country} id={getCode(country)}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className="trail-sub-info-container">
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  Address <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+              <div className="trail-sub-detail-container">
+                <label className="trialsub-label-style">
+                  City <FaStarOfLife className="required-icon" />
+                </label>
+                <input type="text" className="trail-sub-input-style" required />
+              </div>
+            </div>
+
+            {/** Old MUI TextField Implementation - Commented Out */}
+
+            {/* <Stack
               spacing={2}
               sx={{
                 width: "100%",
                 margin: "auto",
               }}
             >
-              <h2 className=" header-style">
-                Welcome to the Annual Subscription Registration
-              </h2>
-              <h2 className="header-style subtitle-style">
-                Company Information
-              </h2>
+           
               <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
                 <TextField
                   label="Organization Name"
@@ -117,7 +236,7 @@ const AnnualSubscriptionComponent = () => {
               </Stack>
               <h2 className=" header-style subtitle-style">User Information</h2>
               {/* First Name Last Name */}
-              <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
+            {/* <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
                 <TextField
                   label="First Name"
                   variant="outlined"
@@ -162,7 +281,7 @@ const AnnualSubscriptionComponent = () => {
                 />
               </Stack>
               {/* Email Address Phone Number */}
-              <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
+            {/* <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
                 <TextField
                   label="Email Address"
                   variant="outlined"
@@ -207,7 +326,7 @@ const AnnualSubscriptionComponent = () => {
                 />
               </Stack>
               {/* City Address */}
-              <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
+            {/* <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
                 <TextField
                   label="City"
                   variant="outlined"
@@ -250,9 +369,9 @@ const AnnualSubscriptionComponent = () => {
                   }}
                   required
                 />
-              </Stack>
-              {/* Zip  Country */}
-              <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
+              </Stack> */}
+            {/* Zip  Country */}
+            {/* <Stack direction="row" spacing={3} sx={{ width: "100%" }}>
                 <select className="country-select" required>
                   <option value="" disabled selected className="select-option">
                     Select Country
@@ -285,28 +404,31 @@ const AnnualSubscriptionComponent = () => {
                   required
                 />
               </Stack>
-            </Stack>
-            <div className="agreement-container">
-              <p>
-                Please read the{" "}
-                <span
-                  className="agreement-highlight"
-                  onClick={handleAgreementClick}
-                >
-                  Agreement Details
-                </span>{" "}
-                before you complete the registration process.
-              </p>
+            </Stack>   */}
+            <div className="agreement-main-container">
+              <div className="agreement-container">
+                <p>
+                  Please read the{" "}
+                  <span
+                    className="agreement-highlight"
+                    onClick={handleAgreementClick}
+                  >
+                    Agreement Details
+                  </span>{" "}
+                  before you complete the registration process.
+                </p>
+              </div>
+              <div className="agreement-container">
+                <input type="checkbox" />
+                <label> Yes, I agree with all the terms and conditions</label>
+              </div>
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
             </div>
-            <div>
-              <input type="checkbox" />
-              <label> Yes, I agree with all the terms and conditions</label>
-            </div>
-            <button type="submit" className="submit-button">
-              Submit
-            </button>
           </form>
-          <div className="info-container ">
+          {/* globex info container */}
+          <div className="info-container-subscription">
             <div className="info-container-set">
               <IoIosMail className="contact-info-icon-style" />
               <span className="contact-info-icon-style">By Mail</span>

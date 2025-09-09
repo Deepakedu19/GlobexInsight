@@ -4,6 +4,8 @@ import { CiLogin } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IoMdKey } from "react-icons/io";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./index.css";
 
@@ -17,7 +19,34 @@ const LoginFormComponent = () => {
   };
 
   const onHandleLogin = () => {
-    setOnToggleForgtPassword(true);
+    setOnToggleForgtPassword(false);
+  };
+
+  const onHandleForgotPassword = () => {
+    const isValidUser = false;
+    if (isValidUser) {
+      toast.info("Password sent to your registered email id", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      toast.error("Please enter valid username", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
   };
 
   return (
@@ -70,7 +99,10 @@ const LoginFormComponent = () => {
             />
           </label>
           <div className="login-btn-contianer">
-            <button className="sendpassword-page-btn">
+            <button
+              className="sendpassword-page-btn"
+              onClick={onHandleForgotPassword}
+            >
               <IoMdKey className="login-btn-icon" />
               Send Password
             </button>
@@ -78,6 +110,7 @@ const LoginFormComponent = () => {
               Login
             </span>
           </div>
+          <ToastContainer />
         </div>
       )}
     </>

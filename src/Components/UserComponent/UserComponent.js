@@ -323,18 +323,29 @@ const UserComponent = () => {
                 <td className=" name-style space-style">Edit</td>
                 <td className=" name-style space-style">Delete</td>
               </tr>
+              <tr className="user-description-row">
+                <td className=" name-style space-style">First Name</td>
+                <td className=" name-style space-style">Last Name</td>
+                <td className=" email-style space-style">Email</td>
+                <td className=" org-style space-style">Organization</td>
+                <td className=" name-style space-style">Account Type</td>
+                <td className=" name-style space-style">User Type</td>
+                <td className=" LOB-style space-style">LOB</td>
+                <td className=" name-style space-style">Edit</td>
+                <td className=" name-style space-style">Delete</td>
+              </tr>
             </table>
-            <div className="pagination-style">
-              <span className="pagination-content-new">Show entries</span>
-              <select className="drop-down-selection">
-                <option>10</option>
-                <option>25</option>
-                <option>50</option>
-              </select>
-              <TfiArrowCircleLeft className="pagination-font-style" />
-              <TfiArrowCircleRight className="pagination-font-style" />
-              <span className="pagination-content">Page 1 of 1</span>
-            </div>
+          </div>
+          <div className="pagination-style">
+            <span className="pagination-content-new">Show entries</span>
+            <select className="drop-down-selection">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+            <TfiArrowCircleLeft className="pagination-font-style" />
+            <TfiArrowCircleRight className="pagination-font-style" />
+            <span className="pagination-content">Page 1 of 1</span>
           </div>
         </div>
       </div>

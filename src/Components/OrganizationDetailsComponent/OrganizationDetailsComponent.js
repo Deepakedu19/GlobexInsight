@@ -11,16 +11,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "./index.css";
 
 const OrganizationDetailsComponent = () => {
-  const [addContainerToggle, setAddContainerToggle] = useState(false);
-  const [searchContainerToggle, setSearchContainerToggle] = useState(false);
+  const [addContainerToggle, setAddContainerToggle] = useState(false); // to toggle add menu
+  const [isDetailsLoaded, setIsDetailsLoaded] = useState(false);
 
   const onHandleSubmitOrganizationDetails = () => {
     setAddContainerToggle(!addContainerToggle);
-    // window.onclick = (e) => {
-    //   if (!e.target.closest(".add-btn")) {
-    //     setAddContainerToggle(false);
-    //   }
-    // };
   };
 
   const onAddOrganizationDetails = () => {
@@ -34,6 +29,7 @@ const OrganizationDetailsComponent = () => {
       progress: undefined,
       theme: "colored",
     });
+    setIsDetailsLoaded(true);
   };
 
   return (
@@ -50,6 +46,7 @@ const OrganizationDetailsComponent = () => {
             <MdOutlinePlaylistAdd className="add-icon" />
             Add
           </button>
+          {/* {Search Container} */}
           <div className="search-container ">
             <div className="search-content-container">
               {/* <label className="organization-label-name">
@@ -72,36 +69,43 @@ const OrganizationDetailsComponent = () => {
             <button className="search-btn new-additional-btn">clear</button>
           </div>
         </div>
+
+        {/* {Table Contianer} */}
+
         <div className="organization-details-table-container">
           <table className="organization-table">
-            <tr className="table-header-style">
-              <th className="organization-style font-style">
-                Organization Name
-              </th>
-              <th className="font-style place-style"> City</th>
-              <th className="font-style place-style">Country</th>
-              <th className="font-style btn-style">View/Edit</th>
-              <th className="font-style btn-style">Delete</th>
-            </tr>
-            <tr className="table-content-style">
-              <td className="organization-style font-style"></td>
-              <td className="font-style place-style"></td>
-              <td className="font-style place-style"></td>
-              <td className="font-style btn-style"></td>
-              <td className="font-style btn-style"></td>
-            </tr>
+            <thead className="organization-table-head">
+              <tr className="organization-table-header-style ">
+                <th className="organization-style font-style">
+                  Organization Name
+                </th>
+                <th className="font-style place-style"> City</th>
+                <th className="font-style place-style">Country</th>
+                <th className="font-style btn-style">View/Edit</th>
+                <th className="font-style btn-style">Delete</th>
+              </tr>
+            </thead>
+            <tbody className="organization-table-body">
+              <tr className="table-content-style">
+                <td className="organization-style font-style">1</td>
+                <td className="font-style place-style">....</td>
+                <td className="font-style place-style">.....</td>
+                <td className="font-style btn-style">3333</td>
+                <td className="font-style btn-style">33333333</td>
+              </tr>
+            </tbody>
           </table>
-          <div className="pagination-style">
-            <span className="pagination-content-new">Show entries</span>
-            <select className="drop-down-selection">
-              <option>10</option>
-              <option>25</option>
-              <option>50</option>
-            </select>
-            <TfiArrowCircleLeft className="pagination-font-style" />
-            <TfiArrowCircleRight className="pagination-font-style" />
-            <span className="pagination-content">Page 1 of 1</span>
-          </div>
+        </div>
+        <div className="pagination-style">
+          <span className="pagination-content-new">Show entries</span>
+          <select className="drop-down-selection">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+          <TfiArrowCircleLeft className="pagination-font-style" />
+          <TfiArrowCircleRight className="pagination-font-style" />
+          <span className="pagination-content">Page 1 of 1</span>
         </div>
       </div>
       {/* Add Organization-container */}
