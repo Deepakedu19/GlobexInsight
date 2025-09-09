@@ -80,14 +80,17 @@
 
 .newsletter-table-container {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 66vh;
+  overflow-y: auto;
+  background-color: rgb(255, 249, 240);
 }
 .newsletter-table-header {
   width: 100%;
   height: 43px;
   background-color: rgb(235, 235, 235);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .newsletter-table {
   width: 100%;

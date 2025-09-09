@@ -1,28 +1,146 @@
 import LoginHeaderComponent from "../LoginHeaderComponent/LoginHeaderComponent";
 import FooterComponent from "../FooterComponent/FooterComponent";
-import { Stack, TextField } from "@mui/material";
+// import { Stack, TextField } from "@mui/material";
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { FaFax } from "react-icons/fa";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { MdContactMail } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { FaStarOfLife } from "react-icons/fa6";
 
 import "./index.css";
 
 const LoginContactUsComponent = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [comments, setComments] = useState("");
+
+  const onHandleContactUsDetailsSubmit = (event) => {
+    event.preventDefault();
+    const contactUsDetails = {
+      firstName,
+      lastName,
+      company,
+      phoneNumber,
+      email,
+      comments,
+    };
+    if (Object.values(contactUsDetails).every((field) => field.trim() !== "")) {
+      toast.success("Successfully submitted!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      setFirstName("");
+      setLastName("");
+      setCompany("");
+      setPhoneNumber("");
+      setEmail("");
+      setComments("");
+    }
+  };
+
   return (
     <div>
       <LoginHeaderComponent />
       <div className="contact-us-container">
-        <form className="contact-us-form">
+        <form
+          className="contact-us-form"
+          onClick={onHandleContactUsDetailsSubmit}
+        >
           <h2 className="contact-us-title">Contact Us</h2>
           <div className="info-container-set">
             <MdContactMail className="contact-info-icon-style" />
             <span className="contact-info-icon-style">By Mail</span>
           </div>
           <br />
+          <div className="login-contact-username-input-container">
+            <div className="login-contact-us-form-container">
+              <label className="login-contact-us-form-label">
+                First Name <FaStarOfLife className="required-icon" />
+              </label>
+              <input
+                type="text"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                className="login-contact-us-input-style"
+                required
+              />
+            </div>
 
-          <Stack
+            <div className="login-contact-us-form-container">
+              <label className="login-contact-us-form-label">
+                Last Name <FaStarOfLife className="required-icon" />
+              </label>
+              <input
+                type="text"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                className="login-contact-us-input-style"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="login-contact-us-form-container">
+            <label className="login-contact-us-form-label">
+              Company <FaStarOfLife className="required-icon" />
+            </label>
+            <input
+              type="text"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              className="login-contact-us-input-style"
+              required
+            />
+          </div>
+
+          <div className="login-contact-us-form-container">
+            <label className="login-contact-us-form-label">
+              Phone Number <FaStarOfLife className="required-icon" />
+            </label>
+            <input
+              type="tel"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              className="login-contact-us-input-style"
+              required
+            />
+          </div>
+          <div className="login-contact-us-form-container">
+            <label className="login-contact-us-form-label">
+              Email Address <FaStarOfLife className="required-icon" />
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="login-contact-us-input-style"
+              required
+            />
+          </div>
+          <div className="login-contact-us-form-container">
+            <label className="login-contact-us-form-label">Comments</label>
+            <textarea
+              value={comments}
+              onChange={(e) => setComments(e.target.value)}
+              className="login-contact-us-textarea-style"
+              rows="4"
+            />
+          </div>
+
+          {/* <Stack
             spacing={2}
             sx={{
               width: "100%",
@@ -49,6 +167,8 @@ const LoginContactUsComponent = () => {
                     },
                   },
                 }}
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstName}
                 required
               />
               <TextField
@@ -69,6 +189,8 @@ const LoginContactUsComponent = () => {
                     },
                   },
                 }}
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
                 required
               />
             </Stack>
@@ -90,6 +212,8 @@ const LoginContactUsComponent = () => {
                   },
                 },
               }}
+              onChange={(e) => setCompany(e.target.value)}
+              value={company}
               required
             />
             <TextField
@@ -110,6 +234,9 @@ const LoginContactUsComponent = () => {
                   },
                 },
               }}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              value={phoneNumber}
+              type="tel"
               required
             />
             <TextField
@@ -130,6 +257,9 @@ const LoginContactUsComponent = () => {
                   },
                 },
               }}
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              type="email"
               required
             />
             <TextField
@@ -152,12 +282,17 @@ const LoginContactUsComponent = () => {
                   },
                 },
               }}
+              onChange={(e) => setComments(e.target.value)}
+              value={comments}
             />
-          </Stack>
+          </Stack> */}
           <button type="submit" className="submit-button">
             Submit
           </button>
+          <ToastContainer />
         </form>
+        {/* {Globex - information - container} */}
+
         <div className="info-container">
           <div className="info-container-set">
             <IoIosMail className="contact-info-icon-style" />
@@ -188,22 +323,6 @@ const LoginContactUsComponent = () => {
           </a>
         </div>
       </div>
-      {/* <div className="footer-container">
-        <p className="footer-info-container-text">
-          Globex Insight provides information that is subject to change and it
-          may not reflect real time information at the time it is viewed. Data
-          is being reviewed and revised continuously, an update may not include
-          all fields at the same time.
-          <br />
-          <br />
-          Feel free to contact your Globex Insight experts if your use of the
-          latest information is critical.
-          <br />
-          <br />
-          Copyright 2025, Globex International Group Inc. © 2025 Globex • Terms
-          & Conditions • Privacy Policy
-        </p>
-      </div> */}
       <FooterComponent />
     </div>
   );

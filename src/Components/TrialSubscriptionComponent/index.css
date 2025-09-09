@@ -1,15 +1,6 @@
-.trial-subscription-form {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 100px;
-  padding-top: 20px;
-  margin-right: 30px;
-  padding-bottom: 20px;
-}
 .header-style {
+  margin: 0px;
   margin-left: 15px;
-  margin: 8px;
   font-family: calibri light;
   font-size: 28px;
   color: #1466cc;
@@ -18,11 +9,11 @@
 
 .subtitle-style {
   margin-left: 25px;
-  margin-bottom: 20px;
+  color: brown;
 }
 
 .country-select {
-  width: 400px;
+  width: 26.5rem;
   height: 38px;
   border-radius: 5px;
   border: solid 1px #7b5959;
@@ -31,26 +22,23 @@
   color: #616161;
   outline: none;
 }
-.select-option {
-  color: #616161;
-  font-size: 15px;
-  outline: hidden;
-}
+
 .trial-subscription-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: start;
+  height: 45rem;
 }
 .agreement-container {
   width: 70%;
-
-  margin-top: 20px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   font-size: 15px;
-  color: #2b2b2b;
+  color: #484848;
 }
 .agreement-highlight {
   color: #3770ac;
-
   cursor: pointer;
 }
 .agreement-highlight:hover {
@@ -61,18 +49,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
+  width: 99.8%;
+  height: 49.3rem;
   border: solid 1px #000000;
   background-color: #0000007e;
   position: absolute;
   top: 0px;
+  bottom: 0px;
 }
 .agreement-notice-container {
   background-color: white;
   width: 40%;
   height: 85vh;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow-y: scroll;
   z-index: 4;
 }
@@ -136,4 +125,81 @@
 .close-icon {
   margin-left: 200px;
   color: #8f8f8f;
+}
+.info-container-subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #2b2b2b;
+  height: 25rem;
+  margin-top: 7rem;
+  width: 30%;
+}
+.trial-subscription-form {
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  height: 80vh;
+}
+.trail-sub-info-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  margin-left: 24px;
+}
+.trialsub-label-style {
+  font-size: 14px;
+  color: #3b3b3bcc;
+  font-family: Roboto, sans-serif;
+  margin-bottom: 5px;
+}
+.trail-sub-detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 0.5rem;
+}
+.trail-sub-input-style {
+  height: 34px;
+  border-radius: 5px;
+  border: solid 1px #7b5959;
+  padding-left: 10px;
+  border-color: rgb(164, 164, 164);
+  color: #616161;
+  outline: none;
+  width: 97%;
+}
+.trail-sub-input-country-style {
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  border: solid 1px #7b5959;
+  padding-left: 10px;
+  border-color: rgb(164, 164, 164);
+  color: #7f7f7f;
+  outline: none;
+}
+.trail-sub-input-style:hover {
+  border: solid 1px #000000;
+}
+.trail-sub-input-country-style:hover {
+  border: solid 1px #000000;
+}
+
+.trail-sub-input-style:focus {
+  border: solid 1px #5ca9fc;
+}
+.trail-sub-input-country-style:focus {
+  border: solid 1px #5ca9fc;
+}
+.agreement-main-container {
+  padding-left: 1.3em;
 }

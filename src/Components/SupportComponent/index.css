@@ -131,11 +131,16 @@
   background-color: rgb(248, 248, 248);
   border: none;
   height: 45px;
-  border-bottom: solid 1px rgb(235, 234, 234);
 }
 .new-support-table-style {
   border-collapse: collapse;
   width: 100%;
+}
+
+.support-table {
+  height: 66vh;
+  width: 100%;
+  background-color: rgb(255, 249, 240);
 }
 .table-footer {
   width: 100%;

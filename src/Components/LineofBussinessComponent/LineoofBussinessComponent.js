@@ -33,7 +33,7 @@ const LineofBussinessComponent = () => {
             </select>
           </div>
         </div>
-        <div className="table-container">
+        <div className="category-details-table-container">
           <table className="LOB-table-style">
             <tr className="LOB-table-header-style">
               <th className="LOB-category-style">Line of Business</th>
@@ -46,17 +46,17 @@ const LineofBussinessComponent = () => {
               <td className="LOB-button-style"></td>
             </tr>
           </table>
-          <div className="pagination-container">
-            <span className="pagination-content-new">Show entries</span>
-            <select className="drop-down-selection">
-              <option>10</option>
-              <option>25</option>
-              <option>50</option>
-            </select>
-            <TfiArrowCircleLeft className="pagination-font-style" />
-            <TfiArrowCircleRight className="pagination-font-style" />
-            <span className="pagination-content">Page 1 of 1</span>
-          </div>
+        </div>
+        <div className="pagination-container">
+          <span className="pagination-content-new">Show entries</span>
+          <select className="drop-down-selection">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+          <TfiArrowCircleLeft className="pagination-font-style" />
+          <TfiArrowCircleRight className="pagination-font-style" />
+          <span className="pagination-content">Page 1 of 1</span>
         </div>
       </div>
       <FooterComponent />

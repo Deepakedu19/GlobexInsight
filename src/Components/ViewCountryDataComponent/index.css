@@ -1,5 +1,7 @@
 .view-content-container {
-  height: 80vh;
+  height: 79vh;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .view-country-data-filter-btn {
   display: flex;
@@ -8,7 +10,7 @@
   background-color: #1e4ccc;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 7px 20px;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 20px;
@@ -20,7 +22,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  padding-left: 20px;
+
   height: 7vh;
 }
 
@@ -279,11 +281,15 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  height: 62vh;
+  height: 66vh;
+  background-color: rgb(255, 249, 240);
+  width: 100%;
+  padding: 0px;
 }
 .view-country-data-table {
   max-height: 60vh;
-  width: 98%;
+  background-color: rgb(255, 249, 240);
+  width: 100%;
 }
 .view-country-data-table-header-row {
   width: 100%;

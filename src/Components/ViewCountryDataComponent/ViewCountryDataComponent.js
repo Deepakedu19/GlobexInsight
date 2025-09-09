@@ -146,7 +146,7 @@ const ViewCountryDataComponent = () => {
             Filter
           </button>
         </div>
-
+        {/* {on menu Popup} */}
         {onPopupMenu && (
           <div className="view-details-popup-menu">
             <div className="filter-options-container">
@@ -319,18 +319,18 @@ const ViewCountryDataComponent = () => {
                 </td>
               </tr>
             </tbody>
-            <div className="pagination-style">
-              <span className="pagination-content-new">Show entries</span>
-              <select className="drop-down-selection">
-                <option>10</option>
-                <option>25</option>
-                <option>50</option>
-              </select>
-              <TfiArrowCircleLeft className="pagination-font-style" />
-              <TfiArrowCircleRight className="pagination-font-style" />
-              <span className="pagination-content">Page 1 of 1</span>
-            </div>
           </table>
+        </div>
+        <div className="pagination-style">
+          <span className="pagination-content-new">Show entries</span>
+          <select className="drop-down-selection">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+          <TfiArrowCircleLeft className="pagination-font-style" />
+          <TfiArrowCircleRight className="pagination-font-style" />
+          <span className="pagination-content">Page 1 of 1</span>
         </div>
       </div>
       <FooterComponent />

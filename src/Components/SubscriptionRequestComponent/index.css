@@ -3,14 +3,15 @@
   color: brown;
   font-family: Roboto;
   margin-top: 0px;
-  margin-left: 10px;
 
   margin-bottom: 0px;
 }
 .subscription-container {
   background-color: rgb(255, 253, 250);
-  height: 70vh;
-  padding: 20px;
+  height: 78vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
   overflow-y: auto;
 }
 .drop-down-style {
@@ -90,12 +91,11 @@
 }
 
 .subscription-table {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px;
   font-family: sans-serif;
-  margin-top: 0px;
+  margin-top: 5px;
+  height: 67vh;
+
+  background-color: rgb(255, 249, 240);
 }
 
 .name-style {
