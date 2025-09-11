@@ -207,3 +207,13 @@
 .admin-search-content-details-contianer {
   padding-left: 20px;
 }
+.user-edit-icon {
+  cursor: pointer;
+  font-size: 13px;
+  color: grey;
+  text-align: center;
+  transition: 0.3s;
+}
+.user-edit-icon:hover {
+  color: rgb(92, 0, 0);
+}

@@ -40,23 +40,25 @@ const LoginDashboardComponent = () => {
   return (
     <>
       <div className="login-dashboard" style={dashboardStyle}>
-        <div className="login-btn-container">
-          <Link to="/subscription" className="login-link">
-            <button
-              className="login-button"
-              onClick={() => setSwitchLink(false)}
-            >
-              Click here to learn more about
-              <br />
-              <span className="logo-subscription-btn-style">
-                Globex <span className="logo-style">In</span>sight
-              </span>{" "}
-              <br />&<br /> apply for subscriptions
-            </button>
-          </Link>
-        </div>
-        <div className="login-form-container">
-          <LoginFormComponent />
+        <div className="login-dashboard-overlay">
+          <div className="login-btn-container">
+            <Link to="/subscription" className="login-link">
+              <button
+                className="login-button"
+                onClick={() => setSwitchLink(false)}
+              >
+                Click here to learn more about
+                <br />
+                <span className="logo-subscription-btn-style">
+                  Globex <span className="logo-style">In</span>sight
+                </span>{" "}
+                <br />&<br /> apply for subscriptions
+              </button>
+            </Link>
+          </div>
+          <div className="login-form-container">
+            <LoginFormComponent />
+          </div>
         </div>
       </div>
 
