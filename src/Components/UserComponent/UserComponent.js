@@ -842,90 +842,67 @@ const UserComponent = () => {
 
           {/* {search-container} */}
           {searchUserToggle && (
-            <div className="user-add-content-container">
-              <div className="user-search-content-detail-container">
-                <h2 className="admin-search-user-header-title">
-                  Search User
-                  <IoCloseSharp
-                    className="exit-icon"
-                    onClick={() => {
-                      setSearchUserToggle(false);
-                    }}
-                  />
-                </h2>
-                <div className="admin-search-content-details-contianer">
-                  <div className="user-content-main-container">
-                    <div className="admin-user-content-container">
-                      <label className="user-label-name">
-                        First Name{" "}
-                        <FaStarOfLife className="required-icon-style" />
-                      </label>
-                      <input type="text" className="text-input" />
-                    </div>
-                    <div className="admin-user-content-container">
-                      <label className="user-label-name">
-                        Last Name{" "}
-                        <FaStarOfLife className="required-icon-style" />
-                      </label>
-                      <input type="text" className="text-input" />
-                    </div>
-                  </div>
-                  <br />
-                  {/* {Container-2} */}
-                  <div className="user-content-main-container">
-                    <div className="admin-user-content-container">
-                      <label className="user-label-name">
-                        Account Type{" "}
-                        <FaStarOfLife className="required-icon-style" />
-                      </label>
-                      <input type="text" className="text-input" />
-                    </div>
-                    <div className="admin-user-content-container">
-                      <label className="user-label-name">
-                        User Status{" "}
-                        <FaStarOfLife className="required-icon-style" />
-                      </label>
-                      <input type="text" className="text-input" />
-                    </div>
-                  </div>
-
-                  <br />
-                  {/*  container - 3*/}
-                  <div className="user-content-main-container">
-                    <div className="admin-user-content-container">
-                      <label className="user-label-name">
-                        Organization Name{" "}
-                        <FaStarOfLife className="required-icon-style" />
-                      </label>
-                      <input type="text" className="text-input" />
-                    </div>
-                    <div className="admin-user-content-container">
-                      <label className="user-label-name">
-                        Email <FaStarOfLife className="required-icon-style" />
-                      </label>
-                      <input type="text" className="text-input" />
-                    </div>
-                  </div>
-                  <br />
-                  {/* final Contianer */}
-                  <div className="admin-user-content-main-final-container">
-                    <div className="admin-user-content-container">
-                      <label className="user-label-name">
-                        User type{" "}
-                        <FaStarOfLife className="required-icon-style" />
-                      </label>
-                      <input type="text" className="text-input" />
-                    </div>
-                  </div>
+            <div>
+              <div className="user-content-main-container">
+                <div className="user-content-container">
+                  <label className="label-name">
+                    First Name <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
                 </div>
-                <div className="admin-user-btn-container">
-                  <button className="add-btn user-additional-btn ">
-                    Search
-                  </button>
-                  <button className="search-btn user-additional-btn">
-                    Clear
-                  </button>
+                <div className="user-content-container">
+                  <label className="label-name">
+                    Last Name <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
                 </div>
+                <div className="user-content-container">
+                  <label className="label-name">
+                    Account Type{" "}
+                    <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
+                </div>
+              </div>
+              <br />
+              {/* second container */}
+              <div className="user-content-main-container">
+                <div className="user-content-container">
+                  <label className="label-name">
+                    User Status <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
+                </div>
+                <div className="user-content-container">
+                  <label className="label-name">
+                    Organization Name{" "}
+                    <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
+                </div>
+                <div className="user-content-container">
+                  <label className="label-name">
+                    Email <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
+                </div>
+              </div>
+              <br />
+              {/* third Contianer */}
+              <div className="user-content-final-container">
+                <div className="user-content-container">
+                  <label className="label-name">
+                    User type <FaStarOfLife className="required-icon-style" />
+                  </label>
+                  <input type="text" className="text-input" />
+                </div>
+              </div>
+              <div className="user-btn-container">
+                <button className="add-btn user-additional-btn ">Search</button>
+                <button className="search-btn user-additional-btn">
+                  Clear
+                </button>
+              </div>
               </div>
             </div>
           )}
