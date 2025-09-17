@@ -8,6 +8,7 @@ import { useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
+import { toast } from "react-toastify";
 
 const LineofBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -131,6 +132,21 @@ const ViewCountryDataComponent = () => {
     }
   };
 
+  const onHandleSelectedDetails = () => {
+    // TODO: Implement the logic to fetch and display the selected data
+    toast.info("Data fetched successfully", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "colored",
+    });
+    setOnPopupMenu(false);
+  };
+
   return (
     <>
       <DashboardHeaderComponent />
@@ -250,7 +266,12 @@ const ViewCountryDataComponent = () => {
                 </div>
                 {/* {buttons contianer} */}
                 <div className="view-button-container">
-                  <button className="filter-submit-btn">Submit</button>
+                  <button
+                    className="filter-submit-btn"
+                    onClick={onHandleSelectedDetails}
+                  >
+                    Submit
+                  </button>
                   <button
                     className="filter-cancel-btn"
                     onClick={onCancelRequest}

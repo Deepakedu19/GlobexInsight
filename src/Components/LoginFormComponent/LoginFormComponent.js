@@ -11,13 +11,49 @@ import "./index.css";
 
 const LoginFormComponent = () => {
   const [onToggleForgetPassword, setOnToggleForgtPassword] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const onDetailsSubmit = (e) => {
     e.preventDefault();
-    navigate("/dashboard");
-  };
 
+    if (username === "admin" && password === "p") {
+      navigate("/dashboard");
+      toast.success("Login successful", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else if (username === "" || password === "") {
+      toast.warning("Please enter the credentilas", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      toast.error("Invalid credentials", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+  };
   const onHandleLogin = () => {
     setOnToggleForgtPassword(false);
   };
@@ -56,7 +92,13 @@ const LoginFormComponent = () => {
           <h2 className="login-form-heading">Login </h2>
           <label id="label-container">
             <FaUser className="login-icon-style" />{" "}
-            <input type="text" id="login-input-feild" placeholder="UserName" />
+            <input
+              type="text"
+              id="login-input-feild"
+              placeholder="UserName"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </label>
           <label id="label-container">
             <MdKey className="login-icon-style" />{" "}
@@ -64,6 +106,8 @@ const LoginFormComponent = () => {
               type="password"
               id="login-input-feild"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </label>
           <div className="login-btn-contianer">

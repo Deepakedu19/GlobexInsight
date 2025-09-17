@@ -7,6 +7,7 @@ import { DataContext } from "../ContextComponent/ContextComponent";
 import { MdLogout } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { IoMenu } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const countryData = [
   {
@@ -95,6 +96,20 @@ const DashboardHeaderComponent = () => {
   ) : (
     <IoMdArrowDropdown className="drop-down-continer-icon" />
   );
+
+  const onlogoutRequest = () => {
+    contextValue.setActiveLinkId(1);
+    toast("Logout Successfully", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
 
   const onToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -247,9 +262,7 @@ const DashboardHeaderComponent = () => {
               <Link
                 to="/"
                 className="menu-link-style"
-                onClick={() => {
-                  contextValue.setActiveLinkId(1);
-                }}
+                onClick={onlogoutRequest}
               >
                 <MdLogout className="menu-min-icon" /> Logout
               </Link>

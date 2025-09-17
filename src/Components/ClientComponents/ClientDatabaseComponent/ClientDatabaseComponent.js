@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { IoFilter } from "react-icons/io5";
 import { DataContext } from "../../ContextComponent/ContextComponent";
+import { toast } from "react-toastify";
 // import { BiWindowOpen } from "react-icons/bi";
 
 const lineOfBusinessOptions = [
@@ -64,8 +65,25 @@ const ClientDatabaseComponent = () => {
     if (selectedCountries.length > 0) {
       setOnTogglePopMenu(false);
       setOnToggleTable(true);
+      toast.info("Check the data", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+      });
     } else {
-      alert("Please select at least one country.");
+      toast.warning("Please select at least one country", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+      });
     }
   };
 
@@ -131,12 +149,16 @@ const ClientDatabaseComponent = () => {
                           {onToggleCountry && (
                             <div>
                               <div className="clientDatabase-selectall-contianer">
-                                <label className="client-databse-select-all-label">
+                                <label
+                                  className="client-databse-select-all-label"
+                                  htmlfor="select-all-countries"
+                                >
                                   <input
                                     type="checkbox"
                                     className="new-checkbox-style"
                                     onChange={onHandleSelectAllCountries}
                                     checked={onSelectAllCoutries}
+                                    id="select-all-countries"
                                   />
                                   Select all
                                 </label>
@@ -144,12 +166,14 @@ const ClientDatabaseComponent = () => {
                               {countries.map((country, index) => (
                                 <label
                                   key={index}
-                                  className="country-item-label"
+                                  className="select-country-item-label"
+                                  htmlFor={`country-${index}`}
                                 >
                                   <input
                                     type="checkbox"
                                     className="country-checkbox"
                                     value={country}
+                                    id={`country-${index}`}
                                     checked={selectedCountries.includes(
                                       country
                                     )}

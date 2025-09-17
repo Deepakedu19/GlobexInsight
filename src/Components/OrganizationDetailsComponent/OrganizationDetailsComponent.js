@@ -89,6 +89,17 @@ const OrganizationDetailsComponent = () => {
     alert("Are you sure you want to delete this record?");
     const filteredList = organizationDetailsList.filter((org) => org.id !== id);
     setOrganizationDetailsList(filteredList);
+    toast.warning("Record deleted successfully", {
+      toastId: "organization-delete-toast",
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   // To edit organization details
@@ -111,7 +122,7 @@ const OrganizationDetailsComponent = () => {
   };
 
   // To submit edited organization details
-  const onSubmitEditOrganizationDetails = (id) => {
+  const onSubmitEditOrganizationDetails = () => {
     const updatedOrganizationDetails = {
       id: isOrganisationId,
       organizationName,
@@ -133,7 +144,17 @@ const OrganizationDetailsComponent = () => {
           : org
       )
     );
-    alert("Successfully Edited");
+    toast.info("Details are updated", {
+      toastId: "edit-toast",
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
   // To clear form details
   const onHandleClearForm = () => {
@@ -224,7 +245,7 @@ const OrganizationDetailsComponent = () => {
     <>
       <DashboardHeaderComponent />
       <DashboardMinHeader />
-      <ToastContainer />
+
       <div className="organization-container">
         <div className="organization-header-container ">
           <h1 className="header-title">Organization Details</h1>

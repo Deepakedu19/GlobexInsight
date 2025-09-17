@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .add-newsletter-content-details-contianer {
@@ -99,10 +100,15 @@
 .file-name-style {
   width: 40%;
 }
-
+.file-name-style-description {
+  padding-left: 10px;
+  color: grey;
+  font-weight: 400;
+  font-size: small;
+}
 .newsletter-table-description {
   background-color: rgb(253, 253, 253);
-  height: 40px;
+  height: 43px;
 }
 .newletter-label-name {
   font-family: Roboto;
@@ -121,4 +127,17 @@
 }
 .newsletter-file-attacment-style {
   color: grey;
+}
+.file-delete-icon {
+  cursor: pointer;
+  text-align: center;
+  padding-left: 10px;
+}
+.del-icon {
+  font-size: 14px;
+  color: rgb(185, 0, 0);
+  cursor: pointer;
+}
+.del-icon:hover {
+  color: rgb(255, 0, 0);
 }

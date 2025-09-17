@@ -7,13 +7,14 @@ import { useState, useEffect } from "react";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
 import { IoCloseSharp } from "react-icons/io5";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { MdEditSquare } from "react-icons/md";
 import { AiFillDelete } from "react-icons/ai";
 import { v4 as uuidv4 } from "uuid";
 
 const userInitialDetails = [
   {
+    id: uuidv4(),
     firstName: "John",
     lastName: "Doe",
     email: "john.doe@example.com",
@@ -29,6 +30,7 @@ const userInitialDetails = [
     lineOfBusiness: ["Cyber", "D&O"],
   },
   {
+    id: uuidv4(),
     firstName: "Jane",
     lastName: "Smith",
     email: "jane.smith@example.com",
@@ -44,6 +46,7 @@ const userInitialDetails = [
     lineOfBusiness: ["Professional Indemnity", "Property"],
   },
   {
+    id: uuidv4(),
     firstName: "Alice",
     lastName: "Johnson",
     email: "alice.johnson@example.com",
@@ -59,6 +62,7 @@ const userInitialDetails = [
     lineOfBusiness: ["General Liability", "Marine"],
   },
   {
+    id: uuidv4(),
     firstName: "Bob",
     lastName: "Brown",
     email: "bob.brown@example.com",
@@ -93,6 +97,7 @@ const UserComponent = () => {
   const [lineOfBusiness, setLineOfBusiness] = useState([]);
   const [userList, setUserList] = useState([]);
   const [editUserToggle, setEditUserToggle] = useState(false);
+  const [userIdToEdit, setUserIdToEdit] = useState("");
 
   // on Toggle Add User menu
   const onToggleAddUser = () => {
@@ -108,7 +113,10 @@ const UserComponent = () => {
   // on Toggle  Edit User Menu
   const onEditHandler = (userId) => {
     setEditUserToggle(true);
+    setUserIdToEdit(userId);
     const userToEdit = userList.find((user) => user.id === userId);
+
+    console.log(userToEdit);
     if (userToEdit) {
       setFirstName(userToEdit.firstName);
       setLastName(userToEdit.lastName);
@@ -126,6 +134,43 @@ const UserComponent = () => {
     }
   };
 
+  // On Update Register Details
+  const OnUpdateRegisterDetails = () => {
+    const updateUserDetails = userList.filter(
+      (eachUser) => eachUser.id !== userIdToEdit
+    );
+    const updatedUser = {
+      id: userIdToEdit,
+      firstName,
+      lastName,
+      email,
+      organizationName,
+      accountType,
+      userType,
+      address,
+      phone,
+      city,
+      country,
+      zip,
+      userStatus,
+      lineOfBusiness,
+    };
+    if (updateUserDetails) {
+      setUserList([...updateUserDetails, updatedUser]);
+      setEditUserToggle(false);
+      toast.info("User Details Updated Successfully", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+  };
+
   // on Toggle Search User menu
   const onToggleSearchUser = () => {
     setSearchUserToggle(!searchUserToggle);
@@ -137,6 +182,23 @@ const UserComponent = () => {
     //};
   };
 
+  // On Delete User
+  const OnDeleteUser = (userId) => {
+    const updatedUserList = userList.filter(
+      (eachUser) => eachUser.id !== userId
+    );
+    setUserList(updatedUserList);
+    toast.warning("User Record Deleted Successfully", {
+      toastId: "user-delete-toast",
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
+  };
   useEffect(() => {
     setUserList(userInitialDetails);
   }, []);
@@ -373,20 +435,75 @@ const UserComponent = () => {
                     Line of Business{" "}
                     <FaStarOfLife className="user-required-icon-style" />
                   </p>
-                  <input type="checkbox" value="Cyber" />
+                  <input
+                    type="checkbox"
+                    value="Cyber"
+                    onChange={(e) =>
+                      setLineOfBusiness((prevValue) => [
+                        ...prevValue,
+                        e.target.value,
+                      ])
+                    }
+                  />
                   <label className="user-label-name">Cyber</label>
-                  <input type="checkbox" value="D&O" />
+                  <input
+                    type="checkbox"
+                    value="D&O"
+                    onChange={(e) =>
+                      setLineOfBusiness((prevValue) => [
+                        ...prevValue,
+                        e.target.value,
+                      ])
+                    }
+                  />
                   <label className="user-label-name">D&O</label>
-                  <input type="checkbox" value="General Liability" />
+                  <input
+                    type="checkbox"
+                    value="General Liability"
+                    onChange={(e) =>
+                      setLineOfBusiness((prevValue) => [
+                        ...prevValue,
+                        e.target.value,
+                      ])
+                    }
+                  />
                   <label className="user-label-name">General Liability</label>
-                  <input type="checkbox" value="Marine" />
+                  <input
+                    type="checkbox"
+                    value="Marine"
+                    onChange={(e) =>
+                      setLineOfBusiness((prevValue) => [
+                        ...prevValue,
+                        e.target.value,
+                      ])
+                    }
+                  />
                   <label className="user-label-name">Marine</label>
-                  <input type="checkbox" value="Professional Indemnity" />
+
+                  <input
+                    type="checkbox"
+                    value="Property"
+                    onChange={(e) =>
+                      setLineOfBusiness((prevValue) => [
+                        ...prevValue,
+                        e.target.value,
+                      ])
+                    }
+                  />
+                  <label className="user-label-name">Property</label>
+                  <input
+                    type="checkbox"
+                    value="Professional Indemnity"
+                    onChange={(e) =>
+                      setLineOfBusiness((prevValue) => [
+                        ...prevValue,
+                        e.target.value,
+                      ])
+                    }
+                  />
                   <label className="user-label-name">
                     Professional Indemnity
                   </label>
-                  <input type="checkbox" value="Property" />
-                  <label className="user-label-name">Property</label>
                 </div>
                 <div className="admin-user-btn-container">
                   <button
@@ -403,7 +520,6 @@ const UserComponent = () => {
                   >
                     Clear
                   </button>
-                  <ToastContainer />
                 </div>
               </div>
             </div>
@@ -582,82 +698,134 @@ const UserComponent = () => {
                     Line of Business{" "}
                     <FaStarOfLife className="user-required-icon-style" />
                   </p>
+                  {/* Cyber */}
                   <input
                     type="checkbox"
-                    checked={lineOfBusiness.cyber}
-                    onChange={(e) =>
-                      setLineOfBusiness({
-                        ...lineOfBusiness,
-                        cyber: e.target.checked,
-                      })
-                    }
+                    checked={lineOfBusiness.includes("Cyber")}
+                    value="Cyber"
+                    onChange={(e) => {
+                      if (lineOfBusiness.includes(e.target.value)) {
+                        setLineOfBusiness((prevValue) =>
+                          prevValue.filter((item) => item !== e.target.value)
+                        );
+                      } else {
+                        setLineOfBusiness((prevValue) => [
+                          ...prevValue,
+                          e.target.value,
+                        ]);
+                      }
+                    }}
                   />
                   <label className="user-label-name">Cyber</label>
+
+                  {/* D&O */}
                   <input
                     type="checkbox"
-                    checked={lineOfBusiness.do}
-                    onChange={(e) =>
-                      setLineOfBusiness({
-                        ...lineOfBusiness,
-                        do: e.target.checked,
-                      })
-                    }
+                    checked={lineOfBusiness.includes("D&O")}
+                    value="D&O"
+                    onChange={(e) => {
+                      if (lineOfBusiness.includes(e.target.value)) {
+                        setLineOfBusiness((prevValue) =>
+                          prevValue.filter((item) => item !== e.target.value)
+                        );
+                      } else {
+                        setLineOfBusiness((prevValue) => [
+                          ...prevValue,
+                          e.target.value,
+                        ]);
+                      }
+                    }}
                   />
                   <label className="user-label-name">D&O</label>
+
+                  {/* General Liability */}
                   <input
                     type="checkbox"
-                    checked={lineOfBusiness.generalLiability}
-                    onChange={(e) =>
-                      setLineOfBusiness({
-                        ...lineOfBusiness,
-                        generalLiability: e.target.checked,
-                      })
-                    }
+                    checked={lineOfBusiness.includes("General Liability")}
+                    value="General Liability"
+                    onChange={(e) => {
+                      if (lineOfBusiness.includes(e.target.value)) {
+                        setLineOfBusiness((prevValue) =>
+                          prevValue.filter((item) => item !== e.target.value)
+                        );
+                      } else {
+                        setLineOfBusiness((prevValue) => [
+                          ...prevValue,
+                          e.target.value,
+                        ]);
+                      }
+                    }}
                   />
                   <label className="user-label-name">General Liability</label>
+
+                  {/* Marine */}
                   <input
                     type="checkbox"
-                    checked={lineOfBusiness.marine}
-                    onChange={(e) =>
-                      setLineOfBusiness({
-                        ...lineOfBusiness,
-                        marine: e.target.checked,
-                      })
-                    }
+                    checked={lineOfBusiness.includes("Marine")}
+                    value="Marine"
+                    onChange={(e) => {
+                      if (lineOfBusiness.includes(e.target.value)) {
+                        setLineOfBusiness((prevValue) =>
+                          prevValue.filter((item) => item !== e.target.value)
+                        );
+                      } else {
+                        setLineOfBusiness((prevValue) => [
+                          ...prevValue,
+                          e.target.value,
+                        ]);
+                      }
+                    }}
                   />
                   <label className="user-label-name">Marine</label>
+
+                  {/* Professional Indemnity */}
                   <input
                     type="checkbox"
-                    checked={lineOfBusiness.professionalIndemnity}
-                    onChange={(e) =>
-                      setLineOfBusiness({
-                        ...lineOfBusiness,
-                        professionalIndemnity: e.target.checked,
-                      })
-                    }
+                    checked={lineOfBusiness.includes("Professional Indemnity")}
+                    value="Professional Indemnity"
+                    onChange={(e) => {
+                      if (lineOfBusiness.includes(e.target.value)) {
+                        setLineOfBusiness((prevValue) =>
+                          prevValue.filter((item) => item !== e.target.value)
+                        );
+                      } else {
+                        setLineOfBusiness((prevValue) => [
+                          ...prevValue,
+                          e.target.value,
+                        ]);
+                      }
+                    }}
                   />
                   <label className="user-label-name">
                     Professional Indemnity
                   </label>
 
+                  {/* Property */}
                   <input
                     type="checkbox"
-                    checked={lineOfBusiness.property}
-                    onChange={(e) =>
-                      setLineOfBusiness({
-                        ...lineOfBusiness,
-                        property: e.target.checked,
-                      })
-                    }
+                    checked={lineOfBusiness.includes("Property")}
+                    value="Property"
+                    onChange={(e) => {
+                      if (lineOfBusiness.includes(e.target.value)) {
+                        setLineOfBusiness((prevValue) =>
+                          prevValue.filter((item) => item !== e.target.value)
+                        );
+                      } else {
+                        setLineOfBusiness((prevValue) => [
+                          ...prevValue,
+                          e.target.value,
+                        ]);
+                      }
+                    }}
                   />
                   <label className="user-label-name">Property</label>
                 </div>
                 <div className="admin-user-btn-container">
                   <button
                     className="add-btn user-additional-btn "
-                    onClick={OnRegisterDetails}
+                    onClick={() => OnUpdateRegisterDetails()}
                   >
-                    Register
+                    Update
                   </button>
                   <button
                     className="search-btn user-additional-btn"
@@ -667,7 +835,6 @@ const UserComponent = () => {
                   >
                     Clear
                   </button>
-                  <ToastContainer />
                 </div>
               </div>
             </div>
@@ -763,6 +930,7 @@ const UserComponent = () => {
             </div>
           )}
 
+          {/* Table container */}
           <div className="user-table-main-container">
             <table className="user-table">
               <tr className="user-table-header">
@@ -804,12 +972,24 @@ const UserComponent = () => {
                     />
                   </td>
                   <td className="name-style space-style">
-                    <AiFillDelete className="user-edit-icon" />
+                    <AiFillDelete
+                      className="user-edit-icon"
+                      onClick={() => {
+                        if (
+                          window.confirm(
+                            "Are you sure you want to delete this user?"
+                          )
+                        ) {
+                          OnDeleteUser(eachUser.id);
+                        }
+                      }}
+                    />
                   </td>
                 </tr>
               ))}
             </table>
           </div>
+
           <div className="pagination-style">
             <span className="pagination-content-new">Show entries</span>
             <select className="drop-down-selection">

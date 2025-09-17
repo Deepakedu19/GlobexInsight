@@ -100,7 +100,7 @@
 }
 .user-content-main-final-container {
   width: 100%;
-  padding-left: 30px;
+  padding-left: 35px;
   margin-bottom: 5%;
 }
 .add-question-title {
@@ -154,4 +154,12 @@
   justify-content: center;
   width: 95%;
   padding-left: 8%;
+}
+.questionnair-select-text-input {
+  width: 103%;
+  height: 38px;
+  border: solid 1px rgb(163, 163, 163);
+  border-radius: 5px;
+  padding-left: 13px;
+  outline-color: rgb(107, 149, 255);
 }

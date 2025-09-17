@@ -104,14 +104,14 @@
   left: 0;
   right: 0;
   height: 80vh;
-
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  padding-top: 3rem;
 }
 .pop-menu-content {
   background: rgb(255, 255, 255);
-  height: 20rem;
+  height: 21rem;
   width: 80%;
   border-radius: 12px;
 }
@@ -124,15 +124,18 @@
   height: 15rem;
 }
 
-.country-item-label:hover {
+.select-country-item-label:hover {
   background-color: rgb(214, 214, 214);
   color: rgb(32, 32, 32);
 }
-.country-item-label {
+.select-country-item-label {
   padding: 5px;
+  padding-left: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
+  color: rgb(62, 62, 62);
 }
 
 .country-checkbox {
@@ -319,24 +322,24 @@
 }
 
 .country-list {
-  width: 25%;
+  width: 36%;
   position: absolute;
-  top: 61%;
-  left: 12.4%;
+  top: 36vh;
+  left: 12%;
   display: flex;
   flex-direction: column;
-  max-height: 200px;
+  max-height: 38vh;
   overflow-y: auto;
   background-color: white;
-  color: rgb(107, 107, 107);
   font-size: small;
+  font-weight: lighter;
   border-top-left-radius: 3px;
   font-family: Roboto;
   padding-left: 0;
 }
 .clientDatabase-selectall-contianer {
   height: 40px;
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(223, 223, 223);
   display: flex;
   align-items: center;
   padding-left: 12px;
@@ -344,7 +347,7 @@
 .client-databse-select-all-label {
   color: rgb(44, 44, 44);
   font-size: larger;
-  font-weight: 100;
+  font-weight: lighter;
 }
 .new-checkbox-style {
   margin-right: 10px;
