@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   z-index: 100;
+  backdrop-filter: blur(5px);
 }
 
 .add-newsletter-content-details-contianer {
@@ -83,6 +84,13 @@
   width: 100%;
   height: 66vh;
   overflow-y: auto;
+  background-color: rgb(249, 252, 255);
+}
+
+.newsletter-fullscreen-table-container {
+  width: 100%;
+  height: 94vh;
+  overflow-y: auto;
   background-color: rgb(255, 249, 240);
 }
 .newsletter-table-header {
@@ -99,12 +107,14 @@
 }
 .file-name-style {
   width: 40%;
+  font-size: 15px;
 }
 .file-name-style-description {
   padding-left: 10px;
-  color: grey;
+  color: rgb(26, 26, 26);
   font-weight: 400;
-  font-size: small;
+  font-size: 14px;
+  font-family: Roboto;
 }
 .newsletter-table-description {
   background-color: rgb(253, 253, 253);
@@ -132,6 +142,7 @@
   cursor: pointer;
   text-align: center;
   padding-left: 10px;
+  font-size: 15px;
 }
 .del-icon {
   font-size: 14px;

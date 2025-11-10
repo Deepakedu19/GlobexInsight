@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(5px);
 }
 
 .questionnair-user-content-container {
@@ -40,7 +41,13 @@
   width: 100%;
   height: 66vh;
   overflow-y: auto;
-  background-color: rgb(255, 249, 240);
+  background-color: rgb(249, 252, 255);
+}
+.questionnair-fullscreen-table-contianer {
+  width: 100%;
+  height: 94vh;
+  overflow-y: auto;
+  background-color: rgb(240, 255, 255);
 }
 
 .questionnair-detail-container {
@@ -67,20 +74,22 @@
   padding-right: 6px;
 }
 .s-no-style {
-  width: 12%;
-  padding-left: 6px;
-  padding-right: 6px;
+  width: 7%;
+  padding-left: 2px;
+  padding-right: 2px;
   font-weight: 400;
 }
 .category-style {
-  width: 20%;
-  padding-left: 6px;
+  width: 15%;
+  padding-left: 2px;
   font-weight: 400;
 }
 .question-style {
-  width: 28%;
-  padding-left: 6px;
+  width: 22%;
+  padding-left: 2px;
   font-weight: 400;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .questionnair-container {
   padding-left: 20px;
@@ -100,8 +109,9 @@
 }
 .user-content-main-final-container {
   width: 100%;
-  padding-left: 35px;
   margin-bottom: 5%;
+  display: flex;
+  justify-content: space-evenly;
 }
 .add-question-title {
   background-color: rgb(233, 233, 233);
@@ -162,4 +172,53 @@
   border-radius: 5px;
   padding-left: 13px;
   outline-color: rgb(107, 149, 255);
+}
+
+.questionnair-font-style {
+  font-size: 15px;
+}
+
+.questionnair-header-style {
+  font-weight: 500;
+  color: rgb(27, 27, 27);
+}
+.question-visiblity-check {
+  height: 15px;
+  width: 15px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+.questionnair-checkbox-cotnainner {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.check-box-label {
+  margin-right: 10px;
+}
+.questionnair-table-btn-styles {
+  border: solid 1px red;
+}
+
+.Questionnair-edit-icon {
+  font-size: 16px;
+  width: 30%;
+  cursor: pointer;
+}
+.questionnair-view-icon {
+  font-size: 22px;
+  color: rgb(255, 98, 0);
+}
+.questionnair-hide-icon {
+  font-size: 22px;
+  color: rgb(255, 149, 0);
+}
+.questionnair-edit-color {
+  color: rgb(0, 76, 255);
+}
+.questionnair-delete-color {
+  color: rgb(179, 1, 1);
+}
+.disable-row-color {
+  background-color: rgb(255, 240, 238);
 }

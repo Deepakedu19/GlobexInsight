@@ -12,6 +12,8 @@ import { MdEditSquare } from "react-icons/md";
 import { AiFillDelete } from "react-icons/ai";
 import "./index.css";
 import { v4 as uuidv4 } from "uuid";
+import { MdOutlineZoomOutMap } from "react-icons/md";
+import { AiOutlineFullscreenExit } from "react-icons/ai";
 
 const referenceDetails = [
   {
@@ -74,6 +76,7 @@ const OrganizationDetailsComponent = () => {
   const [comments, setComments] = useState("");
   const [status, setStatus] = useState("");
   const [onEditDetails, setOnEditDetails] = useState(false);
+  const [onToggleFullScreenTable, SetOnToggleFullScreenTable] = useState(false);
 
   useEffect(() => {
     // Load initial data from referenceDetails
@@ -81,6 +84,14 @@ const OrganizationDetailsComponent = () => {
   }, []);
   // To toggle add organization details container
   const onHandleSubmitOrganizationDetails = () => {
+    setOrganizationName("");
+    setAddress("");
+    setCity("");
+    setCountry("");
+    setZip("");
+    setWebsite("");
+    setComments("");
+    setStatus("");
     setAddContainerToggle(!addContainerToggle);
   };
 
@@ -223,7 +234,6 @@ const OrganizationDetailsComponent = () => {
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: false,
-
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
@@ -290,6 +300,13 @@ const OrganizationDetailsComponent = () => {
             >
               clear
             </button>
+          </div>
+          {/* {fullscreen container}*/}
+          <div
+            className="full-screen-container"
+            onClick={() => SetOnToggleFullScreenTable(true)}
+          >
+            <MdOutlineZoomOutMap />
           </div>
         </div>
 
@@ -611,6 +628,73 @@ const OrganizationDetailsComponent = () => {
         </div>
       )}
 
+      {/* {Full Screen Table View} */}
+      {onToggleFullScreenTable && (
+        <div className="organization-full-sceen-table-view-container">
+          <div className="organization-fullscreen-details-table-container">
+            <table className="organization-table">
+              <thead className="organization-table-head">
+                <tr className="organization-table-header-style ">
+                  <th className="organization-style font-style">
+                    Organization Name
+                  </th>
+                  <th className="font-style place-style"> City</th>
+                  <th className="font-style place-style">Country</th>
+                  <th className="font-style btn-style-header">View/Edit</th>
+                  <th className="font-style btn-style-header">Delete</th>
+                </tr>
+              </thead>
+              <tbody className="organization-table-body">
+                {organizationDetailsList.map((org, index) => (
+                  <tr className="table-content-style" key={index}>
+                    <td className="organization-style org-detail-font-style">
+                      {org.organizationName}
+                    </td>
+                    <td className="place-style org-detail-font-style">
+                      {org.city}
+                    </td>
+                    <td className="place-style org-detail-font-style">
+                      {org.country}
+                    </td>
+                    <td
+                      className="btn-style "
+                      onClick={() => onHandleEditOrganizationDetails(org.id)}
+                    >
+                      <MdEditSquare />
+                    </td>
+                    <td className=" btn-style ">
+                      <AiFillDelete
+                        onClick={() =>
+                          onHandleDeleteOrganizationDetails(org.id)
+                        }
+                      />
+                      <ToastContainer />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="pagination-style">
+            <span className="pagination-content-new">Show entries</span>
+            <select className="drop-down-selection">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+            <TfiArrowCircleLeft className="pagination-font-style" />
+            <TfiArrowCircleRight className="pagination-font-style" />
+            <span className="pagination-content">Page 1 of 1</span>
+            <span className="Zoom-content">
+              <AiOutlineFullscreenExit
+                onClick={() => {
+                  SetOnToggleFullScreenTable(false);
+                }}
+              />
+            </span>
+          </div>
+        </div>
+      )}
       <FooterComponent />
     </>
   );

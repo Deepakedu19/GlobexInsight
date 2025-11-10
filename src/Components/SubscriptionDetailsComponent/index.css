@@ -51,13 +51,14 @@
   height: 83vh;
   width: 80%;
   background-image: linear-gradient(
-    rgba(16, 11, 149, 0.891),
-    rgba(57, 88, 190, 0.844),
-    rgba(12, 20, 31, 0.842)
+    rgba(16, 11, 149, 0.877),
+    rgba(57, 88, 190, 0.832),
+    rgba(12, 20, 31, 0.88)
   );
   margin-top: 5px;
   display: flex;
   padding: 20px;
+  backdrop-filter: blur(20px);
 }
 .globex-logo {
   width: 100%;

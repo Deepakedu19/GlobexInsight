@@ -1,25 +1,17 @@
-.client-other-services-main-container {
-  background-image: url("https://images.unsplash.com/photo-1587860166238-7b3c5d8bc34d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+/* .client-other-services-main-container {
+  background-image: url("https://images.unsplash.com/photo-1568033307159-33b0f098dec4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740");
   height: 75vh;
   background-size: cover;
   background-position: center;
 }
 .client-other-services-content-filter {
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.89),
-    rgba(192, 192, 192, 0.658),
-    rgba(182, 193, 213, 0.592),
-    rgba(235, 235, 235, 0.685),
-    rgba(176, 190, 201, 0.644),
-    rgba(255, 255, 255, 0.692),
-    rgba(124, 177, 252, 0.918)
-  );
-
+  background-image: linear-gradient(rgba(242, 242, 242, 0.298));
   border-radius: 5px;
   height: 75vh;
+  backdrop-filter: blur(10px);
 }
 .filter-1 {
-  background-color: rgba(247, 247, 247, 0.575);
+  background-color: rgba(247, 247, 247, 0.318);
   padding: 10px;
   border-radius: 5px;
   height: 30vh;
@@ -38,30 +30,25 @@
   text-align: center;
   border-radius: 50%;
   padding-left: 13px;
-  background-image: radial-gradient(
-    circle,
-    rgba(224, 224, 224, 0.89),
-    rgba(215, 221, 242, 0.959),
-    rgba(0, 52, 101, 0.815)
-  );
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.267));
   position: relative;
   left: 40%;
   top: 7rem;
-  border: solid 1px rgb(127, 155, 184);
 }
 .information-title {
   position: relative;
   top: -50%;
   left: 35%;
-  color: rgb(166, 166, 166);
+  color: rgb(64, 64, 64);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.866);
+  background-color: rgba(255, 255, 255, 0.555);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  font-weight: 400;
 }
 .TE-title {
   position: relative;
@@ -76,20 +63,22 @@
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  font-weight: 400;
 }
 .PA-title {
   position: relative;
   top: -8.5rem;
   left: 9%;
-  color: rgb(166, 166, 166);
+  color: rgb(48, 48, 48);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.866);
+  background-color: rgba(255, 255, 255, 0.582);
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  font-weight: 400;
 }
 .PAdmin-title {
   position: relative;
@@ -104,6 +93,7 @@
   padding-bottom: 10px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  font-weight: 400;
 }
 .IE-title {
   position: relative;
@@ -116,38 +106,142 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.866);
   padding-bottom: 10px;
-  border-top-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  font-weight: 400;
 }
 .PAS-title {
   position: relative;
   top: -21rem;
   left: 60%;
-  color: rgb(166, 166, 166);
+  color: rgb(43, 43, 43);
   font-weight: lighter;
   border-bottom: solid 2px rgb(255, 128, 0);
   width: 30%;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.866);
+  background-color: rgba(255, 255, 255, 0.599);
   padding-bottom: 10px;
-  border-top-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  font-weight: 400;
 }
 .home-icon-title {
-  color: rgb(213, 213, 213);
+  color: rgb(28, 0, 72);
   text-align: center;
   font-weight: 500;
   font-family: sans-serif;
   margin-top: 0px;
   margin-bottom: 0px;
-
   padding-top: 8px;
   height: 35px;
 }
 .home-exit-icon {
-  color: rgba(243, 243, 243, 0.661);
+  color: rgba(31, 31, 31, 0.853);
   cursor: pointer;
   position: relative;
   top: 10px;
   left: 25%;
+} */
+
+/* Layout style -2 */
+
+.client-otherServices-main-container {
+  height: 45vh;
+  background-image: url("https://images.pexels.com/photos/30012663/pexels-photo-30012663.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+.client-otherServices-content-filter {
+  height: 45vh;
+  background-color: rgba(5, 0, 53, 0.88);
+  backdrop-filter: blur(1px);
+}
+.client-otherServices-content-tiles {
+  width: 100%;
+  height: 40vh;
+  background-color: rgb(245, 245, 245);
+}
+.client-otherServices-content-title {
+  color: rgb(231, 231, 231);
+  margin-top: 0px;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 5%;
+  padding-left: 20px;
+  font-weight: 300;
+  font-family: roboto;
+}
+.client-otherServices-globex-image {
+  width: 230px;
+  position: relative;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.client-otherServices-content-tiles {
+  height: 30vh;
+}
+.client-otherServices-tile-container {
+  width: 100%;
+  height: 8rem;
+  position: absolute;
+  top: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(172, 62, 62, 0);
+  height: 30vh;
+}
+
+.client-otherServices-image-container {
+  background-image: url("https://i.pinimg.com/1200x/67/15/91/67159175e75b42e0f2a737c188d3e333.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 13vh;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding-left: 20px;
+  border-radius: 8px;
+}
+.client-otherServices-image-and-icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+}
+.other-service-icon {
+  font-size: 35px;
+  color: rgb(233, 255, 235);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.other-service-title {
+  font-size: 1.2rem;
+  color: rgb(0, 69, 15);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.client-other-services-home-exit-icon {
+  color: rgba(255, 255, 255, 0.699);
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.client-other-services-home-exit-icon:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
 }

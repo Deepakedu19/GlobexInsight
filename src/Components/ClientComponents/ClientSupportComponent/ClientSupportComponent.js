@@ -42,12 +42,12 @@ const ClientSupportComponent = () => {
               <div className="form-details-container">
                 <h2 className="form-header-title"> Create Ticket</h2>
                 <div className="add-record-input-container">
-                  <label className="label-name">Subject</label>
+                  <lable className="support-label-name">Subject</lable>
                   <input type="text" className="input-container" />
                 </div>
                 <br />
                 <div className="add-record-input-container">
-                  <label className="label-name">Description</label>
+                  <label className="support-label-name">Description</label>
                   <textarea rows={5} className="input-container" />
                 </div>
                 <br />

@@ -43,7 +43,7 @@ const LoginFormComponent = () => {
       });
     } else {
       toast.error("Invalid credentials", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -62,8 +62,8 @@ const LoginFormComponent = () => {
     const isValidUser = false;
     if (isValidUser) {
       toast.info("Password sent to your registered email id", {
-        position: "top-center",
-        autoClose: 5000,
+        position: "top-right",
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -73,8 +73,8 @@ const LoginFormComponent = () => {
       });
     } else {
       toast.error("Please enter valid username", {
-        position: "top-center",
-        autoClose: 5000,
+        position: "top-right",
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -110,8 +110,8 @@ const LoginFormComponent = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </label>
-          <div className="login-btn-contianer">
-            <button className="login-page-btn" onClick={onDetailsSubmit}>
+          <div className="login-form-btn-container">
+            <button className="login-submit-page-btn" onClick={onDetailsSubmit}>
               <CiLogin className="login-btn-icon" />
               Login
             </button>

@@ -2,7 +2,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 import { HiOutlineMenu } from "react-icons/hi";
-
 import { CgProfile } from "react-icons/cg";
 import { PiPasswordFill } from "react-icons/pi";
 import { IoHome } from "react-icons/io5";

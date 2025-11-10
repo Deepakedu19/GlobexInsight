@@ -7,8 +7,8 @@
   /* filter: grayscale(50%); */
 }
 .client-support-filter-container {
-  height: 75vh;
-  background-image: linear-gradient(
+  height: 73vh;
+  /* background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.589),
     rgba(255, 166, 0, 0.26),
@@ -16,19 +16,21 @@
     rgba(0, 53, 167, 0.476),
     rgba(0, 15, 177, 0.469),
     rgba(0, 0, 0, 0.548)
-  );
+  ); */
+  background-color: rgba(255, 255, 255, 0.555);
   padding: 20px;
+  backdrop-filter: blur(10px);
 }
 .client-support-filter-container-active {
   filter: blur(70%);
 }
 .contact-add-btn {
-  background-color: rgb(71, 157, 255);
+  background-color: rgba(27, 27, 27, 0.747);
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px 20px;
   border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 0px;
@@ -41,7 +43,7 @@
   border-collapse: collapse;
 }
 .client-support-table-header-row {
-  background-color: rgba(141, 141, 141, 0.959);
+  background-color: rgba(0, 60, 181, 0.959);
   color: rgb(255, 255, 255);
   height: 45px;
 }
@@ -55,7 +57,7 @@
 }
 
 .client-support-table-description-row {
-  background-color: rgba(255, 255, 255, 0.904);
+  background-color: rgba(244, 252, 255, 0.904);
   height: 40px;
 }
 .client-support-table-data {
@@ -68,25 +70,28 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.62);
-  height: 78vh;
+  background-color: rgba(0, 0, 0, 0.801);
+  height: 79vh;
   width: 100%;
-  top: 120px;
+  top: 0px;
   left: 0%;
+  backdrop-filter: blur(50px);
+  z-index: 100px;
 }
 .form-details-container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   background-color: white;
   flex-direction: column;
   width: 40%;
   height: 50vh;
 }
-
+.support-label-name {
+  color: grey;
+  font-family: Roboto;
+}
 .input-container {
   width: 100%;
   padding: 10px;
@@ -122,18 +127,16 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 12px;
-  color: rgb(82, 82, 82);
+  color: rgb(255, 255, 255);
   width: 100%;
   margin-top: 0px;
   height: 47px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 84, 251, 0.904);
   font-family: Roboto;
   font-weight: 500;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 .home-btn-style {
   background-color: rgba(0, 0, 0, 0.623);

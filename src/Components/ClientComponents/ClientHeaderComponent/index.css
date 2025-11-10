@@ -1,7 +1,7 @@
 .logout-icon {
   cursor: pointer;
   margin-left: 10px;
-  color: rgb(135, 135, 135);
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -10,7 +10,7 @@
 
 .client-menu-icon {
   cursor: pointer;
-  color: rgb(166, 168, 181);
+  color: rgb(211, 211, 211);
   font-size: 25px;
   padding-right: 3%;
   padding-left: 3%;
@@ -37,9 +37,9 @@
   color: white;
 } */
 .logout-icon:hover {
-  color: rgb(86, 86, 86);
+  color: rgb(255, 255, 255);
   margin-right: 10px;
-  background-color: #dedede;
+  background-color: #575757;
   padding: 3px;
   border-radius: 5px;
 }
@@ -57,14 +57,15 @@
   position: absolute;
   top: 10%;
   right: 3%;
-  width: 20%;
+  width: 16%;
   height: 27vh;
-  background-color: rgb(255, 255, 255);
-  border-top-left-radius: 28px;
-  border-bottom-right-radius: 28px;
+  background-color: rgba(255, 255, 255, 0.418);
+  border-radius: 10px;
   box-shadow: rgba(120, 120, 120, 0.661) 0px 1px 2px 0px,
     rgba(255, 255, 255, 0.15) 0px 2px 6px 2px;
   z-index: 7;
+  border: solid 1px rgb(191, 191, 191);
+  backdrop-filter: blur(20px);
 }
 .container-style-icon {
   background-color: rgba(3, 200, 250, 0.832);

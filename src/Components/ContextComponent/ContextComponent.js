@@ -8,6 +8,8 @@ export const DataProvider = (props) => {
   const [clientActiveLinkId, setClientActiveLinkId] = useState(0);
   const [activeLinkstyle, setActiveLinkStyle] = useState("");
   const [onEditResetPassword, setOnEditResetPassword] = useState(false);
+  const [onloginAnimation, setOnLoginAnimation] = useState(true);
+  const [questionList, setQuestionList] = useState([]);
   const myDate = new Date();
   return (
     <DataContext.Provider
@@ -23,6 +25,10 @@ export const DataProvider = (props) => {
         setActiveLinkStyle,
         onEditResetPassword,
         setOnEditResetPassword,
+        setOnLoginAnimation,
+        onloginAnimation,
+        questionList,
+        setQuestionList,
       }}
     >
       {props.children}

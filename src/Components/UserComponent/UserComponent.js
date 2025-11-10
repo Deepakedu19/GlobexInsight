@@ -11,6 +11,8 @@ import { toast } from "react-toastify";
 import { MdEditSquare } from "react-icons/md";
 import { AiFillDelete } from "react-icons/ai";
 import { v4 as uuidv4 } from "uuid";
+import { MdOutlineZoomOutMap } from "react-icons/md";
+import { AiOutlineFullscreenExit } from "react-icons/ai";
 
 const userInitialDetails = [
   {
@@ -98,6 +100,7 @@ const UserComponent = () => {
   const [userList, setUserList] = useState([]);
   const [editUserToggle, setEditUserToggle] = useState(false);
   const [userIdToEdit, setUserIdToEdit] = useState("");
+  const [onToggleFullScreenTable, SetOnToggleFullScreenTable] = useState(false);
 
   // on Toggle Add User menu
   const onToggleAddUser = () => {
@@ -112,6 +115,7 @@ const UserComponent = () => {
 
   // on Toggle  Edit User Menu
   const onEditHandler = (userId) => {
+    SetOnToggleFullScreenTable(false);
     setEditUserToggle(true);
     setUserIdToEdit(userId);
     const userToEdit = userList.find((user) => user.id === userId);
@@ -261,6 +265,12 @@ const UserComponent = () => {
             <button className="search-btn" onClick={onToggleSearchUser}>
               Search
             </button>
+            <div
+              className="full-screen-container"
+              onClick={() => SetOnToggleFullScreenTable(true)}
+            >
+              <MdOutlineZoomOutMap />
+            </div>
           </div>
           {addUserToggle && (
             <div className="user-add-content-container ">
@@ -1004,6 +1014,88 @@ const UserComponent = () => {
         </div>
       </div>
       <FooterComponent />
+      {/* Full screen table view */}
+      {onToggleFullScreenTable && (
+        <div className="LOB-full-sceen-table-view-container">
+          <div className="user-FullView-table-main-container">
+            <table className="user-table">
+              <tr className="user-table-header">
+                <th className="user-header-font name-style">First Name</th>
+                <th className="user-header-font name-style">Last Name</th>
+                <th className="user-header-font email-style">Email</th>
+                <th className="user-header-font org-style">Organization</th>
+                <th className="user-header-font name-style">Account Type</th>
+                <th className="user-header-font name-style">User Type</th>
+                <th className="user-header-font LOB-style">LOB</th>
+                <th className="user-header-font user-btn-style">Edit</th>
+                <th className="user-header-font user-btn-style">Delete</th>
+              </tr>
+              {userList.map((eachUser, index) => (
+                <tr className="user-description-row" key={index}>
+                  <td className="name-style space-style">
+                    {eachUser.firstName}
+                  </td>
+                  <td className="name-style space-style">
+                    {eachUser.lastName}
+                  </td>
+                  <td className="email-style space-style">{eachUser.email}</td>
+                  <td className="org-style space-style">
+                    {eachUser.organizationName}
+                  </td>
+                  <td className="name-style space-style">
+                    {eachUser.accountType}
+                  </td>
+                  <td className="name-style space-style">
+                    {eachUser.userType}
+                  </td>
+                  <td className="LOB-style space-style">
+                    {eachUser.lineOfBusiness.join(", ")}
+                  </td>
+                  <td className="name-style space-style">
+                    <MdEditSquare
+                      className="user-edit-icon"
+                      onClick={() => onEditHandler(eachUser.id)}
+                    />
+                  </td>
+                  <td className="name-style space-style">
+                    <AiFillDelete
+                      className="user-edit-icon"
+                      onClick={() => {
+                        if (
+                          window.confirm(
+                            "Are you sure you want to delete this user?"
+                          )
+                        ) {
+                          OnDeleteUser(eachUser.id);
+                        }
+                      }}
+                    />
+                  </td>
+                </tr>
+              ))}
+            </table>
+          </div>
+          <div className="pagination-style">
+            <span className="pagination-content-new">Show entries</span>
+            <select className="drop-down-selection">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+            <TfiArrowCircleLeft className="pagination-font-style" />
+            <TfiArrowCircleRight className="pagination-font-style" />
+            <span className="pagination-content">Page 1 of 1</span>
+            <div
+              className="Zoom-content"
+              onClick={() => {
+                SetOnToggleFullScreenTable(false);
+              }}
+            >
+              <AiOutlineFullscreenExit />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

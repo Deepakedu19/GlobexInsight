@@ -9,6 +9,8 @@ import { FaCaretDown } from "react-icons/fa";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 import { toast } from "react-toastify";
+import { useContext } from "react";
+import { DataContext } from "../ContextComponent/ContextComponent";
 
 const LineofBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -30,6 +32,7 @@ const categoryOptions = [
 
 const ViewCountryDataComponent = () => {
   const countries = getNames();
+  // const [questionList] = useContext(DataContext);
 
   //----------------state--variables---------------------------
   // const [onToggleData, setOnToggleData] = useState(false);

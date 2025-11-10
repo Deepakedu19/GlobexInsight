@@ -192,12 +192,15 @@ import { IoCloseOutline } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import { AiFillDelete } from "react-icons/ai";
 import { v4 as uuidv4 } from "uuid";
+import { MdOutlineZoomOutMap } from "react-icons/md";
+import { AiOutlineFullscreenExit } from "react-icons/ai";
 
 const NewsReportComponent = () => {
   const [isToggleAddReport, setIsToggleAddReport] = useState(false);
   const [newslettersFile, setNewslettersFile] = useState();
   const [newsletterContent, setNewsletterContent] = useState("");
   const [selectedNewsletters, setSelectedNewsletters] = useState([]);
+  const [onToggleFullScreenTable, SetOnToggleFullScreenTable] = useState(false);
 
   const onFileChange = (e) => {
     const file = e.target.files[0];
@@ -264,7 +267,14 @@ const NewsReportComponent = () => {
             <MdOutlinePlaylistAdd />
             Add
           </button>
+          <div
+            className="full-screen-container"
+            onClick={() => SetOnToggleFullScreenTable(true)}
+          >
+            <MdOutlineZoomOutMap />
+          </div>
         </div>
+        {/* Add Newsletter Section */}
         {isToggleAddReport && (
           <div className="newletter-content-container ">
             <div className="add-newsletter-content-details-contianer">
@@ -315,6 +325,8 @@ const NewsReportComponent = () => {
             </div>
           </div>
         )}
+
+        {/* Fullscreen Table View */}
         <div className="newsletter-table-container">
           <table className="newsletter-table">
             <tr className="newsletter-table-header">
@@ -353,6 +365,56 @@ const NewsReportComponent = () => {
         </div>
       </div>
       <FooterComponent />
+
+      {/* Fullscreen Table View */}
+      {onToggleFullScreenTable && (
+        <div className="LOB-full-sceen-table-view-container">
+          <div className="newsletter-fullscreen-table-container">
+            <table className="newsletter-table">
+              <tr className="newsletter-table-header">
+                <th className="font-style file-name-style">File Name</th>
+                <th className="font-style file-name-style">Content</th>
+                <th className=" font-style file-delete-icon">Delete</th>
+              </tr>
+              {selectedNewsletters.map((eachNewsletter, index) => (
+                <tr className="newsletter-table-description">
+                  <td className=" file-name-style-description">
+                    {eachNewsletter.newslettersFile.name}
+                  </td>
+                  <td className=" file-name-style-description">
+                    {eachNewsletter.newsletterContent}
+                  </td>
+                  <td className="file-delete-icon ">
+                    <AiFillDelete
+                      className="del-icon"
+                      onClick={() => onDeleteLetter(eachNewsletter.id)}
+                    />
+                  </td>
+                </tr>
+              ))}
+            </table>
+          </div>
+          <div className="pagination-style">
+            <span className="pagination-content-new">Show entries</span>
+            <select className="drop-down-selection">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+            <TfiArrowCircleLeft className="pagination-font-style" />
+            <TfiArrowCircleRight className="pagination-font-style" />
+            <span className="pagination-content">Page 1 of 1</span>
+            <div
+              className="Zoom-content"
+              onClick={() => {
+                SetOnToggleFullScreenTable(false);
+              }}
+            >
+              <AiOutlineFullscreenExit />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

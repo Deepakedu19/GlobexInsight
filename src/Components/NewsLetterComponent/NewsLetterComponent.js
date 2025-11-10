@@ -6,12 +6,14 @@ const NewsLetterComponent = () => {
     <div className="letter-main-container">
       <div className="letter-latest-container">
         <h1 className="heading-letter-style">
-          Latest News Letter <FaNewspaper />
+          <FaNewspaper className="news-letter-icon-style" />
+          Latest News Letter
         </h1>
       </div>
       <div className="letter-oldest-container">
         <h1 className="heading-letter-style">
-          Latest Information Letter <FaNewspaper />
+          <FaNewspaper className="news-letter-icon-style" /> Latest Update
+          Information
         </h1>
       </div>
     </div>

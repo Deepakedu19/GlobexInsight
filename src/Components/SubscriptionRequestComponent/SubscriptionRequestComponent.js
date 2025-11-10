@@ -46,40 +46,14 @@ const SubscriptionRequestComponent = () => {
             </tr>
 
             <tr className="desciption-row-style">
-              <td className="table-header name-style"></td>
-              <td className="table-header name-style"></td>
-              <td className="table-header organization-style"></td>
-              <td className="table-header request-style"></td>
-              <td className="table-header edit-style font-style">
+              <td className="description-table-header name-style"></td>
+              <td className="description-table-header name-style"></td>
+              <td className="description-table-header organization-style"></td>
+              <td className="description-table-header request-style"></td>
+              <td className="description-table-header edit-style font-style-2">
                 <BiSolidEdit />
               </td>
-              <td className="table-header edit-style font-style-2">
-                <RiDeleteBin5Line />
-              </td>
-            </tr>
-            <tr className="desciption-row-style">
-              <td className="table-header name-style"></td>
-              <td className="table-header name-style"></td>
-              <td className="table-header organization-style"></td>
-              <td className="table-header request-style"></td>
-              <td className="table-header edit-style font-style">
-                {" "}
-                <BiSolidEdit />
-              </td>
-              <td className="table-header edit-style font-style-2">
-                <RiDeleteBin5Line />
-              </td>
-            </tr>
-            <tr className="desciption-row-style">
-              <td className="table-header name-style"></td>
-              <td className="table-header name-style"></td>
-              <td className="table-header organization-style"></td>
-              <td className="table-header request-style"></td>
-              <td className="table-header edit-style font-style">
-                {" "}
-                <BiSolidEdit />
-              </td>
-              <td className="table-header edit-style font-style-2">
+              <td className="description-table-header edit-style font-style-2">
                 <RiDeleteBin5Line />
               </td>
             </tr>

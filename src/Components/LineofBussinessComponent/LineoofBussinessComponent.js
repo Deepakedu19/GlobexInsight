@@ -3,6 +3,11 @@ import DashboardMinHeader from "../DashboardMinHeader/DashboardMinHeader";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
+import { MdOutlineZoomOutMap } from "react-icons/md";
+import { AiOutlineFullscreenExit } from "react-icons/ai";
+import { useState } from "react";
+
+import "./index.css";
 
 const LineofBusinessOptions = [
   { id: 1, name: "Cyber" },
@@ -14,6 +19,7 @@ const LineofBusinessOptions = [
 ];
 
 const LineofBussinessComponent = () => {
+  const [onToggleFullScreenTable, SetOnToggleFullScreenTable] = useState(false);
   return (
     <div>
       <DashboardHeaderComponent />
@@ -32,7 +38,15 @@ const LineofBussinessComponent = () => {
               ))}
             </select>
           </div>
+          <div
+            className="full-screen-container"
+            onClick={() => SetOnToggleFullScreenTable(true)}
+          >
+            <MdOutlineZoomOutMap />
+          </div>
         </div>
+
+        {/* LOB Details Table */}
         <div className="category-details-table-container">
           <table className="LOB-table-style">
             <tr className="LOB-table-header-style">
@@ -58,6 +72,45 @@ const LineofBussinessComponent = () => {
           <TfiArrowCircleRight className="pagination-font-style" />
           <span className="pagination-content">Page 1 of 1</span>
         </div>
+
+        {/* Full Screen Table View */}
+        {onToggleFullScreenTable && (
+          <div className="LOB-full-sceen-table-view-container">
+            <div className="Lob-fullScreen-details-table-container">
+              <table className="LOB-table-style">
+                <tr className="LOB-table-header-style">
+                  <th className="LOB-category-style">Line of Business</th>
+                  <th className="LOB-button-style">Edit</th>
+                  <th className="LOB-button-style">Delete</th>
+                </tr>
+                <tr className="LOB-table-description-style">
+                  <td className="LOB-category-style"></td>
+                  <td className="LOB-button-style"></td>
+                  <td className="LOB-button-style"></td>
+                </tr>
+              </table>
+            </div>
+            <div className="pagination-container">
+              <span className="pagination-content-new">Show entries</span>
+              <select className="drop-down-selection">
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+              </select>
+              <TfiArrowCircleLeft className="pagination-font-style" />
+              <TfiArrowCircleRight className="pagination-font-style" />
+              <span className="pagination-content">Page 1 of 1</span>
+              <div
+                className="Zoom-content"
+                onClick={() => {
+                  SetOnToggleFullScreenTable(false);
+                }}
+              >
+                <AiOutlineFullscreenExit />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
       <FooterComponent />
     </div>

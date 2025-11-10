@@ -4,7 +4,6 @@ import { FaUserTag } from "react-icons/fa6";
 import FooterComponent from "../../FooterComponent/FooterComponent";
 import { CiMail } from "react-icons/ci";
 import { BsTelephone } from "react-icons/bs";
-
 import { PiClockUserBold } from "react-icons/pi";
 import { FaEdit } from "react-icons/fa";
 import { BiRename } from "react-icons/bi";
