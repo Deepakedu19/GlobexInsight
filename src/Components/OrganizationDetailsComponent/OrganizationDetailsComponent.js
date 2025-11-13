@@ -341,12 +341,14 @@ const OrganizationDetailsComponent = () => {
                     className="btn-style "
                     onClick={() => onHandleEditOrganizationDetails(org.id)}
                   >
-                    <MdEditSquare />
+                    <MdEditSquare className="questionnair-edit-color" />
                   </td>
                   <td className=" btn-style ">
                     <AiFillDelete
                       onClick={() => onHandleDeleteOrganizationDetails(org.id)}
+                      className="questionnair-delete-color"
                     />
+
                     <ToastContainer />
                   </td>
                 </tr>
@@ -660,13 +662,14 @@ const OrganizationDetailsComponent = () => {
                       className="btn-style "
                       onClick={() => onHandleEditOrganizationDetails(org.id)}
                     >
-                      <MdEditSquare />
+                      <MdEditSquare className="questionnair-edit-color" />
                     </td>
                     <td className=" btn-style ">
                       <AiFillDelete
                         onClick={() =>
                           onHandleDeleteOrganizationDetails(org.id)
                         }
+                        className="questionnair-delete-color"
                       />
                       <ToastContainer />
                     </td>

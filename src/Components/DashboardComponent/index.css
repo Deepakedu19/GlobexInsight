@@ -41,14 +41,14 @@
 }
 
 .content-info-container:hover {
-  background-image: url("https://i.pinimg.com/736x/cc/f0/4d/ccf04d8ffc6ca44c16400478dd1787dd.jpg");
+  background-image: url("https://i.pinimg.com/736x/2c/45/47/2c4547051f1471974d5ebace1b41ffec.jpg");
   background-size: cover;
   box-shadow: rgba(240, 217, 255, 0.25) 0px 54px 55px,
     rgba(255, 255, 255, 0.12) 0px -12px 30px,
     rgba(255, 255, 255, 0.12) 0px 4px 6px,
     rgba(255, 255, 255, 0.17) 0px 12px 13px,
     rgba(255, 255, 255, 0.09) 0px -3px 5px;
-  scale: 1.13;
+  scale: 1.03;
 }
 .icon-style {
   font-size: 22px;
@@ -174,12 +174,12 @@
 .new-background-style-2:hover {
   background-image: url("https://i.pinimg.com/1200x/1a/29/0f/1a290f7f7037f233a4111361b7e334b3.jpg");
   background-size: cover;
-  scale: 1.13;
+  scale: 1.03;
 }
 .new-container-style-3:hover {
   background-image: url("https://i.pinimg.com/1200x/0e/cd/60/0ecd600ec6aba613b5896829430478a4.jpg");
   background-size: cover;
-  scale: 1.13;
+  scale: 1.03;
 }
 
 .new-icon-style-3 {

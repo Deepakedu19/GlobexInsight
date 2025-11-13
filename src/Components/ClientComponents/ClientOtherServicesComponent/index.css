@@ -145,6 +145,16 @@
 
 /* Layout style -2 */
 
+.client-otherServices-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .client-otherServices-main-container {
   height: 45vh;
   background-image: url("https://images.pexels.com/photos/30012663/pexels-photo-30012663.jpeg");
@@ -154,13 +164,15 @@
 }
 .client-otherServices-content-filter {
   height: 45vh;
-  background-color: rgba(5, 0, 53, 0.88);
-  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.541);
 }
 .client-otherServices-content-tiles {
   width: 100%;
   height: 40vh;
   background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .client-otherServices-content-title {
   color: rgb(231, 231, 231);
@@ -184,8 +196,8 @@
   height: 30vh;
 }
 .client-otherServices-tile-container {
-  width: 100%;
-  height: 8rem;
+  width: 96%;
+  height: 1100%;
   position: absolute;
   top: 55%;
   display: flex;
@@ -193,8 +205,8 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  background-color: rgba(172, 62, 62, 0);
   height: 30vh;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .client-otherServices-image-container {

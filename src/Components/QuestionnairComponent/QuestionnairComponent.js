@@ -2,7 +2,7 @@ import DashboardHeaderComponent from "../DashboardHeaderComponent/DashBoardHeade
 import DashboardMinHeader from "../DashboardMinHeader/DashboardMinHeader";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { FaStarOfLife } from "react-icons/fa6";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import "./index.css";
@@ -16,7 +16,54 @@ import { AiOutlineFullscreenExit } from "react-icons/ai";
 import { GrFormView } from "react-icons/gr";
 import { GrFormViewHide } from "react-icons/gr";
 import { DataContext } from "../ContextComponent/ContextComponent";
-import { data } from "react-router-dom";
+
+const questionTypeOptions = [
+  {
+    id: 1,
+    questionNumber: 1,
+    questionText: "what is the policy interested amount?",
+    category: "General Information",
+    questionType: "Text",
+    lineOfBusiness: "Cyber",
+    visibleQuestion: true,
+  },
+  {
+    id: 2,
+    questionNumber: 2,
+    questionText: "What is the policy duration?",
+    category: "Policy Related",
+    questionType: "Number",
+    lineOfBusiness: "D&O",
+    visibleQuestion: true,
+  },
+  {
+    id: 3,
+    questionNumber: 3,
+    questionText: "What is the policy number?",
+    category: "General Information",
+    questionType: "Multiple Choice",
+    lineOfBusiness: "General Liability",
+    visibleQuestion: false,
+  },
+  {
+    id: 4,
+    questionNumber: 4,
+    questionText: "will the policy number be required?",
+    category: "Claims Handling",
+    questionType: "Text",
+    lineOfBusiness: "Cyber",
+    visibleQuestion: true,
+  },
+  {
+    id: 5,
+    questionNumber: 5,
+    questionText: "What is your annual income?",
+    category: "Accounting",
+    questionType: "Number",
+    lineOfBusiness: "Cyber",
+    visibleQuestion: true,
+  },
+];
 
 const categoryOptions = [
   { id: 1, name: "Accounting" },
@@ -37,11 +84,11 @@ const LineofBusinessOptions = [
 ];
 
 const QuestionnairComponent = () => {
-  // const { questionData, setQuestionData } = useContext(contextData);
+  const { policyQuestion, setPolicyQuestion } = useContext(DataContext);
 
   const [addUserToggle, setAddUserToggle] = useState(false);
   const [searchUserToggle, setSearchUserToggle] = useState(false);
-  const [questionList, setQuestionList] = useState([]);
+  // const [questionList, setQuestionList] = useState([]);
   const [questionNumber, setQuestionNumber] = useState("");
   const [questionText, setQuestionText] = useState("");
   const [category, setCategory] = useState("");
@@ -51,6 +98,10 @@ const QuestionnairComponent = () => {
   const [ToggleEditMenu, setToggleEditMenu] = useState(false);
   const [onEditQuestionId, setOnEditQuestionId] = useState("");
   const [onToggleFullScreenTable, SetOnToggleFullScreenTable] = useState(false);
+
+  useEffect(() => {
+    setPolicyQuestion(questionTypeOptions);
+  }, [setPolicyQuestion]);
 
   // toggle add menu
   const onToggleAddUser = () => {
@@ -75,7 +126,7 @@ const QuestionnairComponent = () => {
       visibleQuestion,
     };
 
-    setQuestionList([...questionList, newQuestion]);
+    setPolicyQuestion([...policyQuestion, newQuestion]);
 
     toast.success("Question Added Successfully", {
       position: "top-center",
@@ -105,7 +156,7 @@ const QuestionnairComponent = () => {
     setOnEditQuestionId(id);
     console.log(id);
     setToggleEditMenu(true);
-    const questionnairEdit = questionList.find(
+    const questionnairEdit = policyQuestion.find(
       (question) => question.id === id
     );
     if (questionnairEdit) {
@@ -126,7 +177,7 @@ const QuestionnairComponent = () => {
       questionType,
       lineOfBusiness,
     };
-    setQuestionList((prevList) =>
+    setPolicyQuestion((prevList) =>
       prevList.map((que) =>
         que.id === updateQuestionDetails.id ? updateQuestionDetails : que
       )
@@ -147,8 +198,8 @@ const QuestionnairComponent = () => {
   // ondelete Method
   const onDeleteQuestionnair = (id) => {
     alert("Are you sure you want to delete this record?");
-    const filteredList = questionList.filter((que) => que.id !== id);
-    setQuestionList(filteredList);
+    const filteredList = policyQuestion.filter((que) => que.id !== id);
+    setPolicyQuestion(filteredList);
     toast.warning("Questionnair Deleted", {
       toastId: "edit-toast",
       position: "top-right",
@@ -163,7 +214,7 @@ const QuestionnairComponent = () => {
   };
 
   const onVisibilityQuestion = (id) => {
-    const enableQuestion = questionList.find(
+    const enableQuestion = policyQuestion.find(
       (questionList) => questionList.id === id
     );
 
@@ -178,7 +229,7 @@ const QuestionnairComponent = () => {
         visibleQuestion: !enableQuestion.visibleQuestion,
       };
       console.log(updateQue);
-      setQuestionList((prevList) =>
+      setPolicyQuestion((prevList) =>
         prevList.map((que) => (que.id === updateQue.id ? updateQue : que))
       );
     }
@@ -415,7 +466,7 @@ const QuestionnairComponent = () => {
                   </div>
                 </div>
                 <br />
-                <div className="user-content-main-final-container">
+                <div className="user-content-main-lob-final-container">
                   <div className="questionnair-user-content-container">
                     <label className="questionnair-label-name">
                       Line of Business{" "}
@@ -531,7 +582,7 @@ const QuestionnairComponent = () => {
                 </th>
               </tr>
 
-              {questionList.map((eachQuestion) => (
+              {policyQuestion.map((eachQuestion) => (
                 <tr
                   key={eachQuestion.id}
                   className={
@@ -620,7 +671,7 @@ const QuestionnairComponent = () => {
                 <th className="questionnair-font-style s-no-style">Delete</th>
               </tr>
 
-              {questionList.map((eachQuestion) => (
+              {policyQuestion.map((eachQuestion) => (
                 <tr
                   key={eachQuestion.id}
                   className="questionnair-row-description"

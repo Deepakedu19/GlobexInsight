@@ -48,6 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 .filter-options-container {
   width: 60%;
@@ -279,25 +280,34 @@
 }
 .view-country-data-table-container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   height: 66vh;
-  background-color: rgb(255, 249, 240);
+  background-color: rgb(249, 252, 255);
   width: 100%;
   padding: 0px;
+  overflow: auto;
 }
 .view-country-data-table {
   max-height: 60vh;
   background-color: rgb(255, 249, 240);
   width: 100%;
+  border-collapse: collapse;
 }
 .view-country-data-table-header-row {
+  height: 90px;
+  background-color: rgb(202, 202, 202);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  height: 43px;
-  background-color: rgb(235, 235, 235);
 }
 .view-country-data-table-header-row-data {
-  font-weight: 200;
+  font-weight: 500;
+  text-align: center;
+  min-width: 150px;
+  text-wrap: wrap;
+  position: sticky;
 }
 .view-country-data-table-description-row {
   background-color: rgb(253, 253, 253);
@@ -306,4 +316,59 @@
 .view-country-data-table-description-row-data {
   font-weight: 100;
   text-align: center;
+}
+.view-country-data-table-description-row-question-data {
+  width: 200px;
+}
+.view-country-data-table-description-row-country-data {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-data-available {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: grey;
+}
+.view-filter-link-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(4, 78, 248);
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.font-icon-add-filter-document {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  color: rgb(84, 161, 7);
+}
+.no-data-add-document-text {
+  font-size: 16px;
+  color: grey;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.no-data-add-document-text:hover {
+  font-size: 18px;
+  color: rgb(20, 41, 0);
+}
+.view-country-data-question-text {
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+  font-weight: 500;
+  width: 200px;
+  font-family: Roboto;
+  padding-left: 15px;
 }

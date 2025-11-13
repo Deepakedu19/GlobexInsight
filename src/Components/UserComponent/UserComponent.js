@@ -272,6 +272,8 @@ const UserComponent = () => {
               <MdOutlineZoomOutMap />
             </div>
           </div>
+
+          {/* Add User popup menu */}
           {addUserToggle && (
             <div className="user-add-content-container ">
               <div className="user-add-content-detail-container">
@@ -312,7 +314,7 @@ const UserComponent = () => {
                   <div className="admin-user-content-container">
                     <label className="user-label-name">
                       Email{" "}
-                      <FaStarOfLife className="user-required-icon-style" />
+                      <FaStarOfLife className="user-required-icon-style " />
                     </label>
                     <input
                       type="text"
@@ -328,7 +330,7 @@ const UserComponent = () => {
                   <div className="admin-user-content-container">
                     <label className="user-label-name">
                       Organization Name
-                      <FaStarOfLife className="user-required-icon-style" />
+                      <FaStarOfLife className="user-required-icon-style " />
                     </label>
                     <input
                       type="text"
@@ -432,12 +434,23 @@ const UserComponent = () => {
                       User Status{" "}
                       <FaStarOfLife className="user-required-icon-style" />
                     </label>
-                    <input
+                    {/* <input
                       type="text"
                       className="user-text-input"
                       value={userStatus}
                       onChange={(e) => setUserStatus(e.target.value)}
-                    />
+                    /> */}
+                    <select
+                      className="user-text-input"
+                      value={userStatus}
+                      onChange={(e) => setUserStatus(e.target.value)}
+                    >
+                      <option value="" disabled selected>
+                        Select User Status
+                      </option>
+                      <option value="Active">Active</option>
+                      <option value="Inactive">Inactive</option>
+                    </select>
                   </div>
                 </div>
                 <div className="checkbox-contianer">
@@ -535,6 +548,7 @@ const UserComponent = () => {
             </div>
           )}
 
+          {/* Edit User popup menu */}
           {editUserToggle && (
             <div className="user-add-content-container ">
               <div className="user-add-content-detail-container">
@@ -977,13 +991,13 @@ const UserComponent = () => {
                   </td>
                   <td className="name-style space-style">
                     <MdEditSquare
-                      className="user-edit-icon"
+                      className="user-edit-icon questionnair-edit-color"
                       onClick={() => onEditHandler(eachUser.id)}
                     />
                   </td>
                   <td className="name-style space-style">
                     <AiFillDelete
-                      className="user-edit-icon"
+                      className="user-edit-icon questionnair-delete-color"
                       onClick={() => {
                         if (
                           window.confirm(
@@ -1053,13 +1067,13 @@ const UserComponent = () => {
                   </td>
                   <td className="name-style space-style">
                     <MdEditSquare
-                      className="user-edit-icon"
+                      className="user-edit-icon questionnair-edit-color"
                       onClick={() => onEditHandler(eachUser.id)}
                     />
                   </td>
                   <td className="name-style space-style">
                     <AiFillDelete
-                      className="user-edit-icon"
+                      className="user-edit-icon questionnair-delete-color"
                       onClick={() => {
                         if (
                           window.confirm(

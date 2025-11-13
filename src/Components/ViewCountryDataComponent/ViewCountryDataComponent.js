@@ -32,22 +32,35 @@ const categoryOptions = [
 
 const ViewCountryDataComponent = () => {
   const countries = getNames();
-  // const [questionList] = useContext(DataContext);
+
+  const { policyQuestion } = useContext(DataContext);
 
   //----------------state--variables---------------------------
-  // const [onToggleData, setOnToggleData] = useState(false);
+
   const [onPopupMenu, setOnPopupMenu] = useState(false);
   const [onToggleCategory, setOnToggleCategory] = useState(false);
   const [onToggleCountry, setOnToggleCountry] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [checkedCountries, setCheckedCountries] = useState([]);
-  // State to hold the IDs of selected categories
+  const [LOBFilter, setLOBFilter] = useState("");
+  const [dataToggle, setDataToggle] = useState(false);
+
   const [checkedCategories, setCheckedCategories] = useState([]);
 
+  const filterQuestion = policyQuestion.filter(
+    (eachQuestion) =>
+      eachQuestion.visibleQuestion === true &&
+      (LOBFilter === "" || eachQuestion.lineOfBusiness === LOBFilter) &&
+      (selectedCategories.length === 0 ||
+        selectedCategories.includes(eachQuestion.category))
+  );
+
+  console.log(filterQuestion, "filterQuestion");
   // A variable to check if all categories are selected
   const isAllCategoriesSelected =
     checkedCategories.length === categoryOptions.length;
 
+  // A variable to check if all countries are selected
   const isAllCountriesSelected = checkedCountries.length === countries.length;
 
   const onHandleCategory = () => {
@@ -136,18 +149,31 @@ const ViewCountryDataComponent = () => {
   };
 
   const onHandleSelectedDetails = () => {
-    // TODO: Implement the logic to fetch and display the selected data
-    toast.info("Data fetched successfully", {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-      progress: undefined,
-      theme: "colored",
-    });
-    setOnPopupMenu(false);
+    if (checkedCategories.length > 0) {
+      setDataToggle(true);
+      toast.success("Data fetched successfully", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
+      setOnPopupMenu(false);
+    } else {
+      toast.error("Please select all the required data", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
   };
 
   return (
@@ -175,8 +201,11 @@ const ViewCountryDataComponent = () => {
                 <div className="view-input-container">
                   <label className="view-data-label">Line of Business</label>
                   <br />
-                  <select className="view-data-select">
-                    <option value="" disabled selected>
+                  <select
+                    className="view-data-select"
+                    onChange={(e) => setLOBFilter(e.target.value)}
+                  >
+                    <option value={LOBFilter} disabled selected>
                       Select Line of Business
                     </option>
                     {LineofBusinessOptions.map((option) => (
@@ -189,6 +218,7 @@ const ViewCountryDataComponent = () => {
 
                 <div className="view-container-layout">
                   {/* Category Selection */}
+
                   <div className="view-small-input-container">
                     <label className="view-data-label">Category</label>
                     <br />
@@ -206,7 +236,7 @@ const ViewCountryDataComponent = () => {
                             className="selectall-checkbox-style"
                             checked={isAllCategoriesSelected}
                             onChange={handleSelectAllCategory}
-                          />{" "}
+                          />
                           Select all
                         </label>
                         {categoryOptions.map((option) => (
@@ -227,7 +257,9 @@ const ViewCountryDataComponent = () => {
                       </div>
                     )}
                   </div>
+
                   {/* Country Selection (no change) */}
+
                   <div className="view-small-input-container-2">
                     <label className="view-data-label">Country</label>
                     <br />
@@ -248,19 +280,19 @@ const ViewCountryDataComponent = () => {
                           />
                           Select all
                         </label>
-                        {countries.map((option, index) => (
+                        {countries.map((eachCountry, index) => (
                           <label
                             key={index}
                             className="view-category-option-label"
                           >
                             <input
                               type="checkbox"
-                              value={option}
+                              value={eachCountry}
                               className="view-input-option-checkbox"
-                              checked={checkedCountries.includes(option)}
+                              checked={checkedCountries.includes(eachCountry)}
                               onChange={handleIndividualCountry}
                             />
-                            {option}
+                            {eachCountry}
                           </label>
                         ))}
                       </div>
@@ -329,21 +361,33 @@ const ViewCountryDataComponent = () => {
             </div>
           </div>
         )}
+
+        {/* {country data table} */}
+
         <div className="view-country-data-table-container">
-          <table className="view-country-data-table">
-            <thead>
+          {/* table render */}
+          {dataToggle && (
+            <table className="view-country-data-table">
               <tr className="view-country-data-table-header-row">
                 <th className="view-country-data-table-header-row-data"></th>
+                {checkedCountries.map((eachCountry, index) => (
+                  <th className="view-country-data-table-header-row-data">
+                    {eachCountry}
+                  </th>
+                ))}
               </tr>
-            </thead>
-            <tbody>
-              <tr className="view-country-data-table-description-row">
-                <td className="view-country-data-table-description-row-data">
-                  No data Found
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+              {filterQuestion.map((eachQuestion) => (
+                <tr className="view-country-data-table-description-row">
+                  <td className="view-country-data-table-description-row-question-data">
+                    {eachQuestion.questionNumber}
+                    {")   "}
+                    {eachQuestion.questionText}
+                  </td>
+                </tr>
+              ))}
+            </table>
+          )}
         </div>
         <div className="pagination-style">
           <span className="pagination-content-new">Show entries</span>

@@ -10,6 +10,7 @@ import { GrNetwork } from "react-icons/gr";
 import { SiAudiobookshelf } from "react-icons/si";
 import { useContext } from "react";
 import { DataContext } from "../../ContextComponent/ContextComponent";
+import video from "../../../SiteImages/Video/videoPath.mp4";
 
 const ClientAboutUsComponent = () => {
   const navigate = useNavigate();
@@ -99,55 +100,67 @@ const ClientAboutUsComponent = () => {
     <div>
       <ClientHeaderComponent />
       <ClientLinkComponent />
+      <div className="about-us-video-container">
+        <video autoPlay muted loop playsInline>
+          <source src={video} type="video/webm" />
+        </video>
+      </div>
 
-      <div className="about-us-title-container">
-        <div className="about-us-title-container-filter">
-          <div className="about-us-content-main-container">
-            <h1 className="about-us-heading-style">
-              Who is Globex Underwriting Services?
-            </h1>
-            <img
-              src="https://www.globexinsight.net/images/globex_UW_Nobg.png"
-              alt="Globex Underwriting Services"
-              className="about-us-image"
-            />
-            <p className="about-us-heading-sub-style">
-              An independent and turnkey international solution for insurance
-              organizations who desire to write multinational business.
-            </p>
-            <button
-              className="btn-contact-us"
-              onClick={() => navigate("/contactUs")}
-            >
-              Contact Us
-            </button>
-          </div>
-          <div className="about-list-container">
-            <div className="about-us-item-container">
-              <div className="about-us-item-style-1">
-                <p className="about-us-content-para-style">
-                  <GiTeamIdea className="about-us-icon" />
-                  Team of International Insurance Experts
-                </p>
-              </div>
-              <div className="about-us-item-style">
-                <p className="about-us-content-para-style">
-                  <FaBusinessTime className="about-us-icon" />
-                  All lines of Business
-                </p>
-              </div>
-              <div className="about-us-item-style">
-                <p className="about-us-content-para-style">
-                  <GrNetwork className="about-us-icon" />
-                  Network of insurers in 180+ countries/Territories
-                </p>
-              </div>
-              <div className="about-us-item-style">
-                <p className="about-us-content-para-style">
-                  <SiAudiobookshelf className="about-us-icon" />
-                  Procedures and systems
-                </p>
-              </div>
+      <div className="about-us-title-container-filter">
+        <div className="about-us-content-main-container">
+          <h1 className="about-us-heading-style">
+            Who is Globex Underwriting Services?
+          </h1>
+          <img
+            src="https://www.globexinsight.net/images/globex_UW_Nobg.png"
+            alt="Globex Underwriting Services"
+            className="about-us-image"
+          />
+          <p className="about-us-heading-sub-style">
+            An independent and turnkey international solution for insurance
+            organizations who desire to write multinational business.
+          </p>
+          <button
+            className="btn-contact-us"
+            onClick={() => navigate("/contactUs")}
+          >
+            Contact Us
+          </button>
+          <button
+            className="btn-home-btn"
+            onClick={() => {
+              navigate("/client-dashboard");
+              setClientActiveLinkId(0);
+            }}
+          >
+            Home
+          </button>
+        </div>
+        <div className="about-list-container">
+          <div className="about-us-item-container">
+            <div className="about-us-item-style-1">
+              <p className="about-us-content-para-style">
+                <GiTeamIdea className="about-us-icon" />
+                Team of International Insurance Experts
+              </p>
+            </div>
+            <div className="about-us-item-style">
+              <p className="about-us-content-para-style">
+                <FaBusinessTime className="about-us-icon" />
+                All lines of Business
+              </p>
+            </div>
+            <div className="about-us-item-style">
+              <p className="about-us-content-para-style">
+                <GrNetwork className="about-us-icon" />
+                Network of insurers in 180+ countries/Territories
+              </p>
+            </div>
+            <div className="about-us-item-style">
+              <p className="about-us-content-para-style">
+                <SiAudiobookshelf className="about-us-icon" />
+                Procedures and systems
+              </p>
             </div>
           </div>
         </div>

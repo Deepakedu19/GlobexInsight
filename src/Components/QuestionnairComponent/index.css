@@ -113,6 +113,14 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.user-content-main-lob-final-container {
+  width: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 3%;
+}
 .add-question-title {
   background-color: rgb(233, 233, 233);
   margin-top: 0px;

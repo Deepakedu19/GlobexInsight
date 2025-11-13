@@ -12,6 +12,7 @@ import { MdOutlineWorkspacePremium } from "react-icons/md";
 import { RiAdminFill } from "react-icons/ri";
 import { FaUserTie } from "react-icons/fa6";
 import { MdManageAccounts } from "react-icons/md";
+import otherSupport from "../../../SiteImages/Video/otherSupport.mp4";
 
 const ClientOtherServicesComponent = () => {
   const navigate = useNavigate();
@@ -54,7 +55,17 @@ const ClientOtherServicesComponent = () => {
         </div>
       </div> */}
       {/* Layout style -2 */}
-      <div className="client-otherServices-main-container">
+      <div>
+        <div>
+          <video
+            autoPlay
+            loop
+            muted
+            className="client-otherServices-background-video"
+          >
+            <source src={otherSupport} type="video/mp4" />
+          </video>
+        </div>
         <div className="client-otherServices-content-filter">
           <div className="home-icon-container">
             <IoHome

@@ -9,7 +9,7 @@ export const DataProvider = (props) => {
   const [activeLinkstyle, setActiveLinkStyle] = useState("");
   const [onEditResetPassword, setOnEditResetPassword] = useState(false);
   const [onloginAnimation, setOnLoginAnimation] = useState(true);
-  const [questionList, setQuestionList] = useState([]);
+  const [policyQuestion, setPolicyQuestion] = useState([]);
   const myDate = new Date();
   return (
     <DataContext.Provider
@@ -27,8 +27,8 @@ export const DataProvider = (props) => {
         setOnEditResetPassword,
         setOnLoginAnimation,
         onloginAnimation,
-        questionList,
-        setQuestionList,
+        policyQuestion,
+        setPolicyQuestion,
       }}
     >
       {props.children}
